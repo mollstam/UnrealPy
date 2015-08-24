@@ -1,0 +1,988 @@
+<!doctype html PUBLIC "-//W3C//DTD html 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    
+    
+    <meta http-equiv='X-UA-Compatible' content='IE=emulateIE7' />
+    <title>Coverage for pygments.lexers.r: 100%</title>
+    <link rel='stylesheet' href='style.css' type='text/css'>
+    
+    <script type='text/javascript' src='jquery.min.js'></script>
+    <script type='text/javascript' src='jquery.hotkeys.js'></script>
+    <script type='text/javascript' src='jquery.isonscreen.js'></script>
+    <script type='text/javascript' src='coverage_html.js'></script>
+    <script type='text/javascript' charset='utf-8'>
+        jQuery(document).ready(coverage.pyfile_ready);
+    </script>
+</head>
+<body id='pyfile'>
+
+<div id='header'>
+    <div class='content'>
+        <h1>Coverage for <b>pygments.lexers.r</b> :
+            <span class='pc_cov'>100%</span>
+        </h1>
+        <img id='keyboard_icon' src='keybd_closed.png'>
+        <h2 class='stats'>
+            44 statements &nbsp;
+            <span class='run hide_run shortkey_r button_toggle_run'>44 run</span>
+            <span class='mis shortkey_m button_toggle_mis'>0 missing</span>
+            <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
+            
+        </h2>
+    </div>
+</div>
+
+<div class='help_panel'>
+    <img id='panel_icon' src='keybd_open.png'>
+<p class='legend'>Hot-keys on this page</p>
+    <div>
+<p class='keyhelp'>
+        <span class='key'>r</span>
+        <span class='key'>m</span>
+        <span class='key'>x</span>
+        <span class='key'>p</span> &nbsp; toggle line displays
+    </p>
+<p class='keyhelp'>
+        <span class='key'>j</span>
+        <span class='key'>k</span> &nbsp; next/prev highlighted chunk
+    </p>
+<p class='keyhelp'>
+        <span class='key'>0</span> &nbsp; (zero) top of page
+    </p>
+<p class='keyhelp'>
+        <span class='key'>1</span> &nbsp; (one) first highlighted chunk
+    </p>
+    </div>
+</div>
+
+<div id='source'>
+    <table cellspacing='0' cellpadding='0'>
+        <tr>
+            <td class='linenos' valign='top'>
+<p id='n1' class='pln'><a href='#n1'>1</a></p>
+<p id='n2' class='stm run hide_run'><a href='#n2'>2</a></p>
+<p id='n3' class='pln'><a href='#n3'>3</a></p>
+<p id='n4' class='pln'><a href='#n4'>4</a></p>
+<p id='n5' class='pln'><a href='#n5'>5</a></p>
+<p id='n6' class='pln'><a href='#n6'>6</a></p>
+<p id='n7' class='pln'><a href='#n7'>7</a></p>
+<p id='n8' class='pln'><a href='#n8'>8</a></p>
+<p id='n9' class='pln'><a href='#n9'>9</a></p>
+<p id='n10' class='pln'><a href='#n10'>10</a></p>
+<p id='n11' class='pln'><a href='#n11'>11</a></p>
+<p id='n12' class='stm run hide_run'><a href='#n12'>12</a></p>
+<p id='n13' class='pln'><a href='#n13'>13</a></p>
+<p id='n14' class='stm run hide_run'><a href='#n14'>14</a></p>
+<p id='n15' class='stm run hide_run'><a href='#n15'>15</a></p>
+<p id='n16' class='pln'><a href='#n16'>16</a></p>
+<p id='n17' class='pln'><a href='#n17'>17</a></p>
+<p id='n18' class='stm run hide_run'><a href='#n18'>18</a></p>
+<p id='n19' class='pln'><a href='#n19'>19</a></p>
+<p id='n20' class='pln'><a href='#n20'>20</a></p>
+<p id='n21' class='stm run hide_run'><a href='#n21'>21</a></p>
+<p id='n22' class='pln'><a href='#n22'>22</a></p>
+<p id='n23' class='pln'><a href='#n23'>23</a></p>
+<p id='n24' class='stm run hide_run'><a href='#n24'>24</a></p>
+<p id='n25' class='pln'><a href='#n25'>25</a></p>
+<p id='n26' class='pln'><a href='#n26'>26</a></p>
+<p id='n27' class='pln'><a href='#n27'>27</a></p>
+<p id='n28' class='pln'><a href='#n28'>28</a></p>
+<p id='n29' class='stm run hide_run'><a href='#n29'>29</a></p>
+<p id='n30' class='stm run hide_run'><a href='#n30'>30</a></p>
+<p id='n31' class='stm run hide_run'><a href='#n31'>31</a></p>
+<p id='n32' class='pln'><a href='#n32'>32</a></p>
+<p id='n33' class='stm run hide_run'><a href='#n33'>33</a></p>
+<p id='n34' class='stm run hide_run'><a href='#n34'>34</a></p>
+<p id='n35' class='pln'><a href='#n35'>35</a></p>
+<p id='n36' class='stm run hide_run'><a href='#n36'>36</a></p>
+<p id='n37' class='stm run hide_run'><a href='#n37'>37</a></p>
+<p id='n38' class='pln'><a href='#n38'>38</a></p>
+<p id='n39' class='stm run hide_run'><a href='#n39'>39</a></p>
+<p id='n40' class='stm run hide_run'><a href='#n40'>40</a></p>
+<p id='n41' class='stm run hide_run'><a href='#n41'>41</a></p>
+<p id='n42' class='pln'><a href='#n42'>42</a></p>
+<p id='n43' class='pln'><a href='#n43'>43</a></p>
+<p id='n44' class='stm run hide_run'><a href='#n44'>44</a></p>
+<p id='n45' class='pln'><a href='#n45'>45</a></p>
+<p id='n46' class='stm run hide_run'><a href='#n46'>46</a></p>
+<p id='n47' class='pln'><a href='#n47'>47</a></p>
+<p id='n48' class='pln'><a href='#n48'>48</a></p>
+<p id='n49' class='pln'><a href='#n49'>49</a></p>
+<p id='n50' class='stm run hide_run'><a href='#n50'>50</a></p>
+<p id='n51' class='pln'><a href='#n51'>51</a></p>
+<p id='n52' class='stm run hide_run'><a href='#n52'>52</a></p>
+<p id='n53' class='pln'><a href='#n53'>53</a></p>
+<p id='n54' class='stm run hide_run'><a href='#n54'>54</a></p>
+<p id='n55' class='pln'><a href='#n55'>55</a></p>
+<p id='n56' class='stm run hide_run'><a href='#n56'>56</a></p>
+<p id='n57' class='stm run hide_run'><a href='#n57'>57</a></p>
+<p id='n58' class='pln'><a href='#n58'>58</a></p>
+<p id='n59' class='stm run hide_run'><a href='#n59'>59</a></p>
+<p id='n60' class='pln'><a href='#n60'>60</a></p>
+<p id='n61' class='pln'><a href='#n61'>61</a></p>
+<p id='n62' class='pln'><a href='#n62'>62</a></p>
+<p id='n63' class='pln'><a href='#n63'>63</a></p>
+<p id='n64' class='stm run hide_run'><a href='#n64'>64</a></p>
+<p id='n65' class='stm run hide_run'><a href='#n65'>65</a></p>
+<p id='n66' class='pln'><a href='#n66'>66</a></p>
+<p id='n67' class='stm run hide_run'><a href='#n67'>67</a></p>
+<p id='n68' class='pln'><a href='#n68'>68</a></p>
+<p id='n69' class='pln'><a href='#n69'>69</a></p>
+<p id='n70' class='stm run hide_run'><a href='#n70'>70</a></p>
+<p id='n71' class='pln'><a href='#n71'>71</a></p>
+<p id='n72' class='pln'><a href='#n72'>72</a></p>
+<p id='n73' class='pln'><a href='#n73'>73</a></p>
+<p id='n74' class='pln'><a href='#n74'>74</a></p>
+<p id='n75' class='pln'><a href='#n75'>75</a></p>
+<p id='n76' class='pln'><a href='#n76'>76</a></p>
+<p id='n77' class='stm run hide_run'><a href='#n77'>77</a></p>
+<p id='n78' class='stm run hide_run'><a href='#n78'>78</a></p>
+<p id='n79' class='stm run hide_run'><a href='#n79'>79</a></p>
+<p id='n80' class='stm run hide_run'><a href='#n80'>80</a></p>
+<p id='n81' class='pln'><a href='#n81'>81</a></p>
+<p id='n82' class='pln'><a href='#n82'>82</a></p>
+<p id='n83' class='stm run hide_run'><a href='#n83'>83</a></p>
+<p id='n84' class='pln'><a href='#n84'>84</a></p>
+<p id='n85' class='pln'><a href='#n85'>85</a></p>
+<p id='n86' class='pln'><a href='#n86'>86</a></p>
+<p id='n87' class='pln'><a href='#n87'>87</a></p>
+<p id='n88' class='pln'><a href='#n88'>88</a></p>
+<p id='n89' class='pln'><a href='#n89'>89</a></p>
+<p id='n90' class='pln'><a href='#n90'>90</a></p>
+<p id='n91' class='pln'><a href='#n91'>91</a></p>
+<p id='n92' class='pln'><a href='#n92'>92</a></p>
+<p id='n93' class='pln'><a href='#n93'>93</a></p>
+<p id='n94' class='pln'><a href='#n94'>94</a></p>
+<p id='n95' class='pln'><a href='#n95'>95</a></p>
+<p id='n96' class='pln'><a href='#n96'>96</a></p>
+<p id='n97' class='pln'><a href='#n97'>97</a></p>
+<p id='n98' class='pln'><a href='#n98'>98</a></p>
+<p id='n99' class='pln'><a href='#n99'>99</a></p>
+<p id='n100' class='pln'><a href='#n100'>100</a></p>
+<p id='n101' class='pln'><a href='#n101'>101</a></p>
+<p id='n102' class='pln'><a href='#n102'>102</a></p>
+<p id='n103' class='pln'><a href='#n103'>103</a></p>
+<p id='n104' class='pln'><a href='#n104'>104</a></p>
+<p id='n105' class='pln'><a href='#n105'>105</a></p>
+<p id='n106' class='pln'><a href='#n106'>106</a></p>
+<p id='n107' class='pln'><a href='#n107'>107</a></p>
+<p id='n108' class='pln'><a href='#n108'>108</a></p>
+<p id='n109' class='pln'><a href='#n109'>109</a></p>
+<p id='n110' class='pln'><a href='#n110'>110</a></p>
+<p id='n111' class='pln'><a href='#n111'>111</a></p>
+<p id='n112' class='pln'><a href='#n112'>112</a></p>
+<p id='n113' class='pln'><a href='#n113'>113</a></p>
+<p id='n114' class='pln'><a href='#n114'>114</a></p>
+<p id='n115' class='pln'><a href='#n115'>115</a></p>
+<p id='n116' class='pln'><a href='#n116'>116</a></p>
+<p id='n117' class='pln'><a href='#n117'>117</a></p>
+<p id='n118' class='pln'><a href='#n118'>118</a></p>
+<p id='n119' class='pln'><a href='#n119'>119</a></p>
+<p id='n120' class='pln'><a href='#n120'>120</a></p>
+<p id='n121' class='pln'><a href='#n121'>121</a></p>
+<p id='n122' class='pln'><a href='#n122'>122</a></p>
+<p id='n123' class='pln'><a href='#n123'>123</a></p>
+<p id='n124' class='pln'><a href='#n124'>124</a></p>
+<p id='n125' class='pln'><a href='#n125'>125</a></p>
+<p id='n126' class='pln'><a href='#n126'>126</a></p>
+<p id='n127' class='pln'><a href='#n127'>127</a></p>
+<p id='n128' class='pln'><a href='#n128'>128</a></p>
+<p id='n129' class='pln'><a href='#n129'>129</a></p>
+<p id='n130' class='pln'><a href='#n130'>130</a></p>
+<p id='n131' class='pln'><a href='#n131'>131</a></p>
+<p id='n132' class='pln'><a href='#n132'>132</a></p>
+<p id='n133' class='pln'><a href='#n133'>133</a></p>
+<p id='n134' class='pln'><a href='#n134'>134</a></p>
+<p id='n135' class='pln'><a href='#n135'>135</a></p>
+<p id='n136' class='pln'><a href='#n136'>136</a></p>
+<p id='n137' class='pln'><a href='#n137'>137</a></p>
+<p id='n138' class='pln'><a href='#n138'>138</a></p>
+<p id='n139' class='pln'><a href='#n139'>139</a></p>
+<p id='n140' class='pln'><a href='#n140'>140</a></p>
+<p id='n141' class='pln'><a href='#n141'>141</a></p>
+<p id='n142' class='pln'><a href='#n142'>142</a></p>
+<p id='n143' class='pln'><a href='#n143'>143</a></p>
+<p id='n144' class='pln'><a href='#n144'>144</a></p>
+<p id='n145' class='pln'><a href='#n145'>145</a></p>
+<p id='n146' class='pln'><a href='#n146'>146</a></p>
+<p id='n147' class='pln'><a href='#n147'>147</a></p>
+<p id='n148' class='pln'><a href='#n148'>148</a></p>
+<p id='n149' class='pln'><a href='#n149'>149</a></p>
+<p id='n150' class='pln'><a href='#n150'>150</a></p>
+<p id='n151' class='pln'><a href='#n151'>151</a></p>
+<p id='n152' class='pln'><a href='#n152'>152</a></p>
+<p id='n153' class='pln'><a href='#n153'>153</a></p>
+<p id='n154' class='pln'><a href='#n154'>154</a></p>
+<p id='n155' class='pln'><a href='#n155'>155</a></p>
+<p id='n156' class='pln'><a href='#n156'>156</a></p>
+<p id='n157' class='pln'><a href='#n157'>157</a></p>
+<p id='n158' class='pln'><a href='#n158'>158</a></p>
+<p id='n159' class='pln'><a href='#n159'>159</a></p>
+<p id='n160' class='pln'><a href='#n160'>160</a></p>
+<p id='n161' class='pln'><a href='#n161'>161</a></p>
+<p id='n162' class='pln'><a href='#n162'>162</a></p>
+<p id='n163' class='pln'><a href='#n163'>163</a></p>
+<p id='n164' class='pln'><a href='#n164'>164</a></p>
+<p id='n165' class='pln'><a href='#n165'>165</a></p>
+<p id='n166' class='pln'><a href='#n166'>166</a></p>
+<p id='n167' class='pln'><a href='#n167'>167</a></p>
+<p id='n168' class='pln'><a href='#n168'>168</a></p>
+<p id='n169' class='pln'><a href='#n169'>169</a></p>
+<p id='n170' class='pln'><a href='#n170'>170</a></p>
+<p id='n171' class='pln'><a href='#n171'>171</a></p>
+<p id='n172' class='pln'><a href='#n172'>172</a></p>
+<p id='n173' class='pln'><a href='#n173'>173</a></p>
+<p id='n174' class='pln'><a href='#n174'>174</a></p>
+<p id='n175' class='pln'><a href='#n175'>175</a></p>
+<p id='n176' class='pln'><a href='#n176'>176</a></p>
+<p id='n177' class='pln'><a href='#n177'>177</a></p>
+<p id='n178' class='pln'><a href='#n178'>178</a></p>
+<p id='n179' class='pln'><a href='#n179'>179</a></p>
+<p id='n180' class='pln'><a href='#n180'>180</a></p>
+<p id='n181' class='pln'><a href='#n181'>181</a></p>
+<p id='n182' class='pln'><a href='#n182'>182</a></p>
+<p id='n183' class='pln'><a href='#n183'>183</a></p>
+<p id='n184' class='pln'><a href='#n184'>184</a></p>
+<p id='n185' class='pln'><a href='#n185'>185</a></p>
+<p id='n186' class='pln'><a href='#n186'>186</a></p>
+<p id='n187' class='pln'><a href='#n187'>187</a></p>
+<p id='n188' class='pln'><a href='#n188'>188</a></p>
+<p id='n189' class='pln'><a href='#n189'>189</a></p>
+<p id='n190' class='pln'><a href='#n190'>190</a></p>
+<p id='n191' class='pln'><a href='#n191'>191</a></p>
+<p id='n192' class='pln'><a href='#n192'>192</a></p>
+<p id='n193' class='pln'><a href='#n193'>193</a></p>
+<p id='n194' class='pln'><a href='#n194'>194</a></p>
+<p id='n195' class='pln'><a href='#n195'>195</a></p>
+<p id='n196' class='pln'><a href='#n196'>196</a></p>
+<p id='n197' class='pln'><a href='#n197'>197</a></p>
+<p id='n198' class='pln'><a href='#n198'>198</a></p>
+<p id='n199' class='pln'><a href='#n199'>199</a></p>
+<p id='n200' class='pln'><a href='#n200'>200</a></p>
+<p id='n201' class='pln'><a href='#n201'>201</a></p>
+<p id='n202' class='pln'><a href='#n202'>202</a></p>
+<p id='n203' class='pln'><a href='#n203'>203</a></p>
+<p id='n204' class='pln'><a href='#n204'>204</a></p>
+<p id='n205' class='pln'><a href='#n205'>205</a></p>
+<p id='n206' class='pln'><a href='#n206'>206</a></p>
+<p id='n207' class='pln'><a href='#n207'>207</a></p>
+<p id='n208' class='pln'><a href='#n208'>208</a></p>
+<p id='n209' class='pln'><a href='#n209'>209</a></p>
+<p id='n210' class='pln'><a href='#n210'>210</a></p>
+<p id='n211' class='pln'><a href='#n211'>211</a></p>
+<p id='n212' class='pln'><a href='#n212'>212</a></p>
+<p id='n213' class='pln'><a href='#n213'>213</a></p>
+<p id='n214' class='pln'><a href='#n214'>214</a></p>
+<p id='n215' class='pln'><a href='#n215'>215</a></p>
+<p id='n216' class='pln'><a href='#n216'>216</a></p>
+<p id='n217' class='pln'><a href='#n217'>217</a></p>
+<p id='n218' class='pln'><a href='#n218'>218</a></p>
+<p id='n219' class='pln'><a href='#n219'>219</a></p>
+<p id='n220' class='pln'><a href='#n220'>220</a></p>
+<p id='n221' class='pln'><a href='#n221'>221</a></p>
+<p id='n222' class='pln'><a href='#n222'>222</a></p>
+<p id='n223' class='pln'><a href='#n223'>223</a></p>
+<p id='n224' class='pln'><a href='#n224'>224</a></p>
+<p id='n225' class='pln'><a href='#n225'>225</a></p>
+<p id='n226' class='pln'><a href='#n226'>226</a></p>
+<p id='n227' class='pln'><a href='#n227'>227</a></p>
+<p id='n228' class='pln'><a href='#n228'>228</a></p>
+<p id='n229' class='pln'><a href='#n229'>229</a></p>
+<p id='n230' class='pln'><a href='#n230'>230</a></p>
+<p id='n231' class='pln'><a href='#n231'>231</a></p>
+<p id='n232' class='pln'><a href='#n232'>232</a></p>
+<p id='n233' class='pln'><a href='#n233'>233</a></p>
+<p id='n234' class='pln'><a href='#n234'>234</a></p>
+<p id='n235' class='pln'><a href='#n235'>235</a></p>
+<p id='n236' class='pln'><a href='#n236'>236</a></p>
+<p id='n237' class='pln'><a href='#n237'>237</a></p>
+<p id='n238' class='pln'><a href='#n238'>238</a></p>
+<p id='n239' class='pln'><a href='#n239'>239</a></p>
+<p id='n240' class='pln'><a href='#n240'>240</a></p>
+<p id='n241' class='pln'><a href='#n241'>241</a></p>
+<p id='n242' class='pln'><a href='#n242'>242</a></p>
+<p id='n243' class='pln'><a href='#n243'>243</a></p>
+<p id='n244' class='pln'><a href='#n244'>244</a></p>
+<p id='n245' class='pln'><a href='#n245'>245</a></p>
+<p id='n246' class='pln'><a href='#n246'>246</a></p>
+<p id='n247' class='pln'><a href='#n247'>247</a></p>
+<p id='n248' class='pln'><a href='#n248'>248</a></p>
+<p id='n249' class='pln'><a href='#n249'>249</a></p>
+<p id='n250' class='pln'><a href='#n250'>250</a></p>
+<p id='n251' class='pln'><a href='#n251'>251</a></p>
+<p id='n252' class='pln'><a href='#n252'>252</a></p>
+<p id='n253' class='pln'><a href='#n253'>253</a></p>
+<p id='n254' class='pln'><a href='#n254'>254</a></p>
+<p id='n255' class='pln'><a href='#n255'>255</a></p>
+<p id='n256' class='pln'><a href='#n256'>256</a></p>
+<p id='n257' class='pln'><a href='#n257'>257</a></p>
+<p id='n258' class='pln'><a href='#n258'>258</a></p>
+<p id='n259' class='pln'><a href='#n259'>259</a></p>
+<p id='n260' class='pln'><a href='#n260'>260</a></p>
+<p id='n261' class='pln'><a href='#n261'>261</a></p>
+<p id='n262' class='pln'><a href='#n262'>262</a></p>
+<p id='n263' class='pln'><a href='#n263'>263</a></p>
+<p id='n264' class='pln'><a href='#n264'>264</a></p>
+<p id='n265' class='pln'><a href='#n265'>265</a></p>
+<p id='n266' class='pln'><a href='#n266'>266</a></p>
+<p id='n267' class='pln'><a href='#n267'>267</a></p>
+<p id='n268' class='pln'><a href='#n268'>268</a></p>
+<p id='n269' class='pln'><a href='#n269'>269</a></p>
+<p id='n270' class='pln'><a href='#n270'>270</a></p>
+<p id='n271' class='pln'><a href='#n271'>271</a></p>
+<p id='n272' class='pln'><a href='#n272'>272</a></p>
+<p id='n273' class='pln'><a href='#n273'>273</a></p>
+<p id='n274' class='pln'><a href='#n274'>274</a></p>
+<p id='n275' class='pln'><a href='#n275'>275</a></p>
+<p id='n276' class='pln'><a href='#n276'>276</a></p>
+<p id='n277' class='pln'><a href='#n277'>277</a></p>
+<p id='n278' class='pln'><a href='#n278'>278</a></p>
+<p id='n279' class='pln'><a href='#n279'>279</a></p>
+<p id='n280' class='pln'><a href='#n280'>280</a></p>
+<p id='n281' class='pln'><a href='#n281'>281</a></p>
+<p id='n282' class='pln'><a href='#n282'>282</a></p>
+<p id='n283' class='pln'><a href='#n283'>283</a></p>
+<p id='n284' class='pln'><a href='#n284'>284</a></p>
+<p id='n285' class='pln'><a href='#n285'>285</a></p>
+<p id='n286' class='pln'><a href='#n286'>286</a></p>
+<p id='n287' class='pln'><a href='#n287'>287</a></p>
+<p id='n288' class='pln'><a href='#n288'>288</a></p>
+<p id='n289' class='pln'><a href='#n289'>289</a></p>
+<p id='n290' class='pln'><a href='#n290'>290</a></p>
+<p id='n291' class='pln'><a href='#n291'>291</a></p>
+<p id='n292' class='pln'><a href='#n292'>292</a></p>
+<p id='n293' class='pln'><a href='#n293'>293</a></p>
+<p id='n294' class='pln'><a href='#n294'>294</a></p>
+<p id='n295' class='pln'><a href='#n295'>295</a></p>
+<p id='n296' class='pln'><a href='#n296'>296</a></p>
+<p id='n297' class='pln'><a href='#n297'>297</a></p>
+<p id='n298' class='pln'><a href='#n298'>298</a></p>
+<p id='n299' class='pln'><a href='#n299'>299</a></p>
+<p id='n300' class='pln'><a href='#n300'>300</a></p>
+<p id='n301' class='pln'><a href='#n301'>301</a></p>
+<p id='n302' class='pln'><a href='#n302'>302</a></p>
+<p id='n303' class='pln'><a href='#n303'>303</a></p>
+<p id='n304' class='pln'><a href='#n304'>304</a></p>
+<p id='n305' class='pln'><a href='#n305'>305</a></p>
+<p id='n306' class='pln'><a href='#n306'>306</a></p>
+<p id='n307' class='pln'><a href='#n307'>307</a></p>
+<p id='n308' class='pln'><a href='#n308'>308</a></p>
+<p id='n309' class='pln'><a href='#n309'>309</a></p>
+<p id='n310' class='pln'><a href='#n310'>310</a></p>
+<p id='n311' class='pln'><a href='#n311'>311</a></p>
+<p id='n312' class='pln'><a href='#n312'>312</a></p>
+<p id='n313' class='pln'><a href='#n313'>313</a></p>
+<p id='n314' class='pln'><a href='#n314'>314</a></p>
+<p id='n315' class='pln'><a href='#n315'>315</a></p>
+<p id='n316' class='pln'><a href='#n316'>316</a></p>
+<p id='n317' class='pln'><a href='#n317'>317</a></p>
+<p id='n318' class='pln'><a href='#n318'>318</a></p>
+<p id='n319' class='pln'><a href='#n319'>319</a></p>
+<p id='n320' class='pln'><a href='#n320'>320</a></p>
+<p id='n321' class='pln'><a href='#n321'>321</a></p>
+<p id='n322' class='pln'><a href='#n322'>322</a></p>
+<p id='n323' class='pln'><a href='#n323'>323</a></p>
+<p id='n324' class='pln'><a href='#n324'>324</a></p>
+<p id='n325' class='pln'><a href='#n325'>325</a></p>
+<p id='n326' class='pln'><a href='#n326'>326</a></p>
+<p id='n327' class='pln'><a href='#n327'>327</a></p>
+<p id='n328' class='pln'><a href='#n328'>328</a></p>
+<p id='n329' class='pln'><a href='#n329'>329</a></p>
+<p id='n330' class='pln'><a href='#n330'>330</a></p>
+<p id='n331' class='pln'><a href='#n331'>331</a></p>
+<p id='n332' class='pln'><a href='#n332'>332</a></p>
+<p id='n333' class='pln'><a href='#n333'>333</a></p>
+<p id='n334' class='stm run hide_run'><a href='#n334'>334</a></p>
+<p id='n335' class='pln'><a href='#n335'>335</a></p>
+<p id='n336' class='pln'><a href='#n336'>336</a></p>
+<p id='n337' class='pln'><a href='#n337'>337</a></p>
+<p id='n338' class='pln'><a href='#n338'>338</a></p>
+<p id='n339' class='pln'><a href='#n339'>339</a></p>
+<p id='n340' class='pln'><a href='#n340'>340</a></p>
+<p id='n341' class='pln'><a href='#n341'>341</a></p>
+<p id='n342' class='pln'><a href='#n342'>342</a></p>
+<p id='n343' class='pln'><a href='#n343'>343</a></p>
+<p id='n344' class='pln'><a href='#n344'>344</a></p>
+<p id='n345' class='pln'><a href='#n345'>345</a></p>
+<p id='n346' class='pln'><a href='#n346'>346</a></p>
+<p id='n347' class='pln'><a href='#n347'>347</a></p>
+<p id='n348' class='pln'><a href='#n348'>348</a></p>
+<p id='n349' class='pln'><a href='#n349'>349</a></p>
+<p id='n350' class='pln'><a href='#n350'>350</a></p>
+<p id='n351' class='pln'><a href='#n351'>351</a></p>
+<p id='n352' class='pln'><a href='#n352'>352</a></p>
+<p id='n353' class='pln'><a href='#n353'>353</a></p>
+<p id='n354' class='pln'><a href='#n354'>354</a></p>
+<p id='n355' class='pln'><a href='#n355'>355</a></p>
+<p id='n356' class='pln'><a href='#n356'>356</a></p>
+<p id='n357' class='pln'><a href='#n357'>357</a></p>
+<p id='n358' class='pln'><a href='#n358'>358</a></p>
+<p id='n359' class='pln'><a href='#n359'>359</a></p>
+<p id='n360' class='pln'><a href='#n360'>360</a></p>
+<p id='n361' class='pln'><a href='#n361'>361</a></p>
+<p id='n362' class='pln'><a href='#n362'>362</a></p>
+<p id='n363' class='pln'><a href='#n363'>363</a></p>
+<p id='n364' class='pln'><a href='#n364'>364</a></p>
+<p id='n365' class='pln'><a href='#n365'>365</a></p>
+<p id='n366' class='pln'><a href='#n366'>366</a></p>
+<p id='n367' class='pln'><a href='#n367'>367</a></p>
+<p id='n368' class='pln'><a href='#n368'>368</a></p>
+<p id='n369' class='pln'><a href='#n369'>369</a></p>
+<p id='n370' class='pln'><a href='#n370'>370</a></p>
+<p id='n371' class='pln'><a href='#n371'>371</a></p>
+<p id='n372' class='pln'><a href='#n372'>372</a></p>
+<p id='n373' class='pln'><a href='#n373'>373</a></p>
+<p id='n374' class='pln'><a href='#n374'>374</a></p>
+<p id='n375' class='pln'><a href='#n375'>375</a></p>
+<p id='n376' class='pln'><a href='#n376'>376</a></p>
+<p id='n377' class='pln'><a href='#n377'>377</a></p>
+<p id='n378' class='pln'><a href='#n378'>378</a></p>
+<p id='n379' class='pln'><a href='#n379'>379</a></p>
+<p id='n380' class='pln'><a href='#n380'>380</a></p>
+<p id='n381' class='pln'><a href='#n381'>381</a></p>
+<p id='n382' class='pln'><a href='#n382'>382</a></p>
+<p id='n383' class='pln'><a href='#n383'>383</a></p>
+<p id='n384' class='pln'><a href='#n384'>384</a></p>
+<p id='n385' class='pln'><a href='#n385'>385</a></p>
+<p id='n386' class='pln'><a href='#n386'>386</a></p>
+<p id='n387' class='pln'><a href='#n387'>387</a></p>
+<p id='n388' class='pln'><a href='#n388'>388</a></p>
+<p id='n389' class='pln'><a href='#n389'>389</a></p>
+<p id='n390' class='pln'><a href='#n390'>390</a></p>
+<p id='n391' class='pln'><a href='#n391'>391</a></p>
+<p id='n392' class='pln'><a href='#n392'>392</a></p>
+<p id='n393' class='pln'><a href='#n393'>393</a></p>
+<p id='n394' class='pln'><a href='#n394'>394</a></p>
+<p id='n395' class='pln'><a href='#n395'>395</a></p>
+<p id='n396' class='pln'><a href='#n396'>396</a></p>
+<p id='n397' class='pln'><a href='#n397'>397</a></p>
+<p id='n398' class='pln'><a href='#n398'>398</a></p>
+<p id='n399' class='pln'><a href='#n399'>399</a></p>
+<p id='n400' class='pln'><a href='#n400'>400</a></p>
+<p id='n401' class='pln'><a href='#n401'>401</a></p>
+<p id='n402' class='pln'><a href='#n402'>402</a></p>
+<p id='n403' class='pln'><a href='#n403'>403</a></p>
+<p id='n404' class='pln'><a href='#n404'>404</a></p>
+<p id='n405' class='pln'><a href='#n405'>405</a></p>
+<p id='n406' class='pln'><a href='#n406'>406</a></p>
+<p id='n407' class='pln'><a href='#n407'>407</a></p>
+<p id='n408' class='pln'><a href='#n408'>408</a></p>
+<p id='n409' class='pln'><a href='#n409'>409</a></p>
+<p id='n410' class='pln'><a href='#n410'>410</a></p>
+<p id='n411' class='pln'><a href='#n411'>411</a></p>
+<p id='n412' class='stm run hide_run'><a href='#n412'>412</a></p>
+<p id='n413' class='stm run hide_run'><a href='#n413'>413</a></p>
+<p id='n414' class='stm run hide_run'><a href='#n414'>414</a></p>
+<p id='n415' class='pln'><a href='#n415'>415</a></p>
+<p id='n416' class='pln'><a href='#n416'>416</a></p>
+<p id='n417' class='stm run hide_run'><a href='#n417'>417</a></p>
+<p id='n418' class='pln'><a href='#n418'>418</a></p>
+<p id='n419' class='pln'><a href='#n419'>419</a></p>
+<p id='n420' class='pln'><a href='#n420'>420</a></p>
+<p id='n421' class='pln'><a href='#n421'>421</a></p>
+<p id='n422' class='pln'><a href='#n422'>422</a></p>
+<p id='n423' class='pln'><a href='#n423'>423</a></p>
+<p id='n424' class='pln'><a href='#n424'>424</a></p>
+<p id='n425' class='pln'><a href='#n425'>425</a></p>
+<p id='n426' class='pln'><a href='#n426'>426</a></p>
+<p id='n427' class='pln'><a href='#n427'>427</a></p>
+<p id='n428' class='stm run hide_run'><a href='#n428'>428</a></p>
+<p id='n429' class='stm run hide_run'><a href='#n429'>429</a></p>
+<p id='n430' class='stm run hide_run'><a href='#n430'>430</a></p>
+<p id='n431' class='stm run hide_run'><a href='#n431'>431</a></p>
+<p id='n432' class='pln'><a href='#n432'>432</a></p>
+<p id='n433' class='pln'><a href='#n433'>433</a></p>
+<p id='n434' class='pln'><a href='#n434'>434</a></p>
+<p id='n435' class='stm run hide_run'><a href='#n435'>435</a></p>
+<p id='n436' class='pln'><a href='#n436'>436</a></p>
+<p id='n437' class='pln'><a href='#n437'>437</a></p>
+<p id='n438' class='pln'><a href='#n438'>438</a></p>
+<p id='n439' class='pln'><a href='#n439'>439</a></p>
+<p id='n440' class='pln'><a href='#n440'>440</a></p>
+<p id='n441' class='pln'><a href='#n441'>441</a></p>
+<p id='n442' class='pln'><a href='#n442'>442</a></p>
+<p id='n443' class='pln'><a href='#n443'>443</a></p>
+<p id='n444' class='pln'><a href='#n444'>444</a></p>
+<p id='n445' class='pln'><a href='#n445'>445</a></p>
+<p id='n446' class='pln'><a href='#n446'>446</a></p>
+<p id='n447' class='pln'><a href='#n447'>447</a></p>
+<p id='n448' class='pln'><a href='#n448'>448</a></p>
+<p id='n449' class='pln'><a href='#n449'>449</a></p>
+<p id='n450' class='pln'><a href='#n450'>450</a></p>
+<p id='n451' class='pln'><a href='#n451'>451</a></p>
+<p id='n452' class='pln'><a href='#n452'>452</a></p>
+<p id='n453' class='pln'><a href='#n453'>453</a></p>
+                
+            </td>
+            <td class='text' valign='top'>
+<p id='t1' class='pln'><span class='com'># -*- coding: utf-8 -*-</span><span class='strut'>&nbsp;</span></p>
+<p id='t2' class='stm run hide_run'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t3' class='pln'><span class='str'>&nbsp; &nbsp; pygments.lexers.r</span><span class='strut'>&nbsp;</span></p>
+<p id='t4' class='pln'><span class='str'>&nbsp; &nbsp; ~~~~~~~~~~~~~~~~~</span><span class='strut'>&nbsp;</span></p>
+<p id='t5' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t6' class='pln'><span class='str'>&nbsp; &nbsp; Lexers for the R/S languages.</span><span class='strut'>&nbsp;</span></p>
+<p id='t7' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t8' class='pln'><span class='str'>&nbsp; &nbsp; :copyright: Copyright 2006-2014 by the Pygments team, see AUTHORS.</span><span class='strut'>&nbsp;</span></p>
+<p id='t9' class='pln'><span class='str'>&nbsp; &nbsp; :license: BSD, see LICENSE for details.</span><span class='strut'>&nbsp;</span></p>
+<p id='t10' class='pln'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t11' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t12' class='stm run hide_run'><span class='key'>import</span> <span class='nam'>re</span><span class='strut'>&nbsp;</span></p>
+<p id='t13' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t14' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>pygments</span><span class='op'>.</span><span class='nam'>lexer</span> <span class='key'>import</span> <span class='nam'>Lexer</span><span class='op'>,</span> <span class='nam'>RegexLexer</span><span class='op'>,</span> <span class='nam'>include</span><span class='op'>,</span> <span class='nam'>words</span><span class='op'>,</span> <span class='nam'>do_insertions</span><span class='strut'>&nbsp;</span></p>
+<p id='t15' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>pygments</span><span class='op'>.</span><span class='nam'>token</span> <span class='key'>import</span> <span class='nam'>Text</span><span class='op'>,</span> <span class='nam'>Comment</span><span class='op'>,</span> <span class='nam'>Operator</span><span class='op'>,</span> <span class='nam'>Keyword</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>,</span> <span class='nam'>String</span><span class='op'>,</span> <span class='xx'>\</span><span class='strut'>&nbsp;</span></p>
+<p id='t16' class='pln'>&nbsp; &nbsp; <span class='nam'>Number</span><span class='op'>,</span> <span class='nam'>Punctuation</span><span class='op'>,</span> <span class='nam'>Generic</span><span class='strut'>&nbsp;</span></p>
+<p id='t17' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t18' class='stm run hide_run'><span class='nam'>__all__</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;RConsoleLexer&#39;</span><span class='op'>,</span> <span class='str'>&#39;SLexer&#39;</span><span class='op'>,</span> <span class='str'>&#39;RdLexer&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t19' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t20' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t21' class='stm run hide_run'><span class='nam'>line_re</span>&nbsp; <span class='op'>=</span> <span class='nam'>re</span><span class='op'>.</span><span class='nam'>compile</span><span class='op'>(</span><span class='str'>&#39;.*?\n&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t22' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t23' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t24' class='stm run hide_run'><span class='key'>class</span> <span class='nam'>RConsoleLexer</span><span class='op'>(</span><span class='nam'>Lexer</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t25' class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t26' class='pln'><span class='str'>&nbsp; &nbsp; For R console transcripts or R CMD BATCH output files.</span><span class='strut'>&nbsp;</span></p>
+<p id='t27' class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t28' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t29' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>name</span> <span class='op'>=</span> <span class='str'>&#39;RConsole&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t30' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>aliases</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;rconsole&#39;</span><span class='op'>,</span> <span class='str'>&#39;rout&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t31' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>filenames</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;*.Rout&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t32' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t33' class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>get_tokens_unprocessed</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>text</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t34' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>slexer</span> <span class='op'>=</span> <span class='nam'>SLexer</span><span class='op'>(</span><span class='op'>**</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>options</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t35' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t36' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>current_code_block</span> <span class='op'>=</span> <span class='str'>&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t37' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>insertions</span> <span class='op'>=</span> <span class='op'>[</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t38' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t39' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>match</span> <span class='key'>in</span> <span class='nam'>line_re</span><span class='op'>.</span><span class='nam'>finditer</span><span class='op'>(</span><span class='nam'>text</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t40' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>line</span> <span class='op'>=</span> <span class='nam'>match</span><span class='op'>.</span><span class='nam'>group</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t41' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>line</span><span class='op'>.</span><span class='nam'>startswith</span><span class='op'>(</span><span class='str'>&#39;&gt;&#39;</span><span class='op'>)</span> <span class='key'>or</span> <span class='nam'>line</span><span class='op'>.</span><span class='nam'>startswith</span><span class='op'>(</span><span class='str'>&#39;+&#39;</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t42' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Colorize the prompt as such,</span><span class='strut'>&nbsp;</span></p>
+<p id='t43' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># then put rest of line into current_code_block</span><span class='strut'>&nbsp;</span></p>
+<p id='t44' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>insertions</span><span class='op'>.</span><span class='nam'>append</span><span class='op'>(</span><span class='op'>(</span><span class='nam'>len</span><span class='op'>(</span><span class='nam'>current_code_block</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t45' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='op'>[</span><span class='op'>(</span><span class='num'>0</span><span class='op'>,</span> <span class='nam'>Generic</span><span class='op'>.</span><span class='nam'>Prompt</span><span class='op'>,</span> <span class='nam'>line</span><span class='op'>[</span><span class='op'>:</span><span class='num'>2</span><span class='op'>]</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t46' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>current_code_block</span> <span class='op'>+=</span> <span class='nam'>line</span><span class='op'>[</span><span class='num'>2</span><span class='op'>:</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t47' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>else</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t48' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># We have reached a non-prompt line!</span><span class='strut'>&nbsp;</span></p>
+<p id='t49' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># If we have stored prompt lines, need to process them first.</span><span class='strut'>&nbsp;</span></p>
+<p id='t50' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>current_code_block</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t51' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Weave together the prompts and highlight code.</span><span class='strut'>&nbsp;</span></p>
+<p id='t52' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>item</span> <span class='key'>in</span> <span class='nam'>do_insertions</span><span class='op'>(</span><span class='strut'>&nbsp;</span></p>
+<p id='t53' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>insertions</span><span class='op'>,</span> <span class='nam'>slexer</span><span class='op'>.</span><span class='nam'>get_tokens_unprocessed</span><span class='op'>(</span><span class='nam'>current_code_block</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t54' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>yield</span> <span class='nam'>item</span><span class='strut'>&nbsp;</span></p>
+<p id='t55' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Reset vars for next code block.</span><span class='strut'>&nbsp;</span></p>
+<p id='t56' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>current_code_block</span> <span class='op'>=</span> <span class='str'>&#39;&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t57' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>insertions</span> <span class='op'>=</span> <span class='op'>[</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t58' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Now process the actual line itself, this is output from R.</span><span class='strut'>&nbsp;</span></p>
+<p id='t59' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>yield</span> <span class='nam'>match</span><span class='op'>.</span><span class='nam'>start</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>Generic</span><span class='op'>.</span><span class='nam'>Output</span><span class='op'>,</span> <span class='nam'>line</span><span class='strut'>&nbsp;</span></p>
+<p id='t60' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t61' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># If we happen to end on a code block with nothing after it, need to</span><span class='strut'>&nbsp;</span></p>
+<p id='t62' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># process the last code block. This is neither elegant nor DRY so</span><span class='strut'>&nbsp;</span></p>
+<p id='t63' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># should be changed.</span><span class='strut'>&nbsp;</span></p>
+<p id='t64' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>current_code_block</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t65' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>item</span> <span class='key'>in</span> <span class='nam'>do_insertions</span><span class='op'>(</span><span class='strut'>&nbsp;</span></p>
+<p id='t66' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>insertions</span><span class='op'>,</span> <span class='nam'>slexer</span><span class='op'>.</span><span class='nam'>get_tokens_unprocessed</span><span class='op'>(</span><span class='nam'>current_code_block</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t67' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>yield</span> <span class='nam'>item</span><span class='strut'>&nbsp;</span></p>
+<p id='t68' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t69' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t70' class='stm run hide_run'><span class='key'>class</span> <span class='nam'>SLexer</span><span class='op'>(</span><span class='nam'>RegexLexer</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t71' class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t72' class='pln'><span class='str'>&nbsp; &nbsp; For S, S-plus, and R source code.</span><span class='strut'>&nbsp;</span></p>
+<p id='t73' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t74' class='pln'><span class='str'>&nbsp; &nbsp; .. versionadded:: 0.10</span><span class='strut'>&nbsp;</span></p>
+<p id='t75' class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t76' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t77' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>name</span> <span class='op'>=</span> <span class='str'>&#39;S&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t78' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>aliases</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;splus&#39;</span><span class='op'>,</span> <span class='str'>&#39;s&#39;</span><span class='op'>,</span> <span class='str'>&#39;r&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t79' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>filenames</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;*.S&#39;</span><span class='op'>,</span> <span class='str'>&#39;*.R&#39;</span><span class='op'>,</span> <span class='str'>&#39;.Rhistory&#39;</span><span class='op'>,</span> <span class='str'>&#39;.Rprofile&#39;</span><span class='op'>,</span> <span class='str'>&#39;.Renviron&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t80' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>mimetypes</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;text/S-plus&#39;</span><span class='op'>,</span> <span class='str'>&#39;text/S&#39;</span><span class='op'>,</span> <span class='str'>&#39;text/x-r-source&#39;</span><span class='op'>,</span> <span class='str'>&#39;text/x-r&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t81' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>&#39;text/x-R&#39;</span><span class='op'>,</span> <span class='str'>&#39;text/x-r-history&#39;</span><span class='op'>,</span> <span class='str'>&#39;text/x-r-profile&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t82' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t83' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>builtins_base</span> <span class='op'>=</span> <span class='op'>(</span><span class='strut'>&nbsp;</span></p>
+<p id='t84' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Arg&#39;</span><span class='op'>,</span> <span class='str'>&#39;Conj&#39;</span><span class='op'>,</span> <span class='str'>&#39;Cstack_info&#39;</span><span class='op'>,</span> <span class='str'>&#39;Encoding&#39;</span><span class='op'>,</span> <span class='str'>&#39;FALSE&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t85' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Filter&#39;</span><span class='op'>,</span> <span class='str'>&#39;Find&#39;</span><span class='op'>,</span> <span class='str'>&#39;I&#39;</span><span class='op'>,</span> <span class='str'>&#39;ISOdate&#39;</span><span class='op'>,</span> <span class='str'>&#39;ISOdatetime&#39;</span><span class='op'>,</span> <span class='str'>&#39;Im&#39;</span><span class='op'>,</span> <span class='str'>&#39;Inf&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t86' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;La.svd&#39;</span><span class='op'>,</span> <span class='str'>&#39;Map&#39;</span><span class='op'>,</span> <span class='str'>&#39;Math.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;Math.POSIXt&#39;</span><span class='op'>,</span> <span class='str'>&#39;Math.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t87' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Math.difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;Math.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;Mod&#39;</span><span class='op'>,</span> <span class='str'>&#39;NA_character_&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t88' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;NA_complex_&#39;</span><span class='op'>,</span> <span class='str'>&#39;NA_real_&#39;</span><span class='op'>,</span> <span class='str'>&#39;NCOL&#39;</span><span class='op'>,</span> <span class='str'>&#39;NROW&#39;</span><span class='op'>,</span> <span class='str'>&#39;NULLNA_integer_&#39;</span><span class='op'>,</span> <span class='str'>&#39;NaN&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t89' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Negate&#39;</span><span class='op'>,</span> <span class='str'>&#39;NextMethod&#39;</span><span class='op'>,</span> <span class='str'>&#39;Ops.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;Ops.POSIXt&#39;</span><span class='op'>,</span> <span class='str'>&#39;Ops.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t90' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Ops.difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;Ops.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;Ops.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;Ops.ordered&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t91' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Position&#39;</span><span class='op'>,</span> <span class='str'>&#39;R.Version&#39;</span><span class='op'>,</span> <span class='str'>&#39;R.home&#39;</span><span class='op'>,</span> <span class='str'>&#39;R.version&#39;</span><span class='op'>,</span> <span class='str'>&#39;R.version.string&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t92' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;RNGkind&#39;</span><span class='op'>,</span> <span class='str'>&#39;RNGversion&#39;</span><span class='op'>,</span> <span class='str'>&#39;R_system_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;Re&#39;</span><span class='op'>,</span> <span class='str'>&#39;Recall&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t93' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Reduce&#39;</span><span class='op'>,</span> <span class='str'>&#39;Summary.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;Summary.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;Summary.POSIXlt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t94' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Summary.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;Summary.difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;Summary.factor&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t95' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Summary.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;Summary.ordered&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.Date&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t96' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Sys.chmod&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.getenv&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.getlocale&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.getpid&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t97' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Sys.glob&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.info&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.localeconv&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.readlink&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t98' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Sys.setFileTime&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.setenv&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.setlocale&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.sleep&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t99' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Sys.time&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.timezone&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.umask&#39;</span><span class='op'>,</span> <span class='str'>&#39;Sys.unsetenv&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t100' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;Sys.which&#39;</span><span class='op'>,</span> <span class='str'>&#39;TRUE&#39;</span><span class='op'>,</span> <span class='str'>&#39;UseMethod&#39;</span><span class='op'>,</span> <span class='str'>&#39;Vectorize&#39;</span><span class='op'>,</span> <span class='str'>&#39;abbreviate&#39;</span><span class='op'>,</span> <span class='str'>&#39;abs&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t101' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;acos&#39;</span><span class='op'>,</span> <span class='str'>&#39;acosh&#39;</span><span class='op'>,</span> <span class='str'>&#39;addNA&#39;</span><span class='op'>,</span> <span class='str'>&#39;addTaskCallback&#39;</span><span class='op'>,</span> <span class='str'>&#39;agrep&#39;</span><span class='op'>,</span> <span class='str'>&#39;alist&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t102' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;all&#39;</span><span class='op'>,</span> <span class='str'>&#39;all.equal&#39;</span><span class='op'>,</span> <span class='str'>&#39;all.equal.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;all.equal.character&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t103' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;all.equal.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;all.equal.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;all.equal.formula&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t104' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;all.equal.language&#39;</span><span class='op'>,</span> <span class='str'>&#39;all.equal.list&#39;</span><span class='op'>,</span> <span class='str'>&#39;all.equal.numeric&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t105' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;all.equal.raw&#39;</span><span class='op'>,</span> <span class='str'>&#39;all.names&#39;</span><span class='op'>,</span> <span class='str'>&#39;all.vars&#39;</span><span class='op'>,</span> <span class='str'>&#39;any&#39;</span><span class='op'>,</span> <span class='str'>&#39;anyDuplicated&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t106' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;anyDuplicated.array&#39;</span><span class='op'>,</span> <span class='str'>&#39;anyDuplicated.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t107' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;anyDuplicated.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;anyDuplicated.matrix&#39;</span><span class='op'>,</span> <span class='str'>&#39;aperm&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t108' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;aperm.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;aperm.table&#39;</span><span class='op'>,</span> <span class='str'>&#39;append&#39;</span><span class='op'>,</span> <span class='str'>&#39;apply&#39;</span><span class='op'>,</span> <span class='str'>&#39;args&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t109' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;arrayInd&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.Date.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.Date.POSIXlt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t110' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.Date.character&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.Date.date&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.Date.dates&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t111' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.Date.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.Date.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.Date.numeric&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t112' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.POSIXct.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.POSIXct.POSIXlt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t113' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.POSIXct.date&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.POSIXct.dates&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.POSIXct.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t114' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.POSIXct.numeric&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.POSIXlt.Date&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t115' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.POSIXlt.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.POSIXlt.character&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.POSIXlt.date&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t116' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.POSIXlt.dates&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.POSIXlt.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.POSIXlt.factor&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t117' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.POSIXlt.numeric&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.array&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.array.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.call&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t118' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.character&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.character.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.character.POSIXt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t119' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.character.condition&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.character.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t120' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.character.error&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.character.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.character.hexmode&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t121' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.character.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.character.octmode&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t122' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.character.srcref&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.complex&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t123' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.AsIs&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.POSIXct&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t124' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.array&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t125' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.character&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.complex&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t126' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t127' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.factor&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t128' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.integer&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.list&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t129' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.logical&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.matrix&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t130' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.model.matrix&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.numeric&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t131' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.ordered&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t132' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.raw&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.table&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.data.frame.ts&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t133' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.data.frame.vector&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.double&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t134' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.double.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.double.difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.environment&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t135' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.expression&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.expression.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.factor&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t136' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.function&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.function.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.hexmode&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.integer&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t137' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.list&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.list.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.list.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.list.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t138' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.list.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.list.environment&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.list.factor&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t139' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.list.function&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.list.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.logical&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t140' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.logical.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.matrix&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.matrix.POSIXlt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t141' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.matrix.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.matrix.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.matrix.noquote&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t142' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.name&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.null&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.null.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.numeric&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t143' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.octmode&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.ordered&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t144' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.package_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.pairlist&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.qr&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.raw&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.single&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t145' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.single.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.symbol&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.table&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.table.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t146' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;as.vector&#39;</span><span class='op'>,</span> <span class='str'>&#39;as.vector.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;asNamespace&#39;</span><span class='op'>,</span> <span class='str'>&#39;asS3&#39;</span><span class='op'>,</span> <span class='str'>&#39;asS4&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t147' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;asin&#39;</span><span class='op'>,</span> <span class='str'>&#39;asinh&#39;</span><span class='op'>,</span> <span class='str'>&#39;assign&#39;</span><span class='op'>,</span> <span class='str'>&#39;atan&#39;</span><span class='op'>,</span> <span class='str'>&#39;atan2&#39;</span><span class='op'>,</span> <span class='str'>&#39;atanh&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t148' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;attachNamespace&#39;</span><span class='op'>,</span> <span class='str'>&#39;attr&#39;</span><span class='op'>,</span> <span class='str'>&#39;attr.all.equal&#39;</span><span class='op'>,</span> <span class='str'>&#39;attributes&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t149' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;autoload&#39;</span><span class='op'>,</span> <span class='str'>&#39;autoloader&#39;</span><span class='op'>,</span> <span class='str'>&#39;backsolve&#39;</span><span class='op'>,</span> <span class='str'>&#39;baseenv&#39;</span><span class='op'>,</span> <span class='str'>&#39;basename&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t150' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;besselI&#39;</span><span class='op'>,</span> <span class='str'>&#39;besselJ&#39;</span><span class='op'>,</span> <span class='str'>&#39;besselK&#39;</span><span class='op'>,</span> <span class='str'>&#39;besselY&#39;</span><span class='op'>,</span> <span class='str'>&#39;beta&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t151' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;bindingIsActive&#39;</span><span class='op'>,</span> <span class='str'>&#39;bindingIsLocked&#39;</span><span class='op'>,</span> <span class='str'>&#39;bindtextdomain&#39;</span><span class='op'>,</span> <span class='str'>&#39;bitwAnd&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t152' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;bitwNot&#39;</span><span class='op'>,</span> <span class='str'>&#39;bitwOr&#39;</span><span class='op'>,</span> <span class='str'>&#39;bitwShiftL&#39;</span><span class='op'>,</span> <span class='str'>&#39;bitwShiftR&#39;</span><span class='op'>,</span> <span class='str'>&#39;bitwXor&#39;</span><span class='op'>,</span> <span class='str'>&#39;body&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t153' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;bquote&#39;</span><span class='op'>,</span> <span class='str'>&#39;browser&#39;</span><span class='op'>,</span> <span class='str'>&#39;browserCondition&#39;</span><span class='op'>,</span> <span class='str'>&#39;browserSetDebug&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t154' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;browserText&#39;</span><span class='op'>,</span> <span class='str'>&#39;builtins&#39;</span><span class='op'>,</span> <span class='str'>&#39;by&#39;</span><span class='op'>,</span> <span class='str'>&#39;by.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;by.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t155' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;bzfile&#39;</span><span class='op'>,</span> <span class='str'>&#39;c.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;c.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;c.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;c.noquote&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t156' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;c.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;call&#39;</span><span class='op'>,</span> <span class='str'>&#39;callCC&#39;</span><span class='op'>,</span> <span class='str'>&#39;capabilities&#39;</span><span class='op'>,</span> <span class='str'>&#39;casefold&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t157' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;cat&#39;</span><span class='op'>,</span> <span class='str'>&#39;category&#39;</span><span class='op'>,</span> <span class='str'>&#39;cbind&#39;</span><span class='op'>,</span> <span class='str'>&#39;cbind.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;ceiling&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t158' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;char.expand&#39;</span><span class='op'>,</span> <span class='str'>&#39;charToRaw&#39;</span><span class='op'>,</span> <span class='str'>&#39;charmatch&#39;</span><span class='op'>,</span> <span class='str'>&#39;chartr&#39;</span><span class='op'>,</span> <span class='str'>&#39;check_tzones&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t159' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;chol&#39;</span><span class='op'>,</span> <span class='str'>&#39;chol.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;chol2inv&#39;</span><span class='op'>,</span> <span class='str'>&#39;choose&#39;</span><span class='op'>,</span> <span class='str'>&#39;class&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t160' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;clearPushBack&#39;</span><span class='op'>,</span> <span class='str'>&#39;close&#39;</span><span class='op'>,</span> <span class='str'>&#39;close.connection&#39;</span><span class='op'>,</span> <span class='str'>&#39;close.srcfile&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t161' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;close.srcfilealias&#39;</span><span class='op'>,</span> <span class='str'>&#39;closeAllConnections&#39;</span><span class='op'>,</span> <span class='str'>&#39;col&#39;</span><span class='op'>,</span> <span class='str'>&#39;colMeans&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t162' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;colSums&#39;</span><span class='op'>,</span> <span class='str'>&#39;colnames&#39;</span><span class='op'>,</span> <span class='str'>&#39;commandArgs&#39;</span><span class='op'>,</span> <span class='str'>&#39;comment&#39;</span><span class='op'>,</span> <span class='str'>&#39;computeRestarts&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t163' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;conditionCall&#39;</span><span class='op'>,</span> <span class='str'>&#39;conditionCall.condition&#39;</span><span class='op'>,</span> <span class='str'>&#39;conditionMessage&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t164' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;conditionMessage.condition&#39;</span><span class='op'>,</span> <span class='str'>&#39;conflicts&#39;</span><span class='op'>,</span> <span class='str'>&#39;contributors&#39;</span><span class='op'>,</span> <span class='str'>&#39;cos&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t165' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;cosh&#39;</span><span class='op'>,</span> <span class='str'>&#39;crossprod&#39;</span><span class='op'>,</span> <span class='str'>&#39;cummax&#39;</span><span class='op'>,</span> <span class='str'>&#39;cummin&#39;</span><span class='op'>,</span> <span class='str'>&#39;cumprod&#39;</span><span class='op'>,</span> <span class='str'>&#39;cumsum&#39;</span><span class='op'>,</span> <span class='str'>&#39;cut&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t166' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;cut.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;cut.POSIXt&#39;</span><span class='op'>,</span> <span class='str'>&#39;cut.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;dQuote&#39;</span><span class='op'>,</span> <span class='str'>&#39;data.class&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t167' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;data.matrix&#39;</span><span class='op'>,</span> <span class='str'>&#39;date&#39;</span><span class='op'>,</span> <span class='str'>&#39;debug&#39;</span><span class='op'>,</span> <span class='str'>&#39;debugonce&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t168' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;default.stringsAsFactors&#39;</span><span class='op'>,</span> <span class='str'>&#39;delayedAssign&#39;</span><span class='op'>,</span> <span class='str'>&#39;deparse&#39;</span><span class='op'>,</span> <span class='str'>&#39;det&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t169' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;determinant&#39;</span><span class='op'>,</span> <span class='str'>&#39;determinant.matrix&#39;</span><span class='op'>,</span> <span class='str'>&#39;dget&#39;</span><span class='op'>,</span> <span class='str'>&#39;diag&#39;</span><span class='op'>,</span> <span class='str'>&#39;diff&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t170' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;diff.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;diff.POSIXt&#39;</span><span class='op'>,</span> <span class='str'>&#39;diff.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;digamma&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t171' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;dim&#39;</span><span class='op'>,</span> <span class='str'>&#39;dim.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;dimnames&#39;</span><span class='op'>,</span> <span class='str'>&#39;dimnames.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;dir&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t172' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;dir.create&#39;</span><span class='op'>,</span> <span class='str'>&#39;dirname&#39;</span><span class='op'>,</span> <span class='str'>&#39;do.call&#39;</span><span class='op'>,</span> <span class='str'>&#39;dput&#39;</span><span class='op'>,</span> <span class='str'>&#39;drop&#39;</span><span class='op'>,</span> <span class='str'>&#39;droplevels&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t173' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;droplevels.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;droplevels.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;dump&#39;</span><span class='op'>,</span> <span class='str'>&#39;duplicated&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t174' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;duplicated.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;duplicated.array&#39;</span><span class='op'>,</span> <span class='str'>&#39;duplicated.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t175' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;duplicated.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;duplicated.matrix&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t176' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;duplicated.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;dyn.load&#39;</span><span class='op'>,</span> <span class='str'>&#39;dyn.unload&#39;</span><span class='op'>,</span> <span class='str'>&#39;eapply&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t177' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;eigen&#39;</span><span class='op'>,</span> <span class='str'>&#39;else&#39;</span><span class='op'>,</span> <span class='str'>&#39;emptyenv&#39;</span><span class='op'>,</span> <span class='str'>&#39;enc2native&#39;</span><span class='op'>,</span> <span class='str'>&#39;enc2utf8&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t178' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;encodeString&#39;</span><span class='op'>,</span> <span class='str'>&#39;enquote&#39;</span><span class='op'>,</span> <span class='str'>&#39;env.profile&#39;</span><span class='op'>,</span> <span class='str'>&#39;environment&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t179' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;environmentIsLocked&#39;</span><span class='op'>,</span> <span class='str'>&#39;environmentName&#39;</span><span class='op'>,</span> <span class='str'>&#39;eval&#39;</span><span class='op'>,</span> <span class='str'>&#39;eval.parent&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t180' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;evalq&#39;</span><span class='op'>,</span> <span class='str'>&#39;exists&#39;</span><span class='op'>,</span> <span class='str'>&#39;exp&#39;</span><span class='op'>,</span> <span class='str'>&#39;expand.grid&#39;</span><span class='op'>,</span> <span class='str'>&#39;expm1&#39;</span><span class='op'>,</span> <span class='str'>&#39;expression&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t181' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;factorial&#39;</span><span class='op'>,</span> <span class='str'>&#39;fifo&#39;</span><span class='op'>,</span> <span class='str'>&#39;file&#39;</span><span class='op'>,</span> <span class='str'>&#39;file.access&#39;</span><span class='op'>,</span> <span class='str'>&#39;file.append&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t182' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;file.choose&#39;</span><span class='op'>,</span> <span class='str'>&#39;file.copy&#39;</span><span class='op'>,</span> <span class='str'>&#39;file.create&#39;</span><span class='op'>,</span> <span class='str'>&#39;file.exists&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t183' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;file.info&#39;</span><span class='op'>,</span> <span class='str'>&#39;file.link&#39;</span><span class='op'>,</span> <span class='str'>&#39;file.path&#39;</span><span class='op'>,</span> <span class='str'>&#39;file.remove&#39;</span><span class='op'>,</span> <span class='str'>&#39;file.rename&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t184' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;file.show&#39;</span><span class='op'>,</span> <span class='str'>&#39;file.symlink&#39;</span><span class='op'>,</span> <span class='str'>&#39;find.package&#39;</span><span class='op'>,</span> <span class='str'>&#39;findInterval&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t185' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;findPackageEnv&#39;</span><span class='op'>,</span> <span class='str'>&#39;findRestart&#39;</span><span class='op'>,</span> <span class='str'>&#39;floor&#39;</span><span class='op'>,</span> <span class='str'>&#39;flush&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t186' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;flush.connection&#39;</span><span class='op'>,</span> <span class='str'>&#39;force&#39;</span><span class='op'>,</span> <span class='str'>&#39;formals&#39;</span><span class='op'>,</span> <span class='str'>&#39;format&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t187' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;format.AsIs&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.POSIXlt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t188' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;format.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.difftime&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t189' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;format.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.hexmode&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.info&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t190' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;format.libraryIQR&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.octmode&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t191' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;format.packageInfo&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.pval&#39;</span><span class='op'>,</span> <span class='str'>&#39;format.summaryDefault&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t192' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;formatC&#39;</span><span class='op'>,</span> <span class='str'>&#39;formatDL&#39;</span><span class='op'>,</span> <span class='str'>&#39;forwardsolve&#39;</span><span class='op'>,</span> <span class='str'>&#39;gamma&#39;</span><span class='op'>,</span> <span class='str'>&#39;gc&#39;</span><span class='op'>,</span> <span class='str'>&#39;gc.time&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t193' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;gcinfo&#39;</span><span class='op'>,</span> <span class='str'>&#39;gctorture&#39;</span><span class='op'>,</span> <span class='str'>&#39;gctorture2&#39;</span><span class='op'>,</span> <span class='str'>&#39;get&#39;</span><span class='op'>,</span> <span class='str'>&#39;getAllConnections&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t194' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;getCallingDLL&#39;</span><span class='op'>,</span> <span class='str'>&#39;getCallingDLLe&#39;</span><span class='op'>,</span> <span class='str'>&#39;getConnection&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t195' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;getDLLRegisteredRoutines&#39;</span><span class='op'>,</span> <span class='str'>&#39;getDLLRegisteredRoutines.DLLInfo&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t196' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;getDLLRegisteredRoutines.character&#39;</span><span class='op'>,</span> <span class='str'>&#39;getElement&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t197' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;getExportedValue&#39;</span><span class='op'>,</span> <span class='str'>&#39;getHook&#39;</span><span class='op'>,</span> <span class='str'>&#39;getLoadedDLLs&#39;</span><span class='op'>,</span> <span class='str'>&#39;getNamespace&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t198' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;getNamespaceExports&#39;</span><span class='op'>,</span> <span class='str'>&#39;getNamespaceImports&#39;</span><span class='op'>,</span> <span class='str'>&#39;getNamespaceInfo&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t199' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;getNamespaceName&#39;</span><span class='op'>,</span> <span class='str'>&#39;getNamespaceUsers&#39;</span><span class='op'>,</span> <span class='str'>&#39;getNamespaceVersion&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t200' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;getNativeSymbolInfo&#39;</span><span class='op'>,</span> <span class='str'>&#39;getOption&#39;</span><span class='op'>,</span> <span class='str'>&#39;getRversion&#39;</span><span class='op'>,</span> <span class='str'>&#39;getSrcLines&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t201' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;getTaskCallbackNames&#39;</span><span class='op'>,</span> <span class='str'>&#39;geterrmessage&#39;</span><span class='op'>,</span> <span class='str'>&#39;gettext&#39;</span><span class='op'>,</span> <span class='str'>&#39;gettextf&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t202' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;getwd&#39;</span><span class='op'>,</span> <span class='str'>&#39;gl&#39;</span><span class='op'>,</span> <span class='str'>&#39;globalenv&#39;</span><span class='op'>,</span> <span class='str'>&#39;gregexpr&#39;</span><span class='op'>,</span> <span class='str'>&#39;grep&#39;</span><span class='op'>,</span> <span class='str'>&#39;grepRaw&#39;</span><span class='op'>,</span> <span class='str'>&#39;grepl&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t203' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;gsub&#39;</span><span class='op'>,</span> <span class='str'>&#39;gzcon&#39;</span><span class='op'>,</span> <span class='str'>&#39;gzfile&#39;</span><span class='op'>,</span> <span class='str'>&#39;head&#39;</span><span class='op'>,</span> <span class='str'>&#39;iconv&#39;</span><span class='op'>,</span> <span class='str'>&#39;iconvlist&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t204' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;icuSetCollate&#39;</span><span class='op'>,</span> <span class='str'>&#39;identical&#39;</span><span class='op'>,</span> <span class='str'>&#39;identity&#39;</span><span class='op'>,</span> <span class='str'>&#39;ifelse&#39;</span><span class='op'>,</span> <span class='str'>&#39;importIntoEnv&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t205' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;in&#39;</span><span class='op'>,</span> <span class='str'>&#39;inherits&#39;</span><span class='op'>,</span> <span class='str'>&#39;intToBits&#39;</span><span class='op'>,</span> <span class='str'>&#39;intToUtf8&#39;</span><span class='op'>,</span> <span class='str'>&#39;interaction&#39;</span><span class='op'>,</span> <span class='str'>&#39;interactive&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t206' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;intersect&#39;</span><span class='op'>,</span> <span class='str'>&#39;inverse.rle&#39;</span><span class='op'>,</span> <span class='str'>&#39;invisible&#39;</span><span class='op'>,</span> <span class='str'>&#39;invokeRestart&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t207' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;invokeRestartInteractively&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.R&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.array&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.atomic&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t208' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.call&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.character&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.complex&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t209' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.double&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.element&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.environment&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.expression&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t210' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.finite&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.function&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.infinite&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t211' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.integer&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.language&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.list&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.loaded&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.logical&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t212' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.matrix&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.na&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.na.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.na.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t213' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.na.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.name&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.nan&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.null&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t214' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.numeric&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.numeric.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.numeric.POSIXt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t215' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.numeric.difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.object&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t216' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.ordered&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.package_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.pairlist&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.primitive&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t217' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.qr&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.raw&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.recursive&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.single&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.symbol&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t218' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;is.table&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.unsorted&#39;</span><span class='op'>,</span> <span class='str'>&#39;is.vector&#39;</span><span class='op'>,</span> <span class='str'>&#39;isBaseNamespace&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t219' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;isIncomplete&#39;</span><span class='op'>,</span> <span class='str'>&#39;isNamespace&#39;</span><span class='op'>,</span> <span class='str'>&#39;isOpen&#39;</span><span class='op'>,</span> <span class='str'>&#39;isRestart&#39;</span><span class='op'>,</span> <span class='str'>&#39;isS4&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t220' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;isSeekable&#39;</span><span class='op'>,</span> <span class='str'>&#39;isSymmetric&#39;</span><span class='op'>,</span> <span class='str'>&#39;isSymmetric.matrix&#39;</span><span class='op'>,</span> <span class='str'>&#39;isTRUE&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t221' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;isatty&#39;</span><span class='op'>,</span> <span class='str'>&#39;isdebugged&#39;</span><span class='op'>,</span> <span class='str'>&#39;jitter&#39;</span><span class='op'>,</span> <span class='str'>&#39;julian&#39;</span><span class='op'>,</span> <span class='str'>&#39;julian.Date&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t222' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;julian.POSIXt&#39;</span><span class='op'>,</span> <span class='str'>&#39;kappa&#39;</span><span class='op'>,</span> <span class='str'>&#39;kappa.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;kappa.lm&#39;</span><span class='op'>,</span> <span class='str'>&#39;kappa.qr&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t223' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;kronecker&#39;</span><span class='op'>,</span> <span class='str'>&#39;l10n_info&#39;</span><span class='op'>,</span> <span class='str'>&#39;labels&#39;</span><span class='op'>,</span> <span class='str'>&#39;labels.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;lapply&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t224' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;lazyLoad&#39;</span><span class='op'>,</span> <span class='str'>&#39;lazyLoadDBexec&#39;</span><span class='op'>,</span> <span class='str'>&#39;lazyLoadDBfetch&#39;</span><span class='op'>,</span> <span class='str'>&#39;lbeta&#39;</span><span class='op'>,</span> <span class='str'>&#39;lchoose&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t225' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;length&#39;</span><span class='op'>,</span> <span class='str'>&#39;length.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;letters&#39;</span><span class='op'>,</span> <span class='str'>&#39;levels&#39;</span><span class='op'>,</span> <span class='str'>&#39;levels.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t226' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;lfactorial&#39;</span><span class='op'>,</span> <span class='str'>&#39;lgamma&#39;</span><span class='op'>,</span> <span class='str'>&#39;library.dynam&#39;</span><span class='op'>,</span> <span class='str'>&#39;library.dynam.unload&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t227' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;licence&#39;</span><span class='op'>,</span> <span class='str'>&#39;license&#39;</span><span class='op'>,</span> <span class='str'>&#39;list.dirs&#39;</span><span class='op'>,</span> <span class='str'>&#39;list.files&#39;</span><span class='op'>,</span> <span class='str'>&#39;list2env&#39;</span><span class='op'>,</span> <span class='str'>&#39;load&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t228' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;loadNamespace&#39;</span><span class='op'>,</span> <span class='str'>&#39;loadedNamespaces&#39;</span><span class='op'>,</span> <span class='str'>&#39;loadingNamespaceInfo&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t229' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;local&#39;</span><span class='op'>,</span> <span class='str'>&#39;lockBinding&#39;</span><span class='op'>,</span> <span class='str'>&#39;lockEnvironment&#39;</span><span class='op'>,</span> <span class='str'>&#39;log&#39;</span><span class='op'>,</span> <span class='str'>&#39;log10&#39;</span><span class='op'>,</span> <span class='str'>&#39;log1p&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t230' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;log2&#39;</span><span class='op'>,</span> <span class='str'>&#39;logb&#39;</span><span class='op'>,</span> <span class='str'>&#39;lower.tri&#39;</span><span class='op'>,</span> <span class='str'>&#39;ls&#39;</span><span class='op'>,</span> <span class='str'>&#39;make.names&#39;</span><span class='op'>,</span> <span class='str'>&#39;make.unique&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t231' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;makeActiveBinding&#39;</span><span class='op'>,</span> <span class='str'>&#39;mapply&#39;</span><span class='op'>,</span> <span class='str'>&#39;margin.table&#39;</span><span class='op'>,</span> <span class='str'>&#39;mat.or.vec&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t232' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;match&#39;</span><span class='op'>,</span> <span class='str'>&#39;match.arg&#39;</span><span class='op'>,</span> <span class='str'>&#39;match.call&#39;</span><span class='op'>,</span> <span class='str'>&#39;match.fun&#39;</span><span class='op'>,</span> <span class='str'>&#39;max&#39;</span><span class='op'>,</span> <span class='str'>&#39;max.col&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t233' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;mean&#39;</span><span class='op'>,</span> <span class='str'>&#39;mean.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;mean.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;mean.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;mean.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t234' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;mean.difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;mem.limits&#39;</span><span class='op'>,</span> <span class='str'>&#39;memCompress&#39;</span><span class='op'>,</span> <span class='str'>&#39;memDecompress&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t235' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;memory.profile&#39;</span><span class='op'>,</span> <span class='str'>&#39;merge&#39;</span><span class='op'>,</span> <span class='str'>&#39;merge.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;merge.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t236' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;message&#39;</span><span class='op'>,</span> <span class='str'>&#39;mget&#39;</span><span class='op'>,</span> <span class='str'>&#39;min&#39;</span><span class='op'>,</span> <span class='str'>&#39;missing&#39;</span><span class='op'>,</span> <span class='str'>&#39;mode&#39;</span><span class='op'>,</span> <span class='str'>&#39;month.abb&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t237' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;month.name&#39;</span><span class='op'>,</span> <span class='str'>&#39;months&#39;</span><span class='op'>,</span> <span class='str'>&#39;months.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;months.POSIXt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t238' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;months.abb&#39;</span><span class='op'>,</span> <span class='str'>&#39;months.nameletters&#39;</span><span class='op'>,</span> <span class='str'>&#39;names&#39;</span><span class='op'>,</span> <span class='str'>&#39;names.POSIXlt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t239' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;namespaceExport&#39;</span><span class='op'>,</span> <span class='str'>&#39;namespaceImport&#39;</span><span class='op'>,</span> <span class='str'>&#39;namespaceImportClasses&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t240' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;namespaceImportFrom&#39;</span><span class='op'>,</span> <span class='str'>&#39;namespaceImportMethods&#39;</span><span class='op'>,</span> <span class='str'>&#39;nargs&#39;</span><span class='op'>,</span> <span class='str'>&#39;nchar&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t241' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;ncol&#39;</span><span class='op'>,</span> <span class='str'>&#39;new.env&#39;</span><span class='op'>,</span> <span class='str'>&#39;ngettext&#39;</span><span class='op'>,</span> <span class='str'>&#39;nlevels&#39;</span><span class='op'>,</span> <span class='str'>&#39;noquote&#39;</span><span class='op'>,</span> <span class='str'>&#39;norm&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t242' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;normalizePath&#39;</span><span class='op'>,</span> <span class='str'>&#39;nrow&#39;</span><span class='op'>,</span> <span class='str'>&#39;numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;nzchar&#39;</span><span class='op'>,</span> <span class='str'>&#39;objects&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t243' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;oldClass&#39;</span><span class='op'>,</span> <span class='str'>&#39;on.exit&#39;</span><span class='op'>,</span> <span class='str'>&#39;open&#39;</span><span class='op'>,</span> <span class='str'>&#39;open.connection&#39;</span><span class='op'>,</span> <span class='str'>&#39;open.srcfile&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t244' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;open.srcfilealias&#39;</span><span class='op'>,</span> <span class='str'>&#39;open.srcfilecopy&#39;</span><span class='op'>,</span> <span class='str'>&#39;options&#39;</span><span class='op'>,</span> <span class='str'>&#39;order&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t245' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;ordered&#39;</span><span class='op'>,</span> <span class='str'>&#39;outer&#39;</span><span class='op'>,</span> <span class='str'>&#39;packBits&#39;</span><span class='op'>,</span> <span class='str'>&#39;packageEvent&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t246' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;packageHasNamespace&#39;</span><span class='op'>,</span> <span class='str'>&#39;packageStartupMessage&#39;</span><span class='op'>,</span> <span class='str'>&#39;package_version&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t247' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;pairlist&#39;</span><span class='op'>,</span> <span class='str'>&#39;parent.env&#39;</span><span class='op'>,</span> <span class='str'>&#39;parent.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;parse&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t248' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;parseNamespaceFile&#39;</span><span class='op'>,</span> <span class='str'>&#39;paste&#39;</span><span class='op'>,</span> <span class='str'>&#39;paste0&#39;</span><span class='op'>,</span> <span class='str'>&#39;path.expand&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t249' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;path.package&#39;</span><span class='op'>,</span> <span class='str'>&#39;pipe&#39;</span><span class='op'>,</span> <span class='str'>&#39;pmatch&#39;</span><span class='op'>,</span> <span class='str'>&#39;pmax&#39;</span><span class='op'>,</span> <span class='str'>&#39;pmax.int&#39;</span><span class='op'>,</span> <span class='str'>&#39;pmin&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t250' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;pmin.int&#39;</span><span class='op'>,</span> <span class='str'>&#39;polyroot&#39;</span><span class='op'>,</span> <span class='str'>&#39;pos.to.env&#39;</span><span class='op'>,</span> <span class='str'>&#39;pretty&#39;</span><span class='op'>,</span> <span class='str'>&#39;pretty.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t251' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;prettyNum&#39;</span><span class='op'>,</span> <span class='str'>&#39;print&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.AsIs&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.DLLInfo&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t252' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.DLLInfoList&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.DLLRegisteredRoutines&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.Date&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t253' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.NativeRoutineList&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.POSIXlt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t254' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.by&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.condition&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.connection&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t255' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.difftime&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t256' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.function&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.hexmode&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t257' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.libraryIQR&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.listof&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.noquote&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t258' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.octmode&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.packageInfo&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t259' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.proc_time&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.restart&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.rle&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t260' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.simple.list&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.srcfile&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.srcref&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t261' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.summary.table&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.summaryDefault&#39;</span><span class='op'>,</span> <span class='str'>&#39;print.table&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t262' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;print.warnings&#39;</span><span class='op'>,</span> <span class='str'>&#39;prmatrix&#39;</span><span class='op'>,</span> <span class='str'>&#39;proc.time&#39;</span><span class='op'>,</span> <span class='str'>&#39;prod&#39;</span><span class='op'>,</span> <span class='str'>&#39;prop.table&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t263' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;provideDimnames&#39;</span><span class='op'>,</span> <span class='str'>&#39;psigamma&#39;</span><span class='op'>,</span> <span class='str'>&#39;pushBack&#39;</span><span class='op'>,</span> <span class='str'>&#39;pushBackLength&#39;</span><span class='op'>,</span> <span class='str'>&#39;q&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t264' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;qr&#39;</span><span class='op'>,</span> <span class='str'>&#39;qr.Q&#39;</span><span class='op'>,</span> <span class='str'>&#39;qr.R&#39;</span><span class='op'>,</span> <span class='str'>&#39;qr.X&#39;</span><span class='op'>,</span> <span class='str'>&#39;qr.coef&#39;</span><span class='op'>,</span> <span class='str'>&#39;qr.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;qr.fitted&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t265' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;qr.qty&#39;</span><span class='op'>,</span> <span class='str'>&#39;qr.qy&#39;</span><span class='op'>,</span> <span class='str'>&#39;qr.resid&#39;</span><span class='op'>,</span> <span class='str'>&#39;qr.solve&#39;</span><span class='op'>,</span> <span class='str'>&#39;quarters&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t266' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;quarters.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;quarters.POSIXt&#39;</span><span class='op'>,</span> <span class='str'>&#39;quit&#39;</span><span class='op'>,</span> <span class='str'>&#39;quote&#39;</span><span class='op'>,</span> <span class='str'>&#39;range&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t267' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;range.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;rank&#39;</span><span class='op'>,</span> <span class='str'>&#39;rapply&#39;</span><span class='op'>,</span> <span class='str'>&#39;raw&#39;</span><span class='op'>,</span> <span class='str'>&#39;rawConnection&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t268' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;rawConnectionValue&#39;</span><span class='op'>,</span> <span class='str'>&#39;rawShift&#39;</span><span class='op'>,</span> <span class='str'>&#39;rawToBits&#39;</span><span class='op'>,</span> <span class='str'>&#39;rawToChar&#39;</span><span class='op'>,</span> <span class='str'>&#39;rbind&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t269' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;rbind.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;rcond&#39;</span><span class='op'>,</span> <span class='str'>&#39;read.dcf&#39;</span><span class='op'>,</span> <span class='str'>&#39;readBin&#39;</span><span class='op'>,</span> <span class='str'>&#39;readChar&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t270' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;readLines&#39;</span><span class='op'>,</span> <span class='str'>&#39;readRDS&#39;</span><span class='op'>,</span> <span class='str'>&#39;readRenviron&#39;</span><span class='op'>,</span> <span class='str'>&#39;readline&#39;</span><span class='op'>,</span> <span class='str'>&#39;reg.finalizer&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t271' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;regexec&#39;</span><span class='op'>,</span> <span class='str'>&#39;regexpr&#39;</span><span class='op'>,</span> <span class='str'>&#39;registerS3method&#39;</span><span class='op'>,</span> <span class='str'>&#39;registerS3methods&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t272' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;regmatches&#39;</span><span class='op'>,</span> <span class='str'>&#39;remove&#39;</span><span class='op'>,</span> <span class='str'>&#39;removeTaskCallback&#39;</span><span class='op'>,</span> <span class='str'>&#39;rep&#39;</span><span class='op'>,</span> <span class='str'>&#39;rep.Date&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t273' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;rep.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;rep.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;rep.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;rep.int&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t274' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;rep.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;rep_len&#39;</span><span class='op'>,</span> <span class='str'>&#39;replace&#39;</span><span class='op'>,</span> <span class='str'>&#39;replicate&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t275' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;requireNamespace&#39;</span><span class='op'>,</span> <span class='str'>&#39;restartDescription&#39;</span><span class='op'>,</span> <span class='str'>&#39;restartFormals&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t276' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;retracemem&#39;</span><span class='op'>,</span> <span class='str'>&#39;rev&#39;</span><span class='op'>,</span> <span class='str'>&#39;rev.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;rle&#39;</span><span class='op'>,</span> <span class='str'>&#39;rm&#39;</span><span class='op'>,</span> <span class='str'>&#39;round&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t277' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;round.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;round.POSIXt&#39;</span><span class='op'>,</span> <span class='str'>&#39;row&#39;</span><span class='op'>,</span> <span class='str'>&#39;row.names&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t278' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;row.names.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;row.names.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;rowMeans&#39;</span><span class='op'>,</span> <span class='str'>&#39;rowSums&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t279' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;rownames&#39;</span><span class='op'>,</span> <span class='str'>&#39;rowsum&#39;</span><span class='op'>,</span> <span class='str'>&#39;rowsum.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;rowsum.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t280' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;sQuote&#39;</span><span class='op'>,</span> <span class='str'>&#39;sample&#39;</span><span class='op'>,</span> <span class='str'>&#39;sample.int&#39;</span><span class='op'>,</span> <span class='str'>&#39;sapply&#39;</span><span class='op'>,</span> <span class='str'>&#39;save&#39;</span><span class='op'>,</span> <span class='str'>&#39;save.image&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t281' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;saveRDS&#39;</span><span class='op'>,</span> <span class='str'>&#39;scale&#39;</span><span class='op'>,</span> <span class='str'>&#39;scale.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;scan&#39;</span><span class='op'>,</span> <span class='str'>&#39;search&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t282' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;searchpaths&#39;</span><span class='op'>,</span> <span class='str'>&#39;seek&#39;</span><span class='op'>,</span> <span class='str'>&#39;seek.connection&#39;</span><span class='op'>,</span> <span class='str'>&#39;seq&#39;</span><span class='op'>,</span> <span class='str'>&#39;seq.Date&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t283' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;seq.POSIXt&#39;</span><span class='op'>,</span> <span class='str'>&#39;seq.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;seq.int&#39;</span><span class='op'>,</span> <span class='str'>&#39;seq_along&#39;</span><span class='op'>,</span> <span class='str'>&#39;seq_len&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t284' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;sequence&#39;</span><span class='op'>,</span> <span class='str'>&#39;serialize&#39;</span><span class='op'>,</span> <span class='str'>&#39;set.seed&#39;</span><span class='op'>,</span> <span class='str'>&#39;setHook&#39;</span><span class='op'>,</span> <span class='str'>&#39;setNamespaceInfo&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t285' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;setSessionTimeLimit&#39;</span><span class='op'>,</span> <span class='str'>&#39;setTimeLimit&#39;</span><span class='op'>,</span> <span class='str'>&#39;setdiff&#39;</span><span class='op'>,</span> <span class='str'>&#39;setequal&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t286' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;setwd&#39;</span><span class='op'>,</span> <span class='str'>&#39;shQuote&#39;</span><span class='op'>,</span> <span class='str'>&#39;showConnections&#39;</span><span class='op'>,</span> <span class='str'>&#39;sign&#39;</span><span class='op'>,</span> <span class='str'>&#39;signalCondition&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t287' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;signif&#39;</span><span class='op'>,</span> <span class='str'>&#39;simpleCondition&#39;</span><span class='op'>,</span> <span class='str'>&#39;simpleError&#39;</span><span class='op'>,</span> <span class='str'>&#39;simpleMessage&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t288' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;simpleWarning&#39;</span><span class='op'>,</span> <span class='str'>&#39;simplify2array&#39;</span><span class='op'>,</span> <span class='str'>&#39;sin&#39;</span><span class='op'>,</span> <span class='str'>&#39;single&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t289' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;sinh&#39;</span><span class='op'>,</span> <span class='str'>&#39;sink&#39;</span><span class='op'>,</span> <span class='str'>&#39;sink.number&#39;</span><span class='op'>,</span> <span class='str'>&#39;slice.index&#39;</span><span class='op'>,</span> <span class='str'>&#39;socketConnection&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t290' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;socketSelect&#39;</span><span class='op'>,</span> <span class='str'>&#39;solve&#39;</span><span class='op'>,</span> <span class='str'>&#39;solve.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;solve.qr&#39;</span><span class='op'>,</span> <span class='str'>&#39;sort&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t291' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;sort.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;sort.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;sort.int&#39;</span><span class='op'>,</span> <span class='str'>&#39;sort.list&#39;</span><span class='op'>,</span> <span class='str'>&#39;split&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t292' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;split.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;split.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;split.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;split.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t293' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;sprintf&#39;</span><span class='op'>,</span> <span class='str'>&#39;sqrt&#39;</span><span class='op'>,</span> <span class='str'>&#39;srcfile&#39;</span><span class='op'>,</span> <span class='str'>&#39;srcfilealias&#39;</span><span class='op'>,</span> <span class='str'>&#39;srcfilecopy&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t294' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;srcref&#39;</span><span class='op'>,</span> <span class='str'>&#39;standardGeneric&#39;</span><span class='op'>,</span> <span class='str'>&#39;stderr&#39;</span><span class='op'>,</span> <span class='str'>&#39;stdin&#39;</span><span class='op'>,</span> <span class='str'>&#39;stdout&#39;</span><span class='op'>,</span> <span class='str'>&#39;stop&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t295' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;stopifnot&#39;</span><span class='op'>,</span> <span class='str'>&#39;storage.mode&#39;</span><span class='op'>,</span> <span class='str'>&#39;strftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;strptime&#39;</span><span class='op'>,</span> <span class='str'>&#39;strsplit&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t296' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;strtoi&#39;</span><span class='op'>,</span> <span class='str'>&#39;strtrim&#39;</span><span class='op'>,</span> <span class='str'>&#39;structure&#39;</span><span class='op'>,</span> <span class='str'>&#39;strwrap&#39;</span><span class='op'>,</span> <span class='str'>&#39;sub&#39;</span><span class='op'>,</span> <span class='str'>&#39;subset&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t297' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;subset.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;subset.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;subset.matrix&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t298' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;substitute&#39;</span><span class='op'>,</span> <span class='str'>&#39;substr&#39;</span><span class='op'>,</span> <span class='str'>&#39;substring&#39;</span><span class='op'>,</span> <span class='str'>&#39;sum&#39;</span><span class='op'>,</span> <span class='str'>&#39;summary&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t299' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;summary.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;summary.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;summary.POSIXlt&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t300' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;summary.connection&#39;</span><span class='op'>,</span> <span class='str'>&#39;summary.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;summary.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t301' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;summary.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;summary.matrix&#39;</span><span class='op'>,</span> <span class='str'>&#39;summary.proc_time&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t302' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;summary.srcfile&#39;</span><span class='op'>,</span> <span class='str'>&#39;summary.srcref&#39;</span><span class='op'>,</span> <span class='str'>&#39;summary.table&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t303' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;suppressMessages&#39;</span><span class='op'>,</span> <span class='str'>&#39;suppressPackageStartupMessages&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t304' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;suppressWarnings&#39;</span><span class='op'>,</span> <span class='str'>&#39;svd&#39;</span><span class='op'>,</span> <span class='str'>&#39;sweep&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys.call&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys.calls&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t305' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;sys.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys.frames&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys.function&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys.load.image&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t306' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;sys.nframe&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys.on.exit&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys.parent&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys.parents&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t307' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;sys.save.image&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys.source&#39;</span><span class='op'>,</span> <span class='str'>&#39;sys.status&#39;</span><span class='op'>,</span> <span class='str'>&#39;system&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t308' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;system.file&#39;</span><span class='op'>,</span> <span class='str'>&#39;system.time&#39;</span><span class='op'>,</span> <span class='str'>&#39;system2&#39;</span><span class='op'>,</span> <span class='str'>&#39;t&#39;</span><span class='op'>,</span> <span class='str'>&#39;t.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t309' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;t.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;table&#39;</span><span class='op'>,</span> <span class='str'>&#39;tabulate&#39;</span><span class='op'>,</span> <span class='str'>&#39;tail&#39;</span><span class='op'>,</span> <span class='str'>&#39;tan&#39;</span><span class='op'>,</span> <span class='str'>&#39;tanh&#39;</span><span class='op'>,</span> <span class='str'>&#39;tapply&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t310' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;taskCallbackManager&#39;</span><span class='op'>,</span> <span class='str'>&#39;tcrossprod&#39;</span><span class='op'>,</span> <span class='str'>&#39;tempdir&#39;</span><span class='op'>,</span> <span class='str'>&#39;tempfile&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t311' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;testPlatformEquivalence&#39;</span><span class='op'>,</span> <span class='str'>&#39;textConnection&#39;</span><span class='op'>,</span> <span class='str'>&#39;textConnectionValue&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t312' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;toString&#39;</span><span class='op'>,</span> <span class='str'>&#39;toString.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;tolower&#39;</span><span class='op'>,</span> <span class='str'>&#39;topenv&#39;</span><span class='op'>,</span> <span class='str'>&#39;toupper&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t313' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;trace&#39;</span><span class='op'>,</span> <span class='str'>&#39;traceback&#39;</span><span class='op'>,</span> <span class='str'>&#39;tracemem&#39;</span><span class='op'>,</span> <span class='str'>&#39;tracingState&#39;</span><span class='op'>,</span> <span class='str'>&#39;transform&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t314' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;transform.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;transform.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;trigamma&#39;</span><span class='op'>,</span> <span class='str'>&#39;trunc&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t315' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;trunc.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;trunc.POSIXt&#39;</span><span class='op'>,</span> <span class='str'>&#39;truncate&#39;</span><span class='op'>,</span> <span class='str'>&#39;truncate.connection&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t316' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;try&#39;</span><span class='op'>,</span> <span class='str'>&#39;tryCatch&#39;</span><span class='op'>,</span> <span class='str'>&#39;typeof&#39;</span><span class='op'>,</span> <span class='str'>&#39;unclass&#39;</span><span class='op'>,</span> <span class='str'>&#39;undebug&#39;</span><span class='op'>,</span> <span class='str'>&#39;union&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t317' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;unique&#39;</span><span class='op'>,</span> <span class='str'>&#39;unique.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;unique.array&#39;</span><span class='op'>,</span> <span class='str'>&#39;unique.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t318' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;unique.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;unique.matrix&#39;</span><span class='op'>,</span> <span class='str'>&#39;unique.numeric_version&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t319' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;units&#39;</span><span class='op'>,</span> <span class='str'>&#39;units.difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;unix.time&#39;</span><span class='op'>,</span> <span class='str'>&#39;unlink&#39;</span><span class='op'>,</span> <span class='str'>&#39;unlist&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t320' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;unloadNamespace&#39;</span><span class='op'>,</span> <span class='str'>&#39;unlockBinding&#39;</span><span class='op'>,</span> <span class='str'>&#39;unname&#39;</span><span class='op'>,</span> <span class='str'>&#39;unserialize&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t321' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;unsplit&#39;</span><span class='op'>,</span> <span class='str'>&#39;untrace&#39;</span><span class='op'>,</span> <span class='str'>&#39;untracemem&#39;</span><span class='op'>,</span> <span class='str'>&#39;unz&#39;</span><span class='op'>,</span> <span class='str'>&#39;upper.tri&#39;</span><span class='op'>,</span> <span class='str'>&#39;url&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t322' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;utf8ToInt&#39;</span><span class='op'>,</span> <span class='str'>&#39;vapply&#39;</span><span class='op'>,</span> <span class='str'>&#39;version&#39;</span><span class='op'>,</span> <span class='str'>&#39;warning&#39;</span><span class='op'>,</span> <span class='str'>&#39;warnings&#39;</span><span class='op'>,</span> <span class='str'>&#39;weekdays&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t323' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;weekdays.Date&#39;</span><span class='op'>,</span> <span class='str'>&#39;weekdays.POSIXt&#39;</span><span class='op'>,</span> <span class='str'>&#39;which&#39;</span><span class='op'>,</span> <span class='str'>&#39;which.max&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t324' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;which.min&#39;</span><span class='op'>,</span> <span class='str'>&#39;with&#39;</span><span class='op'>,</span> <span class='str'>&#39;with.default&#39;</span><span class='op'>,</span> <span class='str'>&#39;withCallingHandlers&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t325' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;withRestarts&#39;</span><span class='op'>,</span> <span class='str'>&#39;withVisible&#39;</span><span class='op'>,</span> <span class='str'>&#39;within&#39;</span><span class='op'>,</span> <span class='str'>&#39;within.data.frame&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t326' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;within.list&#39;</span><span class='op'>,</span> <span class='str'>&#39;write&#39;</span><span class='op'>,</span> <span class='str'>&#39;write.dcf&#39;</span><span class='op'>,</span> <span class='str'>&#39;writeBin&#39;</span><span class='op'>,</span> <span class='str'>&#39;writeChar&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t327' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;writeLines&#39;</span><span class='op'>,</span> <span class='str'>&#39;xor&#39;</span><span class='op'>,</span> <span class='str'>&#39;xor.hexmode&#39;</span><span class='op'>,</span> <span class='str'>&#39;xor.octmode&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t328' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;xpdrows.data.frame&#39;</span><span class='op'>,</span> <span class='str'>&#39;xtfrm&#39;</span><span class='op'>,</span> <span class='str'>&#39;xtfrm.AsIs&#39;</span><span class='op'>,</span> <span class='str'>&#39;xtfrm.Date&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t329' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;xtfrm.POSIXct&#39;</span><span class='op'>,</span> <span class='str'>&#39;xtfrm.POSIXlt&#39;</span><span class='op'>,</span> <span class='str'>&#39;xtfrm.Surv&#39;</span><span class='op'>,</span> <span class='str'>&#39;xtfrm.default&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t330' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;xtfrm.difftime&#39;</span><span class='op'>,</span> <span class='str'>&#39;xtfrm.factor&#39;</span><span class='op'>,</span> <span class='str'>&#39;xtfrm.numeric_version&#39;</span><span class='op'>,</span> <span class='str'>&#39;xzfile&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t331' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;zapsmall&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t332' class='pln'>&nbsp; &nbsp; <span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t333' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t334' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>tokens</span> <span class='op'>=</span> <span class='op'>{</span><span class='strut'>&nbsp;</span></p>
+<p id='t335' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;comments&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t336' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;#.*$&#39;</span><span class='op'>,</span> <span class='nam'>Comment</span><span class='op'>.</span><span class='nam'>Single</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t337' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t338' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;valid_name&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t339' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;[a-zA-Z][\w.]*&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t340' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># can begin with ., but not if that is followed by a digit</span><span class='strut'>&nbsp;</span></p>
+<p id='t341' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\.[a-zA-Z_][\w.]*&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t342' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t343' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;punctuation&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t344' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\[{1,2}|\]{1,2}|\(|\)|;|,&#39;</span><span class='op'>,</span> <span class='nam'>Punctuation</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t345' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t346' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;keywords&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t347' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='nam'>words</span><span class='op'>(</span><span class='nam'>builtins_base</span><span class='op'>,</span> <span class='nam'>suffix</span><span class='op'>=</span><span class='str'>r&#39;(?![\w. =])&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t348' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='nam'>Keyword</span><span class='op'>.</span><span class='nam'>Pseudo</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t349' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(if|else|for|while|repeat|in|next|break|return|switch|function)&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t350' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;(?![\w.])&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t351' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='nam'>Keyword</span><span class='op'>.</span><span class='nam'>Reserved</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t352' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(array|category|character|complex|double|function|integer|list|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t353' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;logical|matrix|numeric|vector|data.frame|c)&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t354' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;(?![\w.])&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t355' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='nam'>Keyword</span><span class='op'>.</span><span class='nam'>Type</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t356' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(library|require|attach|detach|source)&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t357' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;(?![\w.])&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t358' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='nam'>Keyword</span><span class='op'>.</span><span class='nam'>Namespace</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t359' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t360' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;operators&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t361' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;&lt;&lt;?-|-&gt;&gt;?|-|==|&lt;=|&gt;=|&lt;|&gt;|&amp;&amp;?|!=|\|\|?|\?&#39;</span><span class='op'>,</span> <span class='nam'>Operator</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t362' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\*|\+|\^|/|!|%[^%]*%|=|~|\$|@|:{1,3}&#39;</span><span class='op'>,</span> <span class='nam'>Operator</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t363' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t364' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;builtin_symbols&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t365' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(NULL|NA(_(integer|real|complex|character)_)?|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t366' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;letters|LETTERS|Inf|TRUE|FALSE|NaN|pi|\.\.(\.|[0-9]+))&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t367' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;(?![\w.])&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t368' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='nam'>Keyword</span><span class='op'>.</span><span class='nam'>Constant</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t369' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(T|F)\b&#39;</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>.</span><span class='nam'>Builtin</span><span class='op'>.</span><span class='nam'>Pseudo</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t370' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t371' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;numbers&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t372' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># hex number</span><span class='strut'>&nbsp;</span></p>
+<p id='t373' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;0[xX][a-fA-F0-9]+([pP][0-9]+)?[Li]?&#39;</span><span class='op'>,</span> <span class='nam'>Number</span><span class='op'>.</span><span class='nam'>Hex</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t374' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># decimal number</span><span class='strut'>&nbsp;</span></p>
+<p id='t375' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;[+-]?([0-9]+(\.[0-9]+)?|\.[0-9]+|\.)([eE][+-]?[0-9]+)?[Li]?&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t376' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='nam'>Number</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t377' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t378' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;statements&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t379' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>include</span><span class='op'>(</span><span class='str'>&#39;comments&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t380' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># whitespaces</span><span class='strut'>&nbsp;</span></p>
+<p id='t381' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\s+&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t382' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;`.*?`&#39;</span><span class='op'>,</span> <span class='nam'>String</span><span class='op'>.</span><span class='nam'>Backtick</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t383' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\&#39;&#39;</span><span class='op'>,</span> <span class='nam'>String</span><span class='op'>,</span> <span class='str'>&#39;string_squote&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t384' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\&quot;&#39;</span><span class='op'>,</span> <span class='nam'>String</span><span class='op'>,</span> <span class='str'>&#39;string_dquote&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t385' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>include</span><span class='op'>(</span><span class='str'>&#39;builtin_symbols&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t386' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>include</span><span class='op'>(</span><span class='str'>&#39;numbers&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t387' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>include</span><span class='op'>(</span><span class='str'>&#39;keywords&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t388' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>include</span><span class='op'>(</span><span class='str'>&#39;punctuation&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t389' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>include</span><span class='op'>(</span><span class='str'>&#39;operators&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t390' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>include</span><span class='op'>(</span><span class='str'>&#39;valid_name&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t391' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t392' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;root&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t393' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>include</span><span class='op'>(</span><span class='str'>&#39;statements&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t394' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># blocks:</span><span class='strut'>&nbsp;</span></p>
+<p id='t395' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\{|\}&#39;</span><span class='op'>,</span> <span class='nam'>Punctuation</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t396' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># (r&#39;\{&#39;, Punctuation, &#39;block&#39;),</span><span class='strut'>&nbsp;</span></p>
+<p id='t397' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;.&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t398' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t399' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># &#39;block&#39;: [</span><span class='strut'>&nbsp;</span></p>
+<p id='t400' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; include(&#39;statements&#39;),</span><span class='strut'>&nbsp;</span></p>
+<p id='t401' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; (&#39;\{&#39;, Punctuation, &#39;#push&#39;),</span><span class='strut'>&nbsp;</span></p>
+<p id='t402' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'>#&nbsp; &nbsp; (&#39;\}&#39;, Punctuation, &#39;#pop&#39;)</span><span class='strut'>&nbsp;</span></p>
+<p id='t403' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># ],</span><span class='strut'>&nbsp;</span></p>
+<p id='t404' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;string_squote&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t405' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;([^\&#39;\\]|\\.)*\&#39;&#39;</span><span class='op'>,</span> <span class='nam'>String</span><span class='op'>,</span> <span class='str'>&#39;#pop&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t406' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t407' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;string_dquote&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t408' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;([^&quot;\\]|\\.)*&quot;&#39;</span><span class='op'>,</span> <span class='nam'>String</span><span class='op'>,</span> <span class='str'>&#39;#pop&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t409' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t410' class='pln'>&nbsp; &nbsp; <span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+<p id='t411' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t412' class='stm run hide_run'>&nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>analyse_text</span><span class='op'>(</span><span class='nam'>text</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t413' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>re</span><span class='op'>.</span><span class='nam'>search</span><span class='op'>(</span><span class='str'>r&#39;[a-z0-9_\])\s]&lt;-(?!-)&#39;</span><span class='op'>,</span> <span class='nam'>text</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t414' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='num'>0.11</span><span class='strut'>&nbsp;</span></p>
+<p id='t415' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t416' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t417' class='stm run hide_run'><span class='key'>class</span> <span class='nam'>RdLexer</span><span class='op'>(</span><span class='nam'>RegexLexer</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t418' class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t419' class='pln'><span class='str'>&nbsp; &nbsp; Pygments Lexer for R documentation (Rd) files</span><span class='strut'>&nbsp;</span></p>
+<p id='t420' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t421' class='pln'><span class='str'>&nbsp; &nbsp; This is a very minimal implementation, highlighting little more</span><span class='strut'>&nbsp;</span></p>
+<p id='t422' class='pln'><span class='str'>&nbsp; &nbsp; than the macros. A description of Rd syntax is found in `Writing R</span><span class='strut'>&nbsp;</span></p>
+<p id='t423' class='pln'><span class='str'>&nbsp; &nbsp; Extensions &lt;http://cran.r-project.org/doc/manuals/R-exts.html&gt;`_</span><span class='strut'>&nbsp;</span></p>
+<p id='t424' class='pln'><span class='str'>&nbsp; &nbsp; and `Parsing Rd files &lt;developer.r-project.org/parseRd.pdf&gt;`_.</span><span class='strut'>&nbsp;</span></p>
+<p id='t425' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t426' class='pln'><span class='str'>&nbsp; &nbsp; .. versionadded:: 1.6</span><span class='strut'>&nbsp;</span></p>
+<p id='t427' class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t428' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>name</span> <span class='op'>=</span> <span class='str'>&#39;Rd&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t429' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>aliases</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;rd&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t430' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>filenames</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;*.Rd&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t431' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>mimetypes</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;text/x-r-doc&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t432' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t433' class='pln'>&nbsp; &nbsp; <span class='com'># To account for verbatim / LaTeX-like / and R-like areas</span><span class='strut'>&nbsp;</span></p>
+<p id='t434' class='pln'>&nbsp; &nbsp; <span class='com'># would require parsing.</span><span class='strut'>&nbsp;</span></p>
+<p id='t435' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>tokens</span> <span class='op'>=</span> <span class='op'>{</span><span class='strut'>&nbsp;</span></p>
+<p id='t436' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;root&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t437' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># catch escaped brackets and percent sign</span><span class='strut'>&nbsp;</span></p>
+<p id='t438' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\\[\\{}%]&#39;</span><span class='op'>,</span> <span class='nam'>String</span><span class='op'>.</span><span class='nam'>Escape</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t439' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># comments</span><span class='strut'>&nbsp;</span></p>
+<p id='t440' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;%.*$&#39;</span><span class='op'>,</span> <span class='nam'>Comment</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t441' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># special macros with no arguments</span><span class='strut'>&nbsp;</span></p>
+<p id='t442' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\\(?:cr|l?dots|R|tab)\b&#39;</span><span class='op'>,</span> <span class='nam'>Keyword</span><span class='op'>.</span><span class='nam'>Constant</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t443' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># macros</span><span class='strut'>&nbsp;</span></p>
+<p id='t444' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\\[a-zA-Z]+\b&#39;</span><span class='op'>,</span> <span class='nam'>Keyword</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t445' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># special preprocessor macros</span><span class='strut'>&nbsp;</span></p>
+<p id='t446' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;^\s*#(?:ifn?def|endif).*\b&#39;</span><span class='op'>,</span> <span class='nam'>Comment</span><span class='op'>.</span><span class='nam'>Preproc</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t447' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># non-escaped brackets</span><span class='strut'>&nbsp;</span></p>
+<p id='t448' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;[{}]&#39;</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>.</span><span class='nam'>Builtin</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t449' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># everything else</span><span class='strut'>&nbsp;</span></p>
+<p id='t450' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;[^\\%\n{}]+&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t451' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;.&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t452' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t453' class='pln'>&nbsp; &nbsp; <span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+                
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id='footer'>
+    <div class='content'>
+        <p>
+            <a class='nav' href='index.html'>&#xab; index</a> &nbsp; &nbsp; <a class='nav' href='http://nedbatchelder.com/code/coverage'>coverage.py v3.7.1</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

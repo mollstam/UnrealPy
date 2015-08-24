@@ -1,0 +1,24 @@
+{
+	"FileVersion" : 3,
+
+	"FriendlyName" : "UnrealPy",
+	"Version" : 1,
+	"VersionName" : "1.0",
+	"CreatedBy" : "Tobias Mollstam",
+	"EngineVersion" : "4.7.0",
+	"Description" : "Embeds Python into the editor for scripting editor actions and workflow.",
+	"Category" : "Developer",
+	"EnabledByDefault" : true,
+
+	"Modules" :
+	[
+		{
+			"Name" : "UnrealPyEmbed_Python",
+			"Type" : "Editor"
+		},
+		{
+			"Name" : "UnrealPyEmbed",
+			"Type" : "Editor"
+		}
+	]
+}

@@ -1,0 +1,938 @@
+<!doctype html PUBLIC "-//W3C//DTD html 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    
+    
+    <meta http-equiv='X-UA-Compatible' content='IE=emulateIE7' />
+    <title>Coverage for pygments.lexers.foxpro: 100%</title>
+    <link rel='stylesheet' href='style.css' type='text/css'>
+    
+    <script type='text/javascript' src='jquery.min.js'></script>
+    <script type='text/javascript' src='jquery.hotkeys.js'></script>
+    <script type='text/javascript' src='jquery.isonscreen.js'></script>
+    <script type='text/javascript' src='coverage_html.js'></script>
+    <script type='text/javascript' charset='utf-8'>
+        jQuery(document).ready(coverage.pyfile_ready);
+    </script>
+</head>
+<body id='pyfile'>
+
+<div id='header'>
+    <div class='content'>
+        <h1>Coverage for <b>pygments.lexers.foxpro</b> :
+            <span class='pc_cov'>100%</span>
+        </h1>
+        <img id='keyboard_icon' src='keybd_closed.png'>
+        <h2 class='stats'>
+            12 statements &nbsp;
+            <span class='run hide_run shortkey_r button_toggle_run'>12 run</span>
+            <span class='mis shortkey_m button_toggle_mis'>0 missing</span>
+            <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
+            
+        </h2>
+    </div>
+</div>
+
+<div class='help_panel'>
+    <img id='panel_icon' src='keybd_open.png'>
+<p class='legend'>Hot-keys on this page</p>
+    <div>
+<p class='keyhelp'>
+        <span class='key'>r</span>
+        <span class='key'>m</span>
+        <span class='key'>x</span>
+        <span class='key'>p</span> &nbsp; toggle line displays
+    </p>
+<p class='keyhelp'>
+        <span class='key'>j</span>
+        <span class='key'>k</span> &nbsp; next/prev highlighted chunk
+    </p>
+<p class='keyhelp'>
+        <span class='key'>0</span> &nbsp; (zero) top of page
+    </p>
+<p class='keyhelp'>
+        <span class='key'>1</span> &nbsp; (one) first highlighted chunk
+    </p>
+    </div>
+</div>
+
+<div id='source'>
+    <table cellspacing='0' cellpadding='0'>
+        <tr>
+            <td class='linenos' valign='top'>
+<p id='n1' class='pln'><a href='#n1'>1</a></p>
+<p id='n2' class='stm run hide_run'><a href='#n2'>2</a></p>
+<p id='n3' class='pln'><a href='#n3'>3</a></p>
+<p id='n4' class='pln'><a href='#n4'>4</a></p>
+<p id='n5' class='pln'><a href='#n5'>5</a></p>
+<p id='n6' class='pln'><a href='#n6'>6</a></p>
+<p id='n7' class='pln'><a href='#n7'>7</a></p>
+<p id='n8' class='pln'><a href='#n8'>8</a></p>
+<p id='n9' class='pln'><a href='#n9'>9</a></p>
+<p id='n10' class='pln'><a href='#n10'>10</a></p>
+<p id='n11' class='pln'><a href='#n11'>11</a></p>
+<p id='n12' class='stm run hide_run'><a href='#n12'>12</a></p>
+<p id='n13' class='pln'><a href='#n13'>13</a></p>
+<p id='n14' class='stm run hide_run'><a href='#n14'>14</a></p>
+<p id='n15' class='stm run hide_run'><a href='#n15'>15</a></p>
+<p id='n16' class='pln'><a href='#n16'>16</a></p>
+<p id='n17' class='pln'><a href='#n17'>17</a></p>
+<p id='n18' class='stm run hide_run'><a href='#n18'>18</a></p>
+<p id='n19' class='pln'><a href='#n19'>19</a></p>
+<p id='n20' class='pln'><a href='#n20'>20</a></p>
+<p id='n21' class='stm run hide_run'><a href='#n21'>21</a></p>
+<p id='n22' class='pln'><a href='#n22'>22</a></p>
+<p id='n23' class='pln'><a href='#n23'>23</a></p>
+<p id='n24' class='pln'><a href='#n24'>24</a></p>
+<p id='n25' class='pln'><a href='#n25'>25</a></p>
+<p id='n26' class='pln'><a href='#n26'>26</a></p>
+<p id='n27' class='pln'><a href='#n27'>27</a></p>
+<p id='n28' class='pln'><a href='#n28'>28</a></p>
+<p id='n29' class='pln'><a href='#n29'>29</a></p>
+<p id='n30' class='stm run hide_run'><a href='#n30'>30</a></p>
+<p id='n31' class='stm run hide_run'><a href='#n31'>31</a></p>
+<p id='n32' class='stm run hide_run'><a href='#n32'>32</a></p>
+<p id='n33' class='stm run hide_run'><a href='#n33'>33</a></p>
+<p id='n34' class='pln'><a href='#n34'>34</a></p>
+<p id='n35' class='stm run hide_run'><a href='#n35'>35</a></p>
+<p id='n36' class='pln'><a href='#n36'>36</a></p>
+<p id='n37' class='stm run hide_run'><a href='#n37'>37</a></p>
+<p id='n38' class='pln'><a href='#n38'>38</a></p>
+<p id='n39' class='pln'><a href='#n39'>39</a></p>
+<p id='n40' class='pln'><a href='#n40'>40</a></p>
+<p id='n41' class='pln'><a href='#n41'>41</a></p>
+<p id='n42' class='pln'><a href='#n42'>42</a></p>
+<p id='n43' class='pln'><a href='#n43'>43</a></p>
+<p id='n44' class='pln'><a href='#n44'>44</a></p>
+<p id='n45' class='pln'><a href='#n45'>45</a></p>
+<p id='n46' class='pln'><a href='#n46'>46</a></p>
+<p id='n47' class='pln'><a href='#n47'>47</a></p>
+<p id='n48' class='pln'><a href='#n48'>48</a></p>
+<p id='n49' class='pln'><a href='#n49'>49</a></p>
+<p id='n50' class='pln'><a href='#n50'>50</a></p>
+<p id='n51' class='pln'><a href='#n51'>51</a></p>
+<p id='n52' class='pln'><a href='#n52'>52</a></p>
+<p id='n53' class='pln'><a href='#n53'>53</a></p>
+<p id='n54' class='pln'><a href='#n54'>54</a></p>
+<p id='n55' class='pln'><a href='#n55'>55</a></p>
+<p id='n56' class='pln'><a href='#n56'>56</a></p>
+<p id='n57' class='pln'><a href='#n57'>57</a></p>
+<p id='n58' class='pln'><a href='#n58'>58</a></p>
+<p id='n59' class='pln'><a href='#n59'>59</a></p>
+<p id='n60' class='pln'><a href='#n60'>60</a></p>
+<p id='n61' class='pln'><a href='#n61'>61</a></p>
+<p id='n62' class='pln'><a href='#n62'>62</a></p>
+<p id='n63' class='pln'><a href='#n63'>63</a></p>
+<p id='n64' class='pln'><a href='#n64'>64</a></p>
+<p id='n65' class='pln'><a href='#n65'>65</a></p>
+<p id='n66' class='pln'><a href='#n66'>66</a></p>
+<p id='n67' class='pln'><a href='#n67'>67</a></p>
+<p id='n68' class='pln'><a href='#n68'>68</a></p>
+<p id='n69' class='pln'><a href='#n69'>69</a></p>
+<p id='n70' class='pln'><a href='#n70'>70</a></p>
+<p id='n71' class='pln'><a href='#n71'>71</a></p>
+<p id='n72' class='pln'><a href='#n72'>72</a></p>
+<p id='n73' class='pln'><a href='#n73'>73</a></p>
+<p id='n74' class='pln'><a href='#n74'>74</a></p>
+<p id='n75' class='pln'><a href='#n75'>75</a></p>
+<p id='n76' class='pln'><a href='#n76'>76</a></p>
+<p id='n77' class='pln'><a href='#n77'>77</a></p>
+<p id='n78' class='pln'><a href='#n78'>78</a></p>
+<p id='n79' class='pln'><a href='#n79'>79</a></p>
+<p id='n80' class='pln'><a href='#n80'>80</a></p>
+<p id='n81' class='pln'><a href='#n81'>81</a></p>
+<p id='n82' class='pln'><a href='#n82'>82</a></p>
+<p id='n83' class='pln'><a href='#n83'>83</a></p>
+<p id='n84' class='pln'><a href='#n84'>84</a></p>
+<p id='n85' class='pln'><a href='#n85'>85</a></p>
+<p id='n86' class='pln'><a href='#n86'>86</a></p>
+<p id='n87' class='pln'><a href='#n87'>87</a></p>
+<p id='n88' class='pln'><a href='#n88'>88</a></p>
+<p id='n89' class='pln'><a href='#n89'>89</a></p>
+<p id='n90' class='pln'><a href='#n90'>90</a></p>
+<p id='n91' class='pln'><a href='#n91'>91</a></p>
+<p id='n92' class='pln'><a href='#n92'>92</a></p>
+<p id='n93' class='pln'><a href='#n93'>93</a></p>
+<p id='n94' class='pln'><a href='#n94'>94</a></p>
+<p id='n95' class='pln'><a href='#n95'>95</a></p>
+<p id='n96' class='pln'><a href='#n96'>96</a></p>
+<p id='n97' class='pln'><a href='#n97'>97</a></p>
+<p id='n98' class='pln'><a href='#n98'>98</a></p>
+<p id='n99' class='pln'><a href='#n99'>99</a></p>
+<p id='n100' class='pln'><a href='#n100'>100</a></p>
+<p id='n101' class='pln'><a href='#n101'>101</a></p>
+<p id='n102' class='pln'><a href='#n102'>102</a></p>
+<p id='n103' class='pln'><a href='#n103'>103</a></p>
+<p id='n104' class='pln'><a href='#n104'>104</a></p>
+<p id='n105' class='pln'><a href='#n105'>105</a></p>
+<p id='n106' class='pln'><a href='#n106'>106</a></p>
+<p id='n107' class='pln'><a href='#n107'>107</a></p>
+<p id='n108' class='pln'><a href='#n108'>108</a></p>
+<p id='n109' class='pln'><a href='#n109'>109</a></p>
+<p id='n110' class='pln'><a href='#n110'>110</a></p>
+<p id='n111' class='pln'><a href='#n111'>111</a></p>
+<p id='n112' class='pln'><a href='#n112'>112</a></p>
+<p id='n113' class='pln'><a href='#n113'>113</a></p>
+<p id='n114' class='pln'><a href='#n114'>114</a></p>
+<p id='n115' class='pln'><a href='#n115'>115</a></p>
+<p id='n116' class='pln'><a href='#n116'>116</a></p>
+<p id='n117' class='pln'><a href='#n117'>117</a></p>
+<p id='n118' class='pln'><a href='#n118'>118</a></p>
+<p id='n119' class='pln'><a href='#n119'>119</a></p>
+<p id='n120' class='pln'><a href='#n120'>120</a></p>
+<p id='n121' class='pln'><a href='#n121'>121</a></p>
+<p id='n122' class='pln'><a href='#n122'>122</a></p>
+<p id='n123' class='pln'><a href='#n123'>123</a></p>
+<p id='n124' class='pln'><a href='#n124'>124</a></p>
+<p id='n125' class='pln'><a href='#n125'>125</a></p>
+<p id='n126' class='pln'><a href='#n126'>126</a></p>
+<p id='n127' class='pln'><a href='#n127'>127</a></p>
+<p id='n128' class='pln'><a href='#n128'>128</a></p>
+<p id='n129' class='pln'><a href='#n129'>129</a></p>
+<p id='n130' class='pln'><a href='#n130'>130</a></p>
+<p id='n131' class='pln'><a href='#n131'>131</a></p>
+<p id='n132' class='pln'><a href='#n132'>132</a></p>
+<p id='n133' class='pln'><a href='#n133'>133</a></p>
+<p id='n134' class='pln'><a href='#n134'>134</a></p>
+<p id='n135' class='pln'><a href='#n135'>135</a></p>
+<p id='n136' class='pln'><a href='#n136'>136</a></p>
+<p id='n137' class='pln'><a href='#n137'>137</a></p>
+<p id='n138' class='pln'><a href='#n138'>138</a></p>
+<p id='n139' class='pln'><a href='#n139'>139</a></p>
+<p id='n140' class='pln'><a href='#n140'>140</a></p>
+<p id='n141' class='pln'><a href='#n141'>141</a></p>
+<p id='n142' class='pln'><a href='#n142'>142</a></p>
+<p id='n143' class='pln'><a href='#n143'>143</a></p>
+<p id='n144' class='pln'><a href='#n144'>144</a></p>
+<p id='n145' class='pln'><a href='#n145'>145</a></p>
+<p id='n146' class='pln'><a href='#n146'>146</a></p>
+<p id='n147' class='pln'><a href='#n147'>147</a></p>
+<p id='n148' class='pln'><a href='#n148'>148</a></p>
+<p id='n149' class='pln'><a href='#n149'>149</a></p>
+<p id='n150' class='pln'><a href='#n150'>150</a></p>
+<p id='n151' class='pln'><a href='#n151'>151</a></p>
+<p id='n152' class='pln'><a href='#n152'>152</a></p>
+<p id='n153' class='pln'><a href='#n153'>153</a></p>
+<p id='n154' class='pln'><a href='#n154'>154</a></p>
+<p id='n155' class='pln'><a href='#n155'>155</a></p>
+<p id='n156' class='pln'><a href='#n156'>156</a></p>
+<p id='n157' class='pln'><a href='#n157'>157</a></p>
+<p id='n158' class='pln'><a href='#n158'>158</a></p>
+<p id='n159' class='pln'><a href='#n159'>159</a></p>
+<p id='n160' class='pln'><a href='#n160'>160</a></p>
+<p id='n161' class='pln'><a href='#n161'>161</a></p>
+<p id='n162' class='pln'><a href='#n162'>162</a></p>
+<p id='n163' class='pln'><a href='#n163'>163</a></p>
+<p id='n164' class='pln'><a href='#n164'>164</a></p>
+<p id='n165' class='pln'><a href='#n165'>165</a></p>
+<p id='n166' class='pln'><a href='#n166'>166</a></p>
+<p id='n167' class='pln'><a href='#n167'>167</a></p>
+<p id='n168' class='pln'><a href='#n168'>168</a></p>
+<p id='n169' class='pln'><a href='#n169'>169</a></p>
+<p id='n170' class='pln'><a href='#n170'>170</a></p>
+<p id='n171' class='pln'><a href='#n171'>171</a></p>
+<p id='n172' class='pln'><a href='#n172'>172</a></p>
+<p id='n173' class='pln'><a href='#n173'>173</a></p>
+<p id='n174' class='pln'><a href='#n174'>174</a></p>
+<p id='n175' class='pln'><a href='#n175'>175</a></p>
+<p id='n176' class='pln'><a href='#n176'>176</a></p>
+<p id='n177' class='pln'><a href='#n177'>177</a></p>
+<p id='n178' class='pln'><a href='#n178'>178</a></p>
+<p id='n179' class='pln'><a href='#n179'>179</a></p>
+<p id='n180' class='pln'><a href='#n180'>180</a></p>
+<p id='n181' class='pln'><a href='#n181'>181</a></p>
+<p id='n182' class='pln'><a href='#n182'>182</a></p>
+<p id='n183' class='pln'><a href='#n183'>183</a></p>
+<p id='n184' class='pln'><a href='#n184'>184</a></p>
+<p id='n185' class='pln'><a href='#n185'>185</a></p>
+<p id='n186' class='pln'><a href='#n186'>186</a></p>
+<p id='n187' class='pln'><a href='#n187'>187</a></p>
+<p id='n188' class='pln'><a href='#n188'>188</a></p>
+<p id='n189' class='pln'><a href='#n189'>189</a></p>
+<p id='n190' class='pln'><a href='#n190'>190</a></p>
+<p id='n191' class='pln'><a href='#n191'>191</a></p>
+<p id='n192' class='pln'><a href='#n192'>192</a></p>
+<p id='n193' class='pln'><a href='#n193'>193</a></p>
+<p id='n194' class='pln'><a href='#n194'>194</a></p>
+<p id='n195' class='pln'><a href='#n195'>195</a></p>
+<p id='n196' class='pln'><a href='#n196'>196</a></p>
+<p id='n197' class='pln'><a href='#n197'>197</a></p>
+<p id='n198' class='pln'><a href='#n198'>198</a></p>
+<p id='n199' class='pln'><a href='#n199'>199</a></p>
+<p id='n200' class='pln'><a href='#n200'>200</a></p>
+<p id='n201' class='pln'><a href='#n201'>201</a></p>
+<p id='n202' class='pln'><a href='#n202'>202</a></p>
+<p id='n203' class='pln'><a href='#n203'>203</a></p>
+<p id='n204' class='pln'><a href='#n204'>204</a></p>
+<p id='n205' class='pln'><a href='#n205'>205</a></p>
+<p id='n206' class='pln'><a href='#n206'>206</a></p>
+<p id='n207' class='pln'><a href='#n207'>207</a></p>
+<p id='n208' class='pln'><a href='#n208'>208</a></p>
+<p id='n209' class='pln'><a href='#n209'>209</a></p>
+<p id='n210' class='pln'><a href='#n210'>210</a></p>
+<p id='n211' class='pln'><a href='#n211'>211</a></p>
+<p id='n212' class='pln'><a href='#n212'>212</a></p>
+<p id='n213' class='pln'><a href='#n213'>213</a></p>
+<p id='n214' class='pln'><a href='#n214'>214</a></p>
+<p id='n215' class='pln'><a href='#n215'>215</a></p>
+<p id='n216' class='pln'><a href='#n216'>216</a></p>
+<p id='n217' class='pln'><a href='#n217'>217</a></p>
+<p id='n218' class='pln'><a href='#n218'>218</a></p>
+<p id='n219' class='pln'><a href='#n219'>219</a></p>
+<p id='n220' class='pln'><a href='#n220'>220</a></p>
+<p id='n221' class='pln'><a href='#n221'>221</a></p>
+<p id='n222' class='pln'><a href='#n222'>222</a></p>
+<p id='n223' class='pln'><a href='#n223'>223</a></p>
+<p id='n224' class='pln'><a href='#n224'>224</a></p>
+<p id='n225' class='pln'><a href='#n225'>225</a></p>
+<p id='n226' class='pln'><a href='#n226'>226</a></p>
+<p id='n227' class='pln'><a href='#n227'>227</a></p>
+<p id='n228' class='pln'><a href='#n228'>228</a></p>
+<p id='n229' class='pln'><a href='#n229'>229</a></p>
+<p id='n230' class='pln'><a href='#n230'>230</a></p>
+<p id='n231' class='pln'><a href='#n231'>231</a></p>
+<p id='n232' class='pln'><a href='#n232'>232</a></p>
+<p id='n233' class='pln'><a href='#n233'>233</a></p>
+<p id='n234' class='pln'><a href='#n234'>234</a></p>
+<p id='n235' class='pln'><a href='#n235'>235</a></p>
+<p id='n236' class='pln'><a href='#n236'>236</a></p>
+<p id='n237' class='pln'><a href='#n237'>237</a></p>
+<p id='n238' class='pln'><a href='#n238'>238</a></p>
+<p id='n239' class='pln'><a href='#n239'>239</a></p>
+<p id='n240' class='pln'><a href='#n240'>240</a></p>
+<p id='n241' class='pln'><a href='#n241'>241</a></p>
+<p id='n242' class='pln'><a href='#n242'>242</a></p>
+<p id='n243' class='pln'><a href='#n243'>243</a></p>
+<p id='n244' class='pln'><a href='#n244'>244</a></p>
+<p id='n245' class='pln'><a href='#n245'>245</a></p>
+<p id='n246' class='pln'><a href='#n246'>246</a></p>
+<p id='n247' class='pln'><a href='#n247'>247</a></p>
+<p id='n248' class='pln'><a href='#n248'>248</a></p>
+<p id='n249' class='pln'><a href='#n249'>249</a></p>
+<p id='n250' class='pln'><a href='#n250'>250</a></p>
+<p id='n251' class='pln'><a href='#n251'>251</a></p>
+<p id='n252' class='pln'><a href='#n252'>252</a></p>
+<p id='n253' class='pln'><a href='#n253'>253</a></p>
+<p id='n254' class='pln'><a href='#n254'>254</a></p>
+<p id='n255' class='pln'><a href='#n255'>255</a></p>
+<p id='n256' class='pln'><a href='#n256'>256</a></p>
+<p id='n257' class='pln'><a href='#n257'>257</a></p>
+<p id='n258' class='pln'><a href='#n258'>258</a></p>
+<p id='n259' class='pln'><a href='#n259'>259</a></p>
+<p id='n260' class='pln'><a href='#n260'>260</a></p>
+<p id='n261' class='pln'><a href='#n261'>261</a></p>
+<p id='n262' class='pln'><a href='#n262'>262</a></p>
+<p id='n263' class='pln'><a href='#n263'>263</a></p>
+<p id='n264' class='pln'><a href='#n264'>264</a></p>
+<p id='n265' class='pln'><a href='#n265'>265</a></p>
+<p id='n266' class='pln'><a href='#n266'>266</a></p>
+<p id='n267' class='pln'><a href='#n267'>267</a></p>
+<p id='n268' class='pln'><a href='#n268'>268</a></p>
+<p id='n269' class='pln'><a href='#n269'>269</a></p>
+<p id='n270' class='pln'><a href='#n270'>270</a></p>
+<p id='n271' class='pln'><a href='#n271'>271</a></p>
+<p id='n272' class='pln'><a href='#n272'>272</a></p>
+<p id='n273' class='pln'><a href='#n273'>273</a></p>
+<p id='n274' class='pln'><a href='#n274'>274</a></p>
+<p id='n275' class='pln'><a href='#n275'>275</a></p>
+<p id='n276' class='pln'><a href='#n276'>276</a></p>
+<p id='n277' class='pln'><a href='#n277'>277</a></p>
+<p id='n278' class='pln'><a href='#n278'>278</a></p>
+<p id='n279' class='pln'><a href='#n279'>279</a></p>
+<p id='n280' class='pln'><a href='#n280'>280</a></p>
+<p id='n281' class='pln'><a href='#n281'>281</a></p>
+<p id='n282' class='pln'><a href='#n282'>282</a></p>
+<p id='n283' class='pln'><a href='#n283'>283</a></p>
+<p id='n284' class='pln'><a href='#n284'>284</a></p>
+<p id='n285' class='pln'><a href='#n285'>285</a></p>
+<p id='n286' class='pln'><a href='#n286'>286</a></p>
+<p id='n287' class='pln'><a href='#n287'>287</a></p>
+<p id='n288' class='pln'><a href='#n288'>288</a></p>
+<p id='n289' class='pln'><a href='#n289'>289</a></p>
+<p id='n290' class='pln'><a href='#n290'>290</a></p>
+<p id='n291' class='pln'><a href='#n291'>291</a></p>
+<p id='n292' class='pln'><a href='#n292'>292</a></p>
+<p id='n293' class='pln'><a href='#n293'>293</a></p>
+<p id='n294' class='pln'><a href='#n294'>294</a></p>
+<p id='n295' class='pln'><a href='#n295'>295</a></p>
+<p id='n296' class='pln'><a href='#n296'>296</a></p>
+<p id='n297' class='pln'><a href='#n297'>297</a></p>
+<p id='n298' class='pln'><a href='#n298'>298</a></p>
+<p id='n299' class='pln'><a href='#n299'>299</a></p>
+<p id='n300' class='pln'><a href='#n300'>300</a></p>
+<p id='n301' class='pln'><a href='#n301'>301</a></p>
+<p id='n302' class='pln'><a href='#n302'>302</a></p>
+<p id='n303' class='pln'><a href='#n303'>303</a></p>
+<p id='n304' class='pln'><a href='#n304'>304</a></p>
+<p id='n305' class='pln'><a href='#n305'>305</a></p>
+<p id='n306' class='pln'><a href='#n306'>306</a></p>
+<p id='n307' class='pln'><a href='#n307'>307</a></p>
+<p id='n308' class='pln'><a href='#n308'>308</a></p>
+<p id='n309' class='pln'><a href='#n309'>309</a></p>
+<p id='n310' class='pln'><a href='#n310'>310</a></p>
+<p id='n311' class='pln'><a href='#n311'>311</a></p>
+<p id='n312' class='pln'><a href='#n312'>312</a></p>
+<p id='n313' class='pln'><a href='#n313'>313</a></p>
+<p id='n314' class='pln'><a href='#n314'>314</a></p>
+<p id='n315' class='pln'><a href='#n315'>315</a></p>
+<p id='n316' class='pln'><a href='#n316'>316</a></p>
+<p id='n317' class='pln'><a href='#n317'>317</a></p>
+<p id='n318' class='pln'><a href='#n318'>318</a></p>
+<p id='n319' class='pln'><a href='#n319'>319</a></p>
+<p id='n320' class='pln'><a href='#n320'>320</a></p>
+<p id='n321' class='pln'><a href='#n321'>321</a></p>
+<p id='n322' class='pln'><a href='#n322'>322</a></p>
+<p id='n323' class='pln'><a href='#n323'>323</a></p>
+<p id='n324' class='pln'><a href='#n324'>324</a></p>
+<p id='n325' class='pln'><a href='#n325'>325</a></p>
+<p id='n326' class='pln'><a href='#n326'>326</a></p>
+<p id='n327' class='pln'><a href='#n327'>327</a></p>
+<p id='n328' class='pln'><a href='#n328'>328</a></p>
+<p id='n329' class='pln'><a href='#n329'>329</a></p>
+<p id='n330' class='pln'><a href='#n330'>330</a></p>
+<p id='n331' class='pln'><a href='#n331'>331</a></p>
+<p id='n332' class='pln'><a href='#n332'>332</a></p>
+<p id='n333' class='pln'><a href='#n333'>333</a></p>
+<p id='n334' class='pln'><a href='#n334'>334</a></p>
+<p id='n335' class='pln'><a href='#n335'>335</a></p>
+<p id='n336' class='pln'><a href='#n336'>336</a></p>
+<p id='n337' class='pln'><a href='#n337'>337</a></p>
+<p id='n338' class='pln'><a href='#n338'>338</a></p>
+<p id='n339' class='pln'><a href='#n339'>339</a></p>
+<p id='n340' class='pln'><a href='#n340'>340</a></p>
+<p id='n341' class='pln'><a href='#n341'>341</a></p>
+<p id='n342' class='pln'><a href='#n342'>342</a></p>
+<p id='n343' class='pln'><a href='#n343'>343</a></p>
+<p id='n344' class='pln'><a href='#n344'>344</a></p>
+<p id='n345' class='pln'><a href='#n345'>345</a></p>
+<p id='n346' class='pln'><a href='#n346'>346</a></p>
+<p id='n347' class='pln'><a href='#n347'>347</a></p>
+<p id='n348' class='pln'><a href='#n348'>348</a></p>
+<p id='n349' class='pln'><a href='#n349'>349</a></p>
+<p id='n350' class='pln'><a href='#n350'>350</a></p>
+<p id='n351' class='pln'><a href='#n351'>351</a></p>
+<p id='n352' class='pln'><a href='#n352'>352</a></p>
+<p id='n353' class='pln'><a href='#n353'>353</a></p>
+<p id='n354' class='pln'><a href='#n354'>354</a></p>
+<p id='n355' class='pln'><a href='#n355'>355</a></p>
+<p id='n356' class='pln'><a href='#n356'>356</a></p>
+<p id='n357' class='pln'><a href='#n357'>357</a></p>
+<p id='n358' class='pln'><a href='#n358'>358</a></p>
+<p id='n359' class='pln'><a href='#n359'>359</a></p>
+<p id='n360' class='pln'><a href='#n360'>360</a></p>
+<p id='n361' class='pln'><a href='#n361'>361</a></p>
+<p id='n362' class='pln'><a href='#n362'>362</a></p>
+<p id='n363' class='pln'><a href='#n363'>363</a></p>
+<p id='n364' class='pln'><a href='#n364'>364</a></p>
+<p id='n365' class='pln'><a href='#n365'>365</a></p>
+<p id='n366' class='pln'><a href='#n366'>366</a></p>
+<p id='n367' class='pln'><a href='#n367'>367</a></p>
+<p id='n368' class='pln'><a href='#n368'>368</a></p>
+<p id='n369' class='pln'><a href='#n369'>369</a></p>
+<p id='n370' class='pln'><a href='#n370'>370</a></p>
+<p id='n371' class='pln'><a href='#n371'>371</a></p>
+<p id='n372' class='pln'><a href='#n372'>372</a></p>
+<p id='n373' class='pln'><a href='#n373'>373</a></p>
+<p id='n374' class='pln'><a href='#n374'>374</a></p>
+<p id='n375' class='pln'><a href='#n375'>375</a></p>
+<p id='n376' class='pln'><a href='#n376'>376</a></p>
+<p id='n377' class='pln'><a href='#n377'>377</a></p>
+<p id='n378' class='pln'><a href='#n378'>378</a></p>
+<p id='n379' class='pln'><a href='#n379'>379</a></p>
+<p id='n380' class='pln'><a href='#n380'>380</a></p>
+<p id='n381' class='pln'><a href='#n381'>381</a></p>
+<p id='n382' class='pln'><a href='#n382'>382</a></p>
+<p id='n383' class='pln'><a href='#n383'>383</a></p>
+<p id='n384' class='pln'><a href='#n384'>384</a></p>
+<p id='n385' class='pln'><a href='#n385'>385</a></p>
+<p id='n386' class='pln'><a href='#n386'>386</a></p>
+<p id='n387' class='pln'><a href='#n387'>387</a></p>
+<p id='n388' class='pln'><a href='#n388'>388</a></p>
+<p id='n389' class='pln'><a href='#n389'>389</a></p>
+<p id='n390' class='pln'><a href='#n390'>390</a></p>
+<p id='n391' class='pln'><a href='#n391'>391</a></p>
+<p id='n392' class='pln'><a href='#n392'>392</a></p>
+<p id='n393' class='pln'><a href='#n393'>393</a></p>
+<p id='n394' class='pln'><a href='#n394'>394</a></p>
+<p id='n395' class='pln'><a href='#n395'>395</a></p>
+<p id='n396' class='pln'><a href='#n396'>396</a></p>
+<p id='n397' class='pln'><a href='#n397'>397</a></p>
+<p id='n398' class='pln'><a href='#n398'>398</a></p>
+<p id='n399' class='pln'><a href='#n399'>399</a></p>
+<p id='n400' class='pln'><a href='#n400'>400</a></p>
+<p id='n401' class='pln'><a href='#n401'>401</a></p>
+<p id='n402' class='pln'><a href='#n402'>402</a></p>
+<p id='n403' class='pln'><a href='#n403'>403</a></p>
+<p id='n404' class='pln'><a href='#n404'>404</a></p>
+<p id='n405' class='pln'><a href='#n405'>405</a></p>
+<p id='n406' class='pln'><a href='#n406'>406</a></p>
+<p id='n407' class='pln'><a href='#n407'>407</a></p>
+<p id='n408' class='pln'><a href='#n408'>408</a></p>
+<p id='n409' class='pln'><a href='#n409'>409</a></p>
+<p id='n410' class='pln'><a href='#n410'>410</a></p>
+<p id='n411' class='pln'><a href='#n411'>411</a></p>
+<p id='n412' class='pln'><a href='#n412'>412</a></p>
+<p id='n413' class='pln'><a href='#n413'>413</a></p>
+<p id='n414' class='pln'><a href='#n414'>414</a></p>
+<p id='n415' class='pln'><a href='#n415'>415</a></p>
+<p id='n416' class='pln'><a href='#n416'>416</a></p>
+<p id='n417' class='pln'><a href='#n417'>417</a></p>
+<p id='n418' class='pln'><a href='#n418'>418</a></p>
+<p id='n419' class='pln'><a href='#n419'>419</a></p>
+<p id='n420' class='pln'><a href='#n420'>420</a></p>
+<p id='n421' class='pln'><a href='#n421'>421</a></p>
+<p id='n422' class='pln'><a href='#n422'>422</a></p>
+<p id='n423' class='pln'><a href='#n423'>423</a></p>
+<p id='n424' class='pln'><a href='#n424'>424</a></p>
+<p id='n425' class='pln'><a href='#n425'>425</a></p>
+<p id='n426' class='pln'><a href='#n426'>426</a></p>
+<p id='n427' class='pln'><a href='#n427'>427</a></p>
+<p id='n428' class='pln'><a href='#n428'>428</a></p>
+                
+            </td>
+            <td class='text' valign='top'>
+<p id='t1' class='pln'><span class='com'># -*- coding: utf-8 -*-</span><span class='strut'>&nbsp;</span></p>
+<p id='t2' class='stm run hide_run'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t3' class='pln'><span class='str'>&nbsp; &nbsp; pygments.lexers.foxpro</span><span class='strut'>&nbsp;</span></p>
+<p id='t4' class='pln'><span class='str'>&nbsp; &nbsp; ~~~~~~~~~~~~~~~~~~~~~~</span><span class='strut'>&nbsp;</span></p>
+<p id='t5' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t6' class='pln'><span class='str'>&nbsp; &nbsp; Simple lexer for Microsoft Visual FoxPro source code.</span><span class='strut'>&nbsp;</span></p>
+<p id='t7' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t8' class='pln'><span class='str'>&nbsp; &nbsp; :copyright: Copyright 2006-2014 by the Pygments team, see AUTHORS.</span><span class='strut'>&nbsp;</span></p>
+<p id='t9' class='pln'><span class='str'>&nbsp; &nbsp; :license: BSD, see LICENSE for details.</span><span class='strut'>&nbsp;</span></p>
+<p id='t10' class='pln'><span class='str'>&quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t11' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t12' class='stm run hide_run'><span class='key'>import</span> <span class='nam'>re</span><span class='strut'>&nbsp;</span></p>
+<p id='t13' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t14' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>pygments</span><span class='op'>.</span><span class='nam'>lexer</span> <span class='key'>import</span> <span class='nam'>RegexLexer</span><span class='strut'>&nbsp;</span></p>
+<p id='t15' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>pygments</span><span class='op'>.</span><span class='nam'>token</span> <span class='key'>import</span> <span class='nam'>Punctuation</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>,</span> <span class='nam'>Comment</span><span class='op'>,</span> <span class='nam'>Operator</span><span class='op'>,</span> <span class='nam'>Keyword</span><span class='op'>,</span> <span class='xx'>\</span><span class='strut'>&nbsp;</span></p>
+<p id='t16' class='pln'>&nbsp; &nbsp;&nbsp; <span class='nam'>Name</span><span class='op'>,</span> <span class='nam'>String</span><span class='strut'>&nbsp;</span></p>
+<p id='t17' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t18' class='stm run hide_run'><span class='nam'>__all__</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;FoxProLexer&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t19' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t20' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t21' class='stm run hide_run'><span class='key'>class</span> <span class='nam'>FoxProLexer</span><span class='op'>(</span><span class='nam'>RegexLexer</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t22' class='pln'>&nbsp; &nbsp; <span class='str'>&quot;&quot;&quot;Lexer for Microsoft Visual FoxPro language.</span><span class='strut'>&nbsp;</span></p>
+<p id='t23' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t24' class='pln'><span class='str'>&nbsp; &nbsp; FoxPro syntax allows to shorten all keywords and function names</span><span class='strut'>&nbsp;</span></p>
+<p id='t25' class='pln'><span class='str'>&nbsp; &nbsp; to 4 characters.&nbsp; Shortened forms are not recognized by this lexer.</span><span class='strut'>&nbsp;</span></p>
+<p id='t26' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t27' class='pln'><span class='str'>&nbsp; &nbsp; .. versionadded:: 1.6</span><span class='strut'>&nbsp;</span></p>
+<p id='t28' class='pln'><span class='str'>&nbsp; &nbsp; &quot;&quot;&quot;</span><span class='strut'>&nbsp;</span></p>
+<p id='t29' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t30' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>name</span> <span class='op'>=</span> <span class='str'>&#39;FoxPro&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t31' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>aliases</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;foxpro&#39;</span><span class='op'>,</span> <span class='str'>&#39;vfp&#39;</span><span class='op'>,</span> <span class='str'>&#39;clipper&#39;</span><span class='op'>,</span> <span class='str'>&#39;xbase&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t32' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>filenames</span> <span class='op'>=</span> <span class='op'>[</span><span class='str'>&#39;*.PRG&#39;</span><span class='op'>,</span> <span class='str'>&#39;*.prg&#39;</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t33' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>mimetype</span> <span class='op'>=</span> <span class='op'>[</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t34' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t35' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>flags</span> <span class='op'>=</span> <span class='nam'>re</span><span class='op'>.</span><span class='nam'>IGNORECASE</span> <span class='op'>|</span> <span class='nam'>re</span><span class='op'>.</span><span class='nam'>MULTILINE</span><span class='strut'>&nbsp;</span></p>
+<p id='t36' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t37' class='stm run hide_run'>&nbsp; &nbsp; <span class='nam'>tokens</span> <span class='op'>=</span> <span class='op'>{</span><span class='strut'>&nbsp;</span></p>
+<p id='t38' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;root&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t39' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;;\s*\n&#39;</span><span class='op'>,</span> <span class='nam'>Punctuation</span><span class='op'>)</span><span class='op'>,</span> <span class='com'># consume newline</span><span class='strut'>&nbsp;</span></p>
+<p id='t40' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(^|\n)\s*&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>,</span> <span class='str'>&#39;newline&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t41' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t42' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># Square brackets may be used for array indices</span><span class='strut'>&nbsp;</span></p>
+<p id='t43' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># and for string literal.&nbsp; Look for arrays</span><span class='strut'>&nbsp;</span></p>
+<p id='t44' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># before matching string literals.</span><span class='strut'>&nbsp;</span></p>
+<p id='t45' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(?&lt;=\w)\[[0-9, ]+\]&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t46' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\&#39;[^\&#39;\n]*\&#39;|&quot;[^&quot;\n]*&quot;|\[[^]*]\]&#39;</span><span class='op'>,</span> <span class='nam'>String</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t47' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(^\s*\*|&amp;&amp;|&amp;amp;&amp;amp;).*?\n&#39;</span><span class='op'>,</span> <span class='nam'>Comment</span><span class='op'>.</span><span class='nam'>Single</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t48' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t49' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(ABS|ACLASS|ACOPY|ACOS|ADATABASES|ADBOBJECTS|ADDBS|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t50' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ADDPROPERTY|ADEL|ADIR|ADLLS|ADOCKSTATE|AELEMENT|AERROR|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t51' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AEVENTS|AFIELDS|AFONT|AGETCLASS|AGETFILEVERSION|AINS|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t52' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AINSTANCE|ALANGUAGE|ALEN|ALIAS|ALINES|ALLTRIM|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t53' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AMEMBERS|AMOUSEOBJ|ANETRESOURCES|APRINTERS|APROCINFO|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t54' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ASC|ASCAN|ASELOBJ|ASESSIONS|ASIN|ASORT|ASQLHANDLES|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t55' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ASTACKINFO|ASUBSCRIPT|AT|AT_C|ATAGINFO|ATAN|ATC|ATCC|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t56' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ATCLINE|ATLINE|ATN2|AUSED|AVCXCLASSES|BAR|BARCOUNT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t57' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BARPROMPT|BETWEEN|BINDEVENT|BINTOC|BITAND|BITCLEAR|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t58' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BITLSHIFT|BITNOT|BITOR|BITRSHIFT|BITSET|BITTEST|BITXOR|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t59' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BOF|CANDIDATE|CAPSLOCK|CAST|CDOW|CDX|CEILING|CHR|CHRSAW|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t60' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CHRTRAN|CHRTRANC|CLEARRESULTSET|CMONTH|CNTBAR|CNTPAD|COL|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t61' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;COM|Functions|COMARRAY|COMCLASSINFO|COMPOBJ|COMPROP|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t62' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;COMRETURNERROR|COS|CPCONVERT|CPCURRENT|CPDBF|CREATEBINARY|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t63' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CREATEOBJECT|CREATEOBJECTEX|CREATEOFFLINE|CTOBIN|CTOD|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t64' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CTOT|CURDIR|CURSORGETPROP|CURSORSETPROP|CURSORTOXML|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t65' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CURVAL|DATE|DATETIME|DAY|DBC|DBF|DBGETPROP|DBSETPROP|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t66' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DBUSED|DDEAbortTrans|DDEAdvise|DDEEnabled|DDEExecute|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t67' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DDEInitiate|DDELastError|DDEPoke|DDERequest|DDESetOption|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t68' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DDESetService|DDESetTopic|DDETerminate|DEFAULTEXT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t69' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DELETED|DESCENDING|DIFFERENCE|DIRECTORY|DISKSPACE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t70' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DisplayPath|DMY|DODEFAULT|DOW|DRIVETYPE|DROPOFFLINE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t71' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DTOC|DTOR|DTOS|DTOT|EDITSOURCE|EMPTY|EOF|ERROR|EVAL(UATE)?|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t72' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;EVENTHANDLER|EVL|EXECSCRIPT|EXP|FCHSIZE|FCLOSE|FCOUNT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t73' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FCREATE|FDATE|FEOF|FERROR|FFLUSH|FGETS|FIELD|FILE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t74' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FILETOSTR|FILTER|FKLABEL|FKMAX|FLDLIST|FLOCK|FLOOR|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t75' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FONTMETRIC|FOPEN|FOR|FORCEEXT|FORCEPATH|FOUND|FPUTS|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t76' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FREAD|FSEEK|FSIZE|FTIME|FULLPATH|FV|FWRITE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t77' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;GETAUTOINCVALUE|GETBAR|GETCOLOR|GETCP|GETDIR|GETENV|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t78' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;GETFILE|GETFLDSTATE|GETFONT|GETINTERFACE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t79' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;GETNEXTMODIFIED|GETOBJECT|GETPAD|GETPEM|GETPICT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t80' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;GETPRINTER|GETRESULTSET|GETWORDCOUNT|GETWORDNUM|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t81' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;GETCURSORADAPTER|GOMONTH|HEADER|HOME|HOUR|ICASE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t82' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;IDXCOLLATE|IIF|IMESTATUS|INDBC|INDEXSEEK|INKEY|INLIST|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t83' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;INPUTBOX|INSMODE|INT|ISALPHA|ISBLANK|ISCOLOR|ISDIGIT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t84' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ISEXCLUSIVE|ISFLOCKED|ISLEADBYTE|ISLOWER|ISMEMOFETCHED|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t85' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ISMOUSE|ISNULL|ISPEN|ISREADONLY|ISRLOCKED|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t86' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ISTRANSACTABLE|ISUPPER|JUSTDRIVE|JUSTEXT|JUSTFNAME|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t87' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;JUSTPATH|JUSTSTEM|KEY|KEYMATCH|LASTKEY|LEFT|LEFTC|LEN|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t88' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;LENC|LIKE|LIKEC|LINENO|LOADPICTURE|LOCFILE|LOCK|LOG|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t89' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;LOG10|LOOKUP|LOWER|LTRIM|LUPDATE|MAKETRANSACTABLE|MAX|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t90' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MCOL|MDOWN|MDX|MDY|MEMLINES|MEMORY|MENU|MESSAGE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t91' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MESSAGEBOX|MIN|MINUTE|MLINE|MOD|MONTH|MRKBAR|MRKPAD|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t92' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MROW|MTON|MWINDOW|NDX|NEWOBJECT|NORMALIZE|NTOM|NUMLOCK|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t93' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;NVL|OBJNUM|OBJTOCLIENT|OBJVAR|OCCURS|OEMTOANSI|OLDVAL|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t94' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ON|ORDER|OS|PAD|PADL|PARAMETERS|PAYMENT|PCOL|PCOUNT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t95' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;PEMSTATUS|PI|POPUP|PRIMARY|PRINTSTATUS|PRMBAR|PRMPAD|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t96' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;PROGRAM|PROMPT|PROPER|PROW|PRTINFO|PUTFILE|PV|QUARTER|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t97' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RAISEEVENT|RAND|RAT|RATC|RATLINE|RDLEVEL|READKEY|RECCOUNT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t98' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RECNO|RECSIZE|REFRESH|RELATION|REPLICATE|REQUERY|RGB|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t99' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RGBSCHEME|RIGHT|RIGHTC|RLOCK|ROUND|ROW|RTOD|RTRIM|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t100' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SAVEPICTURE|SCHEME|SCOLS|SEC|SECONDS|SEEK|SELECT|SET|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t101' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SETFLDSTATE|SETRESULTSET|SIGN|SIN|SKPBAR|SKPPAD|SOUNDEX|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t102' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SPACE|SQLCANCEL|SQLCOLUMNS|SQLCOMMIT|SQLCONNECT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t103' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SQLDISCONNECT|SQLEXEC|SQLGETPROP|SQLIDLEDISCONNECT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t104' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SQLMORERESULTS|SQLPREPARE|SQLROLLBACK|SQLSETPROP|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t105' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SQLSTRINGCONNECT|SQLTABLES|SQRT|SROWS|STR|STRCONV|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t106' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;STREXTRACT|STRTOFILE|STRTRAN|STUFF|STUFFC|SUBSTR|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t107' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SUBSTRC|SYS|SYSMETRIC|TABLEREVERT|TABLEUPDATE|TAG|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t108' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;TAGCOUNT|TAGNO|TAN|TARGET|TEXTMERGE|TIME|TRANSFORM|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t109' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;TRIM|TTOC|TTOD|TXNLEVEL|TXTWIDTH|TYPE|UNBINDEVENTS|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t110' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;UNIQUE|UPDATED|UPPER|USED|VAL|VARREAD|VARTYPE|VERSION|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t111' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;WBORDER|WCHILD|WCOLS|WDOCKABLE|WEEK|WEXIST|WFONT|WLAST|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t112' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;WLCOL|WLROW|WMAXIMUM|WMINIMUM|WONTOP|WOUTPUT|WPARENT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t113' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;WREAD|WROWS|WTITLE|WVISIBLE|XMLTOCURSOR|XMLUPDATEGRAM|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t114' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;YEAR)(?=\s*\()&#39;</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>.</span><span class='nam'>Function</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t115' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t116' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;_ALIGNMENT|_ASCIICOLS|_ASCIIROWS|_ASSIST|_BEAUTIFY|_BOX|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t117' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_BROWSER|_BUILDER|_CALCMEM|_CALCVALUE|_CLIPTEXT|_CONVERTER|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t118' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_COVERAGE|_CUROBJ|_DBLCLICK|_DIARYDATE|_DOS|_FOXDOC|_FOXREF|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t119' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_GALLERY|_GENGRAPH|_GENHTML|_GENMENU|_GENPD|_GENSCRN|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t120' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_GENXTAB|_GETEXPR|_INCLUDE|_INCSEEK|_INDENT|_LMARGIN|_MAC|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t121' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_MENUDESIGNER|_MLINE|_PADVANCE|_PAGENO|_PAGETOTAL|_PBPAGE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t122' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_PCOLNO|_PCOPIES|_PDRIVER|_PDSETUP|_PECODE|_PEJECT|_PEPAGE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t123' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_PLENGTH|_PLINENO|_PLOFFSET|_PPITCH|_PQUALITY|_PRETEXT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t124' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_PSCODE|_PSPACING|_PWAIT|_RMARGIN|_REPORTBUILDER|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t125' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_REPORTOUTPUT|_REPORTPREVIEW|_SAMPLES|_SCCTEXT|_SCREEN|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t126' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_SHELL|_SPELLCHK|_STARTUP|_TABS|_TALLY|_TASKPANE|_TEXT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t127' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_THROTTLE|_TOOLBOX|_TOOLTIPTIMEOUT|_TRANSPORT|_TRIGGERLEVEL|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t128' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;_UNIX|_VFP|_WINDOWS|_WIZARD|_WRAP&#39;</span><span class='op'>,</span> <span class='nam'>Keyword</span><span class='op'>.</span><span class='nam'>Pseudo</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t129' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t130' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;THISFORMSET|THISFORM|THIS&#39;</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>.</span><span class='nam'>Builtin</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t131' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t132' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;Application|CheckBox|Collection|Column|ComboBox|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t133' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CommandButton|CommandGroup|Container|Control|CursorAdapter|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t134' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Cursor|Custom|DataEnvironment|DataObject|EditBox|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t135' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Empty|Exception|Fields|Files|File|FormSet|Form|FoxCode|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t136' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Grid|Header|Hyperlink|Image|Label|Line|ListBox|Objects|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t137' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;OptionButton|OptionGroup|PageFrame|Page|ProjectHook|Projects|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t138' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Project|Relation|ReportListener|Separator|Servers|Server|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t139' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Session|Shape|Spinner|Tables|TextBox|Timer|ToolBar|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t140' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;XMLAdapter|XMLField|XMLTable&#39;</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>.</span><span class='nam'>Class</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t141' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t142' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;m\.[a-z_]\w*&#39;</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>.</span><span class='nam'>Variable</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t143' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\.(F|T|AND|OR|NOT|NULL)\.|\b(AND|OR|NOT|NULL)\b&#39;</span><span class='op'>,</span> <span class='nam'>Operator</span><span class='op'>.</span><span class='nam'>Word</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t144' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t145' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\.(ActiveColumn|ActiveControl|ActiveForm|ActivePage|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t146' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ActiveProject|ActiveRow|AddLineFeeds|ADOCodePage|Alias|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t147' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Alignment|Align|AllowAddNew|AllowAutoColumnFit|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t148' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AllowCellSelection|AllowDelete|AllowHeaderSizing|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t149' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AllowInsert|AllowModalMessages|AllowOutput|AllowRowSizing|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t150' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AllowSimultaneousFetch|AllowTabs|AllowUpdate|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t151' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AlwaysOnBottom|AlwaysOnTop|Anchor|Application|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t152' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AutoActivate|AutoCenter|AutoCloseTables|AutoComplete|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t153' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AutoCompSource|AutoCompTable|AutoHideScrollBar|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t154' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AutoIncrement|AutoOpenTables|AutoRelease|AutoSize|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t155' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AutoVerbMenu|AutoYield|BackColor|ForeColor|BackStyle|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t156' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BaseClass|BatchUpdateCount|BindControls|BorderColor|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t157' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BorderStyle|BorderWidth|BoundColumn|BoundTo|Bound|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t158' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BreakOnError|BufferModeOverride|BufferMode|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t159' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BuildDateTime|ButtonCount|Buttons|Cancel|Caption|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t160' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Centered|Century|ChildAlias|ChildOrder|ChildTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t161' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ClassLibrary|Class|ClipControls|Closable|CLSID|CodePage|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t162' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ColorScheme|ColorSource|ColumnCount|ColumnLines|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t163' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ColumnOrder|Columns|ColumnWidths|CommandClauses|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t164' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Comment|CompareMemo|ConflictCheckCmd|ConflictCheckType|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t165' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ContinuousScroll|ControlBox|ControlCount|Controls|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t166' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ControlSource|ConversionFunc|Count|CurrentControl|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t167' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CurrentDataSession|CurrentPass|CurrentX|CurrentY|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t168' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CursorSchema|CursorSource|CursorStatus|Curvature|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t169' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Database|DataSessionID|DataSession|DataSourceType|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t170' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DataSource|DataType|DateFormat|DateMark|Debug|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t171' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DeclareXMLPrefix|DEClassLibrary|DEClass|DefaultFilePath|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t172' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Default|DefOLELCID|DeleteCmdDataSourceType|DeleteCmdDataSource|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t173' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DeleteCmd|DeleteMark|Description|Desktop|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t174' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Details|DisabledBackColor|DisabledForeColor|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t175' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DisabledItemBackColor|DisabledItemForeColor|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t176' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DisabledPicture|DisableEncode|DisplayCount|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t177' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DisplayValue|Dockable|Docked|DockPosition|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t178' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DocumentFile|DownPicture|DragIcon|DragMode|DrawMode|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t179' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DrawStyle|DrawWidth|DynamicAlignment|DynamicBackColor|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t180' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DynamicForeColor|DynamicCurrentControl|DynamicFontBold|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t181' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DynamicFontItalic|DynamicFontStrikethru|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t182' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DynamicFontUnderline|DynamicFontName|DynamicFontOutline|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t183' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DynamicFontShadow|DynamicFontSize|DynamicInputMask|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t184' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DynamicLineHeight|EditorOptions|Enabled|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t185' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;EnableHyperlinks|Encrypted|ErrorNo|Exclude|Exclusive|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t186' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FetchAsNeeded|FetchMemoCmdList|FetchMemoDataSourceType|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t187' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FetchMemoDataSource|FetchMemo|FetchSize|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t188' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FileClassLibrary|FileClass|FillColor|FillStyle|Filter|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t189' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FirstElement|FirstNestedTable|Flags|FontBold|FontItalic|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t190' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FontStrikethru|FontUnderline|FontCharSet|FontCondense|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t191' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FontExtend|FontName|FontOutline|FontShadow|FontSize|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t192' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ForceCloseTag|Format|FormCount|FormattedOutput|Forms|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t193' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;FractionDigits|FRXDataSession|FullName|GDIPlusGraphics|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t194' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;GridLineColor|GridLines|GridLineWidth|HalfHeightCaption|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t195' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;HeaderClassLibrary|HeaderClass|HeaderHeight|Height|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t196' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;HelpContextID|HideSelection|HighlightBackColor|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t197' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;HighlightForeColor|HighlightStyle|HighlightRowLineWidth|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t198' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;HighlightRow|Highlight|HomeDir|Hours|HostName|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t199' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;HScrollSmallChange|hWnd|Icon|IncrementalSearch|Increment|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t200' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;InitialSelectedAlias|InputMask|InsertCmdDataSourceType|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t201' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;InsertCmdDataSource|InsertCmdRefreshCmd|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t202' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;InsertCmdRefreshFieldList|InsertCmdRefreshKeyFieldList|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t203' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;InsertCmd|Instancing|IntegralHeight|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t204' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Interval|IMEMode|IsAttribute|IsBase64|IsBinary|IsNull|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t205' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;IsDiffGram|IsLoaded|ItemBackColor,|ItemData|ItemIDData|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t206' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ItemTips|IXMLDOMElement|KeyboardHighValue|KeyboardLowValue|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t207' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Keyfield|KeyFieldList|KeyPreview|KeySort|LanguageOptions|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t208' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;LeftColumn|Left|LineContents|LineNo|LineSlant|LinkMaster|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t209' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ListCount|ListenerType|ListIndex|ListItemID|ListItem|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t210' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;List|LockColumnsLeft|LockColumns|LockScreen|MacDesktop|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t211' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MainFile|MapN19_4ToCurrency|MapBinary|MapVarchar|Margin|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t212' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MaxButton|MaxHeight|MaxLeft|MaxLength|MaxRecords|MaxTop|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t213' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MaxWidth|MDIForm|MemberClassLibrary|MemberClass|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t214' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MemoWindow|Message|MinButton|MinHeight|MinWidth|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t215' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MouseIcon|MousePointer|Movable|MoverBars|MultiSelect|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t216' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Name|NestedInto|NewIndex|NewItemID|NextSiblingTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t217' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;NoCpTrans|NoDataOnLoad|NoData|NullDisplay|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t218' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;NumberOfElements|Object|OLEClass|OLEDragMode|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t219' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;OLEDragPicture|OLEDropEffects|OLEDropHasData|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t220' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;OLEDropMode|OLEDropTextInsertion|OLELCID|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t221' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;OLERequestPendingTimeout|OLEServerBusyRaiseError|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t222' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;OLEServerBusyTimeout|OLETypeAllowed|OneToMany|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t223' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;OpenViews|OpenWindow|Optimize|OrderDirection|Order|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t224' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;OutputPageCount|OutputType|PageCount|PageHeight|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t225' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;PageNo|PageOrder|Pages|PageTotal|PageWidth|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t226' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;PanelLink|Panel|ParentAlias|ParentClass|ParentTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t227' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Parent|Partition|PasswordChar|PictureMargin|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t228' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;PicturePosition|PictureSpacing|PictureSelectionDisplay|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t229' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;PictureVal|Picture|Prepared|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t230' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;PolyPoints|PreserveWhiteSpace|PreviewContainer|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t231' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;PrintJobName|Procedure|PROCESSID|ProgID|ProjectHookClass|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t232' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ProjectHookLibrary|ProjectHook|QuietMode|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t233' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ReadCycle|ReadLock|ReadMouse|ReadObject|ReadOnly|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t234' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ReadSave|ReadTimeout|RecordMark|RecordSourceType|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t235' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RecordSource|RefreshAlias|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t236' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RefreshCmdDataSourceType|RefreshCmdDataSource|RefreshCmd|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t237' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RefreshIgnoreFieldList|RefreshTimeStamp|RelationalExpr|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t238' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RelativeColumn|RelativeRow|ReleaseType|Resizable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t239' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RespectCursorCP|RespectNesting|RightToLeft|RotateFlip|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t240' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Rotation|RowColChange|RowHeight|RowSourceType|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t241' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RowSource|ScaleMode|SCCProvider|SCCStatus|ScrollBars|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t242' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Seconds|SelectCmd|SelectedID|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t243' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SelectedItemBackColor|SelectedItemForeColor|Selected|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t244' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SelectionNamespaces|SelectOnEntry|SelLength|SelStart|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t245' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SelText|SendGDIPlusImage|SendUpdates|ServerClassLibrary|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t246' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ServerClass|ServerHelpFile|ServerName|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t247' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ServerProject|ShowTips|ShowInTaskbar|ShowWindow|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t248' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Sizable|SizeBox|SOM|Sorted|Sparse|SpecialEffect|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t249' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SpinnerHighValue|SpinnerLowValue|SplitBar|StackLevel|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t250' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;StartMode|StatusBarText|StatusBar|Stretch|StrictDateEntry|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t251' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Style|TabIndex|Tables|TabOrientation|Tabs|TabStop|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t252' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;TabStretch|TabStyle|Tag|TerminateRead|Text|Themes|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t253' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ThreadID|TimestampFieldList|TitleBar|ToolTipText|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t254' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;TopIndex|TopItemID|Top|TwoPassProcess|TypeLibCLSID|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t255' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;TypeLibDesc|TypeLibName|Type|Unicode|UpdatableFieldList|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t256' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;UpdateCmdDataSourceType|UpdateCmdDataSource|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t257' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;UpdateCmdRefreshCmd|UpdateCmdRefreshFieldList|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t258' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;UpdateCmdRefreshKeyFieldList|UpdateCmd|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t259' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;UpdateGramSchemaLocation|UpdateGram|UpdateNameList|UpdateType|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t260' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;UseCodePage|UseCursorSchema|UseDeDataSource|UseMemoSize|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t261' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;UserValue|UseTransactions|UTF8Encoded|Value|VersionComments|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t262' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;VersionCompany|VersionCopyright|VersionDescription|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t263' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;VersionNumber|VersionProduct|VersionTrademarks|Version|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t264' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;VFPXMLProgID|ViewPortHeight|ViewPortLeft|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t265' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ViewPortTop|ViewPortWidth|VScrollSmallChange|View|Visible|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t266' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;VisualEffect|WhatsThisButton|WhatsThisHelpID|WhatsThisHelp|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t267' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;WhereType|Width|WindowList|WindowState|WindowType|WordWrap|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t268' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;WrapCharInCDATA|WrapInCDATA|WrapMemoInCDATA|XMLAdapter|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t269' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;XMLConstraints|XMLNameIsXPath|XMLNamespace|XMLName|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t270' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;XMLPrefix|XMLSchemaLocation|XMLTable|XMLType|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t271' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;XSDfractionDigits|XSDmaxLength|XSDtotalDigits|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t272' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;XSDtype|ZoomBox)&#39;</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>.</span><span class='nam'>Attribute</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t273' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t274' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\.(ActivateCell|AddColumn|AddItem|AddListItem|AddObject|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t275' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AddProperty|AddTableSchema|AddToSCC|Add|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t276' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ApplyDiffgram|Attach|AutoFit|AutoOpen|Box|Build|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t277' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CancelReport|ChangesToCursor|CheckIn|CheckOut|Circle|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t278' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CleanUp|ClearData|ClearStatus|Clear|CloneObject|CloseTables|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t279' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Close|Cls|CursorAttach|CursorDetach|CursorFill|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t280' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CursorRefresh|DataToClip|DelayedMemoFetch|DeleteColumn|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t281' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Dock|DoMessage|DoScroll|DoStatus|DoVerb|Drag|Draw|Eval|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t282' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;GetData|GetDockState|GetFormat|GetKey|GetLatestVersion|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t283' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;GetPageHeight|GetPageWidth|Help|Hide|IncludePageInOutput|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t284' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;IndexToItemID|ItemIDToIndex|Item|LoadXML|Line|Modify|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t285' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MoveItem|Move|Nest|OLEDrag|OnPreviewClose|OutputPage|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t286' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Point|Print|PSet|Quit|ReadExpression|ReadMethod|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t287' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RecordRefresh|Refresh|ReleaseXML|Release|RemoveFromSCC|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t288' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RemoveItem|RemoveListItem|RemoveObject|Remove|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t289' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;Render|Requery|RequestData|ResetToDefault|Reset|Run|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t290' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SaveAsClass|SaveAs|SetAll|SetData|SetFocus|SetFormat|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t291' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SetMain|SetVar|SetViewPort|ShowWhatsThis|Show|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t292' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SupportsListenerType|TextHeight|TextWidth|ToCursor|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t293' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ToXML|UndoCheckOut|Unnest|UpdateStatus|WhatsThisMode|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t294' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;WriteExpression|WriteMethod|ZOrder)&#39;</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>.</span><span class='nam'>Function</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t295' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t296' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\.(Activate|AdjustObjectSize|AfterBand|AfterBuild|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t297' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AfterCloseTables|AfterCursorAttach|AfterCursorClose|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t298' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AfterCursorDetach|AfterCursorFill|AfterCursorRefresh|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t299' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AfterCursorUpdate|AfterDelete|AfterInsert|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t300' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AfterRecordRefresh|AfterUpdate|AfterDock|AfterReport|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t301' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;AfterRowColChange|BeforeBand|BeforeCursorAttach|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t302' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BeforeCursorClose|BeforeCursorDetach|BeforeCursorFill|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t303' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BeforeCursorRefresh|BeforeCursorUpdate|BeforeDelete|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t304' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BeforeInsert|BeforeDock|BeforeOpenTables|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t305' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BeforeRecordRefresh|BeforeReport|BeforeRowColChange|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t306' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BeforeUpdate|Click|dbc_Activate|dbc_AfterAddTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t307' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_AfterAppendProc|dbc_AfterCloseTable|dbc_AfterCopyProc|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t308' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_AfterCreateConnection|dbc_AfterCreateOffline|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t309' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_AfterCreateTable|dbc_AfterCreateView|dbc_AfterDBGetProp|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t310' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_AfterDBSetProp|dbc_AfterDeleteConnection|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t311' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_AfterDropOffline|dbc_AfterDropTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t312' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_AfterModifyConnection|dbc_AfterModifyProc|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t313' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_AfterModifyTable|dbc_AfterModifyView|dbc_AfterOpenTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t314' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_AfterRemoveTable|dbc_AfterRenameConnection|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t315' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_AfterRenameTable|dbc_AfterRenameView|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t316' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_AfterValidateData|dbc_BeforeAddTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t317' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeAppendProc|dbc_BeforeCloseTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t318' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeCopyProc|dbc_BeforeCreateConnection|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t319' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeCreateOffline|dbc_BeforeCreateTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t320' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeCreateView|dbc_BeforeDBGetProp|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t321' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeDBSetProp|dbc_BeforeDeleteConnection|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t322' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeDropOffline|dbc_BeforeDropTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t323' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeModifyConnection|dbc_BeforeModifyProc|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t324' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeModifyTable|dbc_BeforeModifyView|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t325' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeOpenTable|dbc_BeforeRemoveTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t326' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeRenameConnection|dbc_BeforeRenameTable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t327' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_BeforeRenameView|dbc_BeforeValidateData|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t328' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_CloseData|dbc_Deactivate|dbc_ModifyData|dbc_OpenData|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t329' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;dbc_PackData|DblClick|Deactivate|Deleted|Destroy|DoCmd|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t330' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DownClick|DragDrop|DragOver|DropDown|ErrorMessage|Error|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t331' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;EvaluateContents|GotFocus|Init|InteractiveChange|KeyPress|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t332' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;LoadReport|Load|LostFocus|Message|MiddleClick|MouseDown|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t333' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MouseEnter|MouseLeave|MouseMove|MouseUp|MouseWheel|Moved|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t334' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;OLECompleteDrag|OLEDragOver|OLEGiveFeedback|OLESetData|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t335' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;OLEStartDrag|OnMoveItem|Paint|ProgrammaticChange|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t336' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;QueryAddFile|QueryModifyFile|QueryNewFile|QueryRemoveFile|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t337' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;QueryRunFile|QueryUnload|RangeHigh|RangeLow|ReadActivate|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t338' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ReadDeactivate|ReadShow|ReadValid|ReadWhen|Resize|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t339' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RightClick|SCCInit|SCCDestroy|Scrolled|Timer|UIEnable|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t340' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;UnDock|UnloadReport|Unload|UpClick|Valid|When)&#39;</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>.</span><span class='nam'>Function</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t341' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t342' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\s+&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t343' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='com'># everything else is not colored</span><span class='strut'>&nbsp;</span></p>
+<p id='t344' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;.&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t345' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t346' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='str'>&#39;newline&#39;</span><span class='op'>:</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t347' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;\*.*?$&#39;</span><span class='op'>,</span> <span class='nam'>Comment</span><span class='op'>.</span><span class='nam'>Single</span><span class='op'>,</span> <span class='str'>&#39;#pop&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t348' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(ACCEPT|ACTIVATE\s*MENU|ACTIVATE\s*POPUP|ACTIVATE\s*SCREEN|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t349' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ACTIVATE\s*WINDOW|APPEND|APPEND\s*FROM|APPEND\s*FROM\s*ARRAY|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t350' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;APPEND\s*GENERAL|APPEND\s*MEMO|ASSIST|AVERAGE|BLANK|BROWSE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t351' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;BUILD\s*APP|BUILD\s*EXE|BUILD\s*PROJECT|CALCULATE|CALL|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t352' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CANCEL|CHANGE|CLEAR|CLOSE|CLOSE\s*MEMO|COMPILE|CONTINUE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t353' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;COPY\s*FILE|COPY\s*INDEXES|COPY\s*MEMO|COPY\s*STRUCTURE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t354' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;COPY\s*STRUCTURE\s*EXTENDED|COPY\s*TAG|COPY\s*TO|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t355' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;COPY\s*TO\s*ARRAY|COUNT|CREATE|CREATE\s*COLOR\s*SET|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t356' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CREATE\s*CURSOR|CREATE\s*FROM|CREATE\s*LABEL|CREATE\s*MENU|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t357' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CREATE\s*PROJECT|CREATE\s*QUERY|CREATE\s*REPORT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t358' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;CREATE\s*SCREEN|CREATE\s*TABLE|CREATE\s*VIEW|DDE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t359' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DEACTIVATE\s*MENU|DEACTIVATE\s*POPUP|DEACTIVATE\s*WINDOW|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t360' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DECLARE|DEFINE\s*BAR|DEFINE\s*BOX|DEFINE\s*MENU|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t361' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DEFINE\s*PAD|DEFINE\s*POPUP|DEFINE\s*WINDOW|DELETE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t362' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DELETE\s*FILE|DELETE\s*TAG|DIMENSION|DIRECTORY|DISPLAY|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t363' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DISPLAY\s*FILES|DISPLAY\s*MEMORY|DISPLAY\s*STATUS|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t364' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DISPLAY\s*STRUCTURE|DO|EDIT|EJECT|EJECT\s*PAGE|ERASE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t365' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;EXIT|EXPORT|EXTERNAL|FILER|FIND|FLUSH|FUNCTION|GATHER|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t366' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;GETEXPR|GO|GOTO|HELP|HIDE\s*MENU|HIDE\s*POPUP|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t367' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;HIDE\s*WINDOW|IMPORT|INDEX|INPUT|INSERT|JOIN|KEYBOARD|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t368' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;LABEL|LIST|LOAD|LOCATE|LOOP|MENU|MENU\s*TO|MODIFY\s*COMMAND|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t369' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MODIFY\s*FILE|MODIFY\s*GENERAL|MODIFY\s*LABEL|MODIFY\s*MEMO|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t370' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MODIFY\s*MENU|MODIFY\s*PROJECT|MODIFY\s*QUERY|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t371' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MODIFY\s*REPORT|MODIFY\s*SCREEN|MODIFY\s*STRUCTURE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t372' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;MODIFY\s*WINDOW|MOVE\s*POPUP|MOVE\s*WINDOW|NOTE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t373' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ON\s*APLABOUT|ON\s*BAR|ON\s*ERROR|ON\s*ESCAPE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t374' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ON\s*EXIT\s*BAR|ON\s*EXIT\s*MENU|ON\s*EXIT\s*PAD|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t375' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ON\s*EXIT\s*POPUP|ON\s*KEY|ON\s*KEY\s*=|ON\s*KEY\s*LABEL|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t376' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ON\s*MACHELP|ON\s*PAD|ON\s*PAGE|ON\s*READERROR|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t377' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ON\s*SELECTION\s*BAR|ON\s*SELECTION\s*MENU|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t378' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ON\s*SELECTION\s*PAD|ON\s*SELECTION\s*POPUP|ON\s*SHUTDOWN|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t379' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;PACK|PARAMETERS|PLAY\s*MACRO|POP\s*KEY|POP\s*MENU|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t380' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;POP\s*POPUP|PRIVATE|PROCEDURE|PUBLIC|PUSH\s*KEY|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t381' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;PUSH\s*MENU|PUSH\s*POPUP|QUIT|READ|READ\s*MENU|RECALL|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t382' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;REINDEX|RELEASE|RELEASE\s*MODULE|RENAME|REPLACE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t383' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;REPLACE\s*FROM\s*ARRAY|REPORT|RESTORE\s*FROM|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t384' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RESTORE\s*MACROS|RESTORE\s*SCREEN|RESTORE\s*WINDOW|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t385' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;RESUME|RETRY|RETURN|RUN|RUN\s*\/N&quot;|RUNSCRIPT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t386' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SAVE\s*MACROS|SAVE\s*SCREEN|SAVE\s*TO|SAVE\s*WINDOWS|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t387' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SCATTER|SCROLL|SEEK|SELECT|SET|SET\s*ALTERNATE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t388' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*ANSI|SET\s*APLABOUT|SET\s*AUTOSAVE|SET\s*BELL|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t389' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*BLINK|SET\s*BLOCKSIZE|SET\s*BORDER|SET\s*BRSTATUS|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t390' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*CARRY|SET\s*CENTURY|SET\s*CLEAR|SET\s*CLOCK|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t391' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*COLLATE|SET\s*COLOR\s*OF|SET\s*COLOR\s*OF\s*SCHEME|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t392' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*COLOR\s*SET|SET\s*COLOR\s*TO|SET\s*COMPATIBLE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t393' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*CONFIRM|SET\s*CONSOLE|SET\s*CURRENCY|SET\s*CURSOR|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t394' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*DATE|SET\s*DEBUG|SET\s*DECIMALS|SET\s*DEFAULT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t395' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*DELETED|SET\s*DELIMITERS|SET\s*DEVELOPMENT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t396' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*DEVICE|SET\s*DISPLAY|SET\s*DOHISTORY|SET\s*ECHO|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t397' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*ESCAPE|SET\s*EXACT|SET\s*EXCLUSIVE|SET\s*FIELDS|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t398' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*FILTER|SET\s*FIXED|SET\s*FORMAT|SET\s*FULLPATH|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t399' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*FUNCTION|SET\s*HEADINGS|SET\s*HELP|SET\s*HELPFILTER|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t400' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*HOURS|SET\s*INDEX|SET\s*INTENSITY|SET\s*KEY|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t401' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*KEYCOMP|SET\s*LIBRARY|SET\s*LOCK|SET\s*LOGERRORS|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t402' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*MACDESKTOP|SET\s*MACHELP|SET\s*MACKEY|SET\s*MARGIN|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t403' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*MARK\s*OF|SET\s*MARK\s*TO|SET\s*MEMOWIDTH|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t404' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*MESSAGE|SET\s*MOUSE|SET\s*MULTILOCKS|SET\s*NEAR|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t405' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*NOCPTRANS|SET\s*NOTIFY|SET\s*ODOMETER|SET\s*OPTIMIZE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t406' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*ORDER|SET\s*PALETTE|SET\s*PATH|SET\s*PDSETUP|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t407' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*POINT|SET\s*PRINTER|SET\s*PROCEDURE|SET\s*READBORDER|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t408' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*REFRESH|SET\s*RELATION|SET\s*RELATION\s*OFF|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t409' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*REPROCESS|SET\s*RESOURCE|SET\s*SAFETY|SET\s*SCOREBOARD|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t410' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*SEPARATOR|SET\s*SHADOWS|SET\s*SKIP|SET\s*SKIP\s*OF|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t411' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*SPACE|SET\s*STATUS|SET\s*STATUS\s*BAR|SET\s*STEP|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t412' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*STICKY|SET\s*SYSMENU|SET\s*TALK|SET\s*TEXTMERGE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t413' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*TEXTMERGE\s*DELIMITERS|SET\s*TOPIC|SET\s*TRBETWEEN|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t414' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*TYPEAHEAD|SET\s*UDFPARMS|SET\s*UNIQUE|SET\s*VIEW|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t415' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SET\s*VOLUME|SET\s*WINDOW\s*OF\s*MEMO|SET\s*XCMDFILE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t416' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SHOW\s*GET|SHOW\s*GETS|SHOW\s*MENU|SHOW\s*OBJECT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t417' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;SHOW\s*POPUP|SHOW\s*WINDOW|SIZE\s*POPUP|SKIP|SORT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t418' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;STORE|SUM|SUSPEND|TOTAL|TYPE|UNLOCK|UPDATE|USE|WAIT|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t419' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ZAP|ZOOM\s*WINDOW|DO\s*CASE|CASE|OTHERWISE|ENDCASE|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t420' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;DO\s*WHILE|ENDDO|FOR|ENDFOR|NEXT|IF|ELSE|ENDIF|PRINTJOB|&#39;</span><span class='strut'>&nbsp;</span></p>
+<p id='t421' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class='str'>r&#39;ENDPRINTJOB|SCAN|ENDSCAN|TEXT|ENDTEXT|=)&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t422' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>Keyword</span><span class='op'>.</span><span class='nam'>Reserved</span><span class='op'>,</span> <span class='str'>&#39;#pop&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t423' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;#\s*(IF|ELIF|ELSE|ENDIF|DEFINE|IFDEF|IFNDEF|INCLUDE)&#39;</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t424' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>Comment</span><span class='op'>.</span><span class='nam'>Preproc</span><span class='op'>,</span> <span class='str'>&#39;#pop&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t425' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;(m\.)?[a-z_]\w*&#39;</span><span class='op'>,</span> <span class='nam'>Name</span><span class='op'>.</span><span class='nam'>Variable</span><span class='op'>,</span> <span class='str'>&#39;#pop&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t426' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>(</span><span class='str'>r&#39;.&#39;</span><span class='op'>,</span> <span class='nam'>Text</span><span class='op'>,</span> <span class='str'>&#39;#pop&#39;</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t427' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>]</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t428' class='pln'>&nbsp; &nbsp; <span class='op'>}</span><span class='strut'>&nbsp;</span></p>
+                
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id='footer'>
+    <div class='content'>
+        <p>
+            <a class='nav' href='index.html'>&#xab; index</a> &nbsp; &nbsp; <a class='nav' href='http://nedbatchelder.com/code/coverage'>coverage.py v3.7.1</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>

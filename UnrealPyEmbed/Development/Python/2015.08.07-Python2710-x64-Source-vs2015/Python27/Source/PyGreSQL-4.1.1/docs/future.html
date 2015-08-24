@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.9.1: http://docutils.sourceforge.net/" />
+<title>PyGreSQL future directions</title>
+<link rel="stylesheet" href="docs.css" type="text/css" />
+</head>
+<body>
+<div class="document" id="pygresql-future-directions">
+<h1 class="title">PyGreSQL future directions</h1>
+
+<p>This list has been closed since tasks are now managed with the PyGreSQL
+tracker that can be found at <a class="reference external" href="http://trac.vex.net:8000/pgtracker">http://trac.vex.net:8000/pgtracker</a>.
+(ticket numbers have been added below):</p>
+<div class="section" id="to-do">
+<h1>To Do</h1>
+<ul class="simple">
+<li>Add docs for the pgdb module (everything specific to PyGreSQL) (#5).</li>
+<li>The large object and direct access functions need much more attention (#6).</li>
+<li>The fetch method should use real cursors (#7).</li>
+<li>The C module needs to be cleaned up and redundant code merged,
+and should get its own unit test module (#8).</li>
+<li>Clean up test_pg.py and merge it with TEST_PyGreSQL_classic.py (#9).</li>
+<li>The test suite for the classic module should also check that quoted
+mixed-case identifiers can be used everywhere - currently they can't.
+Improve pg.py accordingly, adding quotes etc. as needed (#10).</li>
+<li>What shall we do with the &quot;tutorial&quot; directory - it's rather a tutorial
+for Postgres/SQL than for PyGreSQL, it's using only the query method from
+the classic pg module and no other PyGreSQL functionality, it's rather
+a demo than a tutorial (#11)?</li>
+</ul>
+</div>
+<div class="section" id="wish-list">
+<h1>Wish List</h1>
+<ul class="simple">
+<li>Make use of PQexecParams() and PQprepare(). This could speed up
+executemany() and allow retrieving binary data directly by setting
+the resultFormat parameter to one (#16).</li>
+<li>Enhance cursor.description attribute, delivering more information
+available with PQfmod() or PQftable() for instance (#17).</li>
+<li>Support optional &quot;errorhandler&quot; extension (#18).</li>
+<li>Support optional cursor and connection attribute &quot;messages&quot; (#19).</li>
+<li>Users should be able to register their own types with _pg (#21).</li>
+<li>pg has now got a new method namedresult() that returns named tuples.
+pgdb should also support named tuples, maybe via a row_factory attribute
+on the connection, similar to sqlite3 (see #22).</li>
+<li>New methods in the classic module, similar to getresult() and
+dictresult(), but returning dictionaries of rows instead of lists
+of rows (with primary key or oids as keys) (#23).</li>
+<li>Make PyGreSQL thread-safe on the connection level (#24).</li>
+<li>The API documentation could be created with Epydoc or Sphinx (#4).</li>
+<li>Write a tutorial for beginners and advanced use (#11).</li>
+<li>More and better documented examples (#4, #5, #11).</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

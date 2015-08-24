@@ -1,0 +1,33 @@
+Metadata-Version: 1.1
+Name: pyftpdlib
+Version: 1.3.0
+Summary: High-level asynchronous FTP server library
+Home-page: http://code.google.com/p/pyftpdlib/
+Author: Giampaolo Rodola'
+Author-email: g.rodola@gmail.com
+License: License :: OSI Approved :: MIT License
+Download-URL: http://pyftpdlib.googlecode.com/files/pyftpdlib-1.3.0.tar.gz
+Description: Python FTP server library provides an high-level portable interface to easily write asynchronous FTP servers with Python.
+Keywords: ftp,ftps,server,ftpd,daemon,python,ssl,sendfile,asynchronous,nonblocking,eventdriven,rfc959,rfc1123,rfc2228,rfc2428,rfc2640,rfc3659
+Platform: Platform Independent
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: File Transfer Protocol (FTP)
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Filesystems
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.4
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3

@@ -1,0 +1,1672 @@
+\documentclass{howto}
+\usepackage{ltxmarkup}
+\usepackage{graphicx}
+
+\title{PyChart}
+\author{Yasushi Saito}
+\date{July 2, 2005}
+\authoraddress{
+        Email: \email{yasushi@cs.washington.edu}
+}
+\makeindex
+
+\newcommand{\pychart}{PyChart}
+\newcommand{\pyversion}{1.34}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\xref}[1]{See Section~\ref{#1}}
+\newcommand{\pxref}[1]{see Section~\ref{#1}}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}\label{introduction}
+
+
+This document describes \pychart{} Version \pyversion{}, a Python library
+designed for drawing professional-quality charts. It produces line
+plots, bar plots, range-fill plots, pie charts, and wind-rose charts
+in PostScript, PDF,
+PNG, or SVG.  \pychart{} is distributed under the General Public License (GPL).
+
+
+\begin{seealso*}
+  \seeurl{http://www.gnu.org/copyleft/gpl.html}{Follow this link for more information about GPL.}
+\end{seealso*}
+
+The following examples illustrate uses of \pychart{}.
+
+\subsection{Line plot}
+\index{line plot}
+
+@samplechart{linetest}
+
+This example draws a simple line plot. Below is the source code needed to
+produce this chart.
+
+@samplecode{linetest}
+
+To produce a PostScript chart, just feed the file to Python.
+
+\begin{verbatim}
+% python linetest.py >linetest.eps
+\end{verbatim}
+\index{redirecting output}
+
+Or, to produce a PDF chart, run python like below
+
+\begin{verbatim}
+% python linetest.py --format=pdf >linetest.pdf
+\end{verbatim}
+\index{PDF}
+\index{\texttt{--format} option}
+
+To handle command-line options such as \code{--format=pdf},
+you need to put \code{theme.get_options()} in the beginning of your file.
+\pychart{} also supports PNG, SVG, and interactive X11 display.
+\begin{seealso}
+ \secref{options} for more information about output control.
+\end{seealso}
+
+Every \pychart{} program starts with line "\code{from pychart import *}"
+to import
+classes and objects provided by \pychart{}.  Each chart is represented by
+an \code{area} object (\pxref{module-area}),
+which defines the size , the coordinate system
+(linear, log, etc; \pxref{module-coord}), and plots to be drawn. The final line
+of a program should end with \code{area.draw()}, which draws all the
+components of the chart to the standard output.
+
+\subsection{Bar plot}
+
+@samplechart{bartestv}
+
+The below program generates this chart.
+
+@samplecode{bartestv}
+
+\section{Anatomy of a chart}\label{anatomy}
+
+A chart comprises a set of \dfn{components}. Each component belongs to a
+certain class, from which an instance tailored for a particular chart is
+generated. The below picture shows example of a chart and its components.
+
+@samplechart{failureannot}
+
+
+The standard set of component classes follow:
+
+\begin{description}
+\item[\code{area.T}:]
+
+This class defines the size, the location, and the coordinate
+system (linear, logarithmic, etc) of a chart (\pxref{module-area}).  It also
+contains axes, plots, and legends, as described below.  At least one
+Area must be created in any chart.
+
+\item[\code{axis.X}:]
+\item[\code{axis.Y}:]
+The axis class defines the look of an axis. You can specify, for
+example, the interval and the style of tick marks and grid lines
+(\pxref{module-axis}). \pychart{} provides two types of axes, \code{axis.X} and
+\code{axis.Y}, corresponding to horizontal and vertical axes.
+
+\item[\code{bar_plot.T}:]
+\item[\code{line_plot.T}:]
+\item[\code{pie_plot.T}:]
+\item[\code{range_plot.T}:]
+\item[\code{interval_plot.T}:]
+\item[\code{rose_plot.T}:]
+These classes actually plot a chart.  You can draw multiple plots in a
+single chart, and most of the times you can even mix different types of
+plots, e.g., line plots and bar plots.
+
+\item[\code{legend.T}:]
+The class draws an optional rectangular box that describes what each plot
+means (\pxref{module-legend}).
+
+\item[\code{text_box.T}:]
+This class draws an optional rectangular box that contains arbitrary
+text.  It can also contain arrows (\pxref{module-text-box}).
+
+\item[\code{canvas.T}:]
+The \code{canvas} is a "virtual paper" that defines graph-drawing
+primitives, such as lines, rectangles, and texts. One canvas corresponds
+to one output file. Canvas is used by other components in the graph and
+is usually not manipulated by users directly.  It's handy, however, if
+you want to draw a line/circle/text/etc, directly on the PostScript or
+PDF file. \xref{module-canvas}.
+
+\end{description}
+
+
+\section{Attributes}\label{attribute}
+\index{attribute}
+
+The look of a component of a chart (\pxref{anatomy}) is defined by a
+collection of \dfn{attributes}.  For example, an X or Y axis
+includes an integer \code{tic_len} attribute
+that defines
+the length of "tick" lines drawn perpendicular to the axis (\pxref{module-axis}). It also has
+an integer \code{tic_interval} attribute that defines the separation
+between tick lines.  \xref{module-axis} for the full list of Axis's attributes.
+
+Attributes are usually specified by named arguments during component creation:
+
+\begin{verbatim}
+ax = axis.X(tic_len = 3, tic_interval = 50)
+\end{verbatim}
+
+\noindent
+Attributes can also be changed after a component is created, but before
+\code{area.T.draw()}, the main drawing procedure (\pxref{module-area}), is called.
+The below example has the same effect as the above.
+
+\begin{verbatim}
+ax = axis.X()
+ax.tic_len = 3
+ax.tic_interval = 50
+\end{verbatim}
+
+\index{attribute!setting default values}
+
+Each attribute has a default value that supposedly gives you a standard
+look to the chart. You can change the default values through
+\code{chart_object} module. For example, the below example has the same
+effect as the above, except that all X axes created in the future will
+have the new default values.
+
+\declaremodule{extension}{chart-object}
+\index{set_defaults}
+
+\begin{verbatim}
+chart_object.set_defaults(axis.X, tic_len=3, tic_interval=50)
+ax = axis.X()
+\end{verbatim}
+
+\section{Unit of length and the coordinate System}\label{unit}
+
+\index{unit of length}
+\index{PostScript}
+\index{points}
+\index{coordinate system}
+
+In \pychart{}, the X axis grows to the right, and the Y axis grows up
+(the same as PostScript, but different from X and Windows).
+
+The length is measured in ``PostScript points'', which coincides with \TeX{}
+points. Usually, one point is equal to 1/72 inch.  Several variables and
+functions are provided to manipulate lengths.
+
+Chart magnification can be changed by setting
+variable \code{theme.scale_factor}.
+One can convert a sample data value to a canval coordinate by
+calling two methods, \code{x_pos} and \code{y_pos} in \code{area.T} object.
+
+\index{scaling charts}
+\index{magnifying charts}
+
+\begin{seealso}
+  \xref{module-theme} for the \module{theme} module.
+
+
+
+  \xref{module-area} for the \module{area} mobule.
+\end{seealso}
+
+\section{Reading CSV files and transforming data}
+
+\declaremodule{extension}{chart-data}
+\index{data}
+\index{samples}
+
+The basic function of \pychart{} is to plot sample data in a variety of
+ways.  Sample data are simply a \emph{sequence} of \emph{sequences},
+where the term "sequence" is a Python jargon for either a tuple
+(comma-separated numbers or strings enclosed in parenthesis, e.g.,
+\code{(5, 10, 15)}) or a list
+(comma-separated numbers or strings enclosed in square brackets, e.g.,
+\code{[5, 10, 15]}). Data
+are given to plots through the "\code{data}" attribute of a plot object:
+
+\begin{verbatim}
+l = line_plot.T(data=[(10,20), (11,38), (12,29)], xcol=0, ycol=1)
+\end{verbatim}
+
+\noindent
+In the above example, three sample points will be drawn along with line
+segments that connect them: (10, 20) - (11, 38) - (12, 29).
+Attribute \code{xcol} tells the locations of X values within data (the
+first column of each sample in \code{data}), and \code{ycol} similarly
+tell the locations of Y values (the last column of each sample in
+\code{data}).  A sample point can contain None, in which case
+it is ignored.
+
+\begin{verbatim}
+data = [(10, 20, 21), (11, 38, 22), (13, None, 15), (12, 29, 30)]
+l1 = line_plot.T(data=data, xcol=0, ycol=1)
+l2 = line_plot.T(data=data, xcol=0, ycol=2)
+\end{verbatim}
+
+\noindent
+The above example is equivalent to:
+
+\begin{verbatim}
+l1 = line_plot.T(data=[(10, 20), (11, 38), (12, 29)], xcol=0, ycol=1)
+l2 = line_plot.T(data=[(10, 21), (11, 22), (13, 15), (12, 30)], xcol=0, ycol=1)
+\end{verbatim}
+
+
+Module \code{chart_data} provides several functions for generating,
+reading, or transforming samples.
+
+\index{conversion!CSV}
+\index{CSV}
+\index{comma-separated values (see CSV)}
+
+\begin{funcdesc}{read_csv}{path, delim = ','}
+\index{scanf}
+\index{format!read_csv}
+\index{comments!- in CSV files}
+@pydescribe{chart_data.read_csv}
+\indexii{file}{read}
+\end{funcdesc}
+
+\begin{funcdesc}{read_str}{delim, lines}
+@pydescribe{chart_data.read_str}
+\index{format!read_str}
+\indexii{string}{read}
+\end{funcdesc}
+
+\begin{funcdesc}{write_csv}{path, data}
+@pydescribe{chart_data.write_csv}
+\indexii{file}{write}
+\end{funcdesc}
+
+\begin{funcdesc}{func}{f, from, to, step}
+@pydescribe{chart_data.func}
+\end{funcdesc}
+
+\begin{funcdesc}{filter}{f, data}
+@pydescribe{chart_data.filter}
+\end{funcdesc}
+
+\begin{funcdesc}{extract_rows}{data, rows...}
+@pydescribe{chart_data.extract_rows}
+\end{funcdesc}
+
+\begin{funcdesc}{extract_columns}{data, cols...}
+@pydescribe{chart_data.extract_columns}
+\end{funcdesc}
+
+\begin{funcdesc}{moving_average}{data, xcol, ycol, width}
+\index{average (computing -)}
+\index{mean (computing -)}
+@pydescribe{chart_data.moving_average}
+\end{funcdesc}
+
+\begin{funcdesc}{median}{data, freq_col=1}
+@pydescribe{chart_data.median}
+\end{funcdesc}
+
+\begin{funcdesc}{mean_samples}{data, xcol, ycollist}
+@pydescribe{chart_data.mean_samples}
+\end{funcdesc}
+
+\begin{funcdesc}{stddev_samples}{data, xcol, ycollist, delta}
+\index{standard deviation (computing -)}
+\index{variance (computing -)}
+@pydescribe{chart_data.stddev_samples}
+\end{funcdesc}
+
+\begin{funcdesc}{transform}{func, data}
+@pydescribe{chart_data.transform}
+\end{funcdesc}
+
+One of the frequent uses of \code{transform} is to convert a date string
+to number and back to some other string for display. The next example
+does this: it takes the input for date in the format of "10/5/1983", and
+displays the graph in the format of "Oct 5, 1983".
+
+\indexii{conversion}{date}
+\index{time (see date)}
+
+@samplecode{date}
+
+@samplechart{date}
+
+\section{Area}
+\declaremodule{extension}{area}
+
+\begin{classdesc*}{area.T}
+Class \code{area.T} defines the location and size of a chart. It also
+defines the coordinate system (linear, log, or enumeration) of the X and
+Y axes.
+
+\indexii{scale}{logarithmic}
+\indexii{scale}{linear}
+\index{category axis}
+The X (or Y) coordinate system is defined by attribute
+\code{x_coord} (or \code{y_coord}), which takes an object
+of type \code{coord.T}. Class \code{coord.T} defines how an X (or a Y)
+value is mapped to a display (canvas) location. \pychart{} provides
+three standard coordinate systems: \code{linear_coord.T} (for linear
+mapping; this is the default), \code{log_coord.T} (for logarithmic
+mapping), and \code{category_coord.T} (enumeration of values). Most
+charts will do ok by instantiating one of these pre-defined coordinate
+classes, but you can also define your own wacky coordinate system.
+
+\begin{seealso}
+\xref{module-coord} for more about the coordinate system.
+\end{seealso}
+
+For log and linear coordinate systems, the minimum and maximum
+displayable values in the area are computed automatically from the plots
+unless they are defined explicitly via attribute \code{x_range}.
+In the next example, the X axis is drawn with a
+logarithmic scale. The minimum value
+will be 10, and the maximum value will be computed from the values given
+to plots.
+
+\begin{verbatim}
+ar = area.T(x_coord = log_coord.T(), x_range = (10, None), ...)
+\end{verbatim}
+
+In the below example of a category coordinate system,
+the X axis will list three strings,
+``apple'', ``orange'', and ``blueberry''.
+
+\begin{verbatim}
+samples = [("apple", 10), ("orange", 30), ("blueberry", 20)],
+ar = area.T(x_coord = category_coord(samples, 0))
+ar.add_plot(bar_plot.T(data = samples))
+\end{verbatim}
+\end{classdesc*}
+
+We now list the attributes understood by an \code{area.T} object.
+
+%%area.T
+
+An object of \code{area.T} also provides several methods:
+
+\begin{methoddesc}{add_plot}{plot, ...}
+Add plots to the area. Each \var{plot} must be a plot object.
+\xref{module-line-plot}, \secref{module-bar-plot},
+\secref{module-pie-plot}, \secref{module-range-plot}.
+\end{methoddesc}
+
+\begin{methoddesc}{draw}{canvas = None}
+Draw plots, axes, and the legend. This procedure must be called at the
+end of every \pychart{} application.
+Parameter \var{canvas} is an optional parameter that specifies the output.
+If omitted, the default canvas is used.
+\begin{seealso}
+Section~\ref{module-canvas} for more about canvas.
+\end{seealso}
+\end{methoddesc}
+
+\begin{methoddesc}{x_pos}{xval}
+Converts \var{xval} to a coordinate on the canvas (\pxref{module-canvas}).
+\xref{unit}.
+\end{methoddesc}
+\index{PostScript}
+
+\begin{methoddesc}{y_pos}{yval}
+Converts \var{yval} to a coordinate on the canvas (\pxref{module-canvas}).
+\xref{unit}.
+\end{methoddesc}
+
+\begin{verbatim}
+ar = area.T(loc=(50, 50), size=(100, 100),
+            xrange=(0,200), yrange=(0, 1000))
+px = ar.x_pos(50)
+py = ar.y_pos(100)
+\end{verbatim}
+
+\noindent
+In the above example, the chart is drawn in the area defined by
+rectangle (50, 50) - (150, 150).  The point (\code{px, py}) will
+be at (75, 60), which is the screen location at which the point
+(50, 100) would be drawn (i.e., 50 + 100 * 50/200 = 75,
+50 + 100 * 100 / 1000 = 60).
+
+\index{coordinate system}
+\index{X axis}
+\index{Y axis}
+\index{axis (extension module)}
+
+\subsection{Specifying the coordinate system}
+\declaremodule{extension}{coord}
+\index{coordinate system}
+\indexii{scale}{linear}
+\indexii{scale}{logarithmic}
+\index{coordinate system!linear}
+\index{coordinate system!logarithmic}
+
+Attributes \code{x_coord} and \code{y_coord} specify the coordinate
+systems for the area's X and Y axes. The values of these attributes
+must of type \code{coord.T}. \pychart{} provides three popular subclasses
+of \code{coord}.  Both \code{x_coord} and \code{y_coord} defaults to
+\code{linear_coord.T()}.
+
+\begin{classdesc*}{linear_coord.T}
+This class creates a linear coordinate system.
+
+\begin{verbatim}
+ar = area.T(x_coord = linear_coord.T(), y_coord = linear_coord.T(), ...)
+\end{verbatim}
+\end{classdesc*}
+
+\begin{classdesc*}{log_coord.T}
+This class displays a logarithmic coordinate system.
+\end{classdesc*}
+
+\begin{classdesc}{category_coord.T}{data, col}
+This class defines a ``categorical'' coordinate system, in which the
+axis only takes discrete values. This class takes two constructors:
+\var{data} (\pxref{module-chart-data}) and column \var{col}
+from which the axis values are
+extracted from the data. See the following example:
+@samplecode{categbar}
+
+The output will look like the below:
+
+@samplechart{categbar}
+\end{classdesc}
+
+\index{zap marks}
+
+All the classes described so far are derived from the \code{coord.T} class:
+
+\begin{classdesc}{coord.T}{}
+This is an abstract base class that defines methods for
+calculating the mapping between sample values and coordinates.
+Every \code{coord.T} object must implement the following three methods:
+\end{classdesc}
+
+\begin{methoddesc}{get_data_range}{dmin, dmax, interval}
+This method should compute the minimum and maximum values that are to be
+displayed on the canvas. \var{dmin}, \var{dmax}
+are the minimum and maximum values found
+in the sample data given to the plots. \var{interval} is the value of
+the area's \code{x_grid_interval} (or \code{y_grid_interval})
+attribute (\pxref{module-area}),
+or \code{None} if the
+attribute is omitted by the user. This method should return tuple
+(MIN, MAX, INTERVAL), where MIN, MAX are the minimum and maximum values
+to be displayed, and INTERVAL is the interval with which label and tick lines
+are drawn.
+\end{methoddesc}
+
+\begin{methoddesc}{get_canvas_pos}{size, val, range}
+This method converts a data value (\var{val}) to canvas location.
+Parameter \var{size} is the size of the
+axis, either X or Y, and \var{range} is the minimum and maximum sample
+values obtained by calling \code{self.get_data_range}.
+\end{methoddesc}
+
+\begin{methoddesc}{get_tics}{range, interval}
+This method should return the list of values (not canvas locations) at which
+labels and ``tick'' lines are drawn. Parameters \var{range} and
+\var{interval} are the
+values returned by get_data_range.
+\end{methoddesc}
+
+\index{coordinate system!- with a gap}
+You can create fancier coordinate systems by subtyping \code{coord.T}.
+The below example shows how you can create a chart with ``zap'' marks.
+
+@samplechart{zaptest}
+
+@samplecode{zaptest}
+
+\subsection{Axes}
+\declaremodule{extension}{axis}
+\index{X axis}
+\index{Y axis}
+
+Module \code{axis} defines the look of an axis as well as grid
+lines. Two classes, \code{axis.X} and \code{axis.Y}, are provided by
+this module.
+
+\begin{classdesc*}{axis.X}
+This class is draws an X (horizontal) axis.
+
+%%axis.X
+\end{classdesc*}
+
+\begin{classdesc*}{axis.Y}
+This class is draws a Y (vertical) axis.
+
+%%axis.Y
+\end{classdesc*}
+
+\subsection{Legends}
+\declaremodule{extension}{legend}
+
+\begin{classdesc*}{legend.T}
+A legend is a subcomponent of area that draws a rectangular box with
+the description of each plots.
+\end{classdesc*}
+
+This class supports the following attributes:
+
+%%legend.T
+
+\section{Bar plots}
+\declaremodule{extension}{bar-plot}
+
+\begin{classdesc*}{bar_plot.T}
+  This class draws a bar plot.
+
+@samplechartandcode{bartest,Sample bar plot}
+
+@samplechartandcode{bartest2, Bar plot with error bars}
+\end{classdesc*}
+
+The list the attributes understood by an \code{bar_plot.T} object follow:
+
+%%bar_plot.T
+
+\section{Interval bar plots}
+\declaremodule{extension}{interval-bar-plot}
+
+\begin{classdesc*}{interval_bar_plot.T}
+An interval bar plot is a special kind of bar plot that draws
+an alternating sequence of bars.
+@samplechartandcode{intvlbartestv, Sample interval bar chart}
+\end{classdesc*}
+
+The list the attributes understood by an \code{interval_bar_plot.T} object:
+
+%%interval_bar_plot.T
+
+\section{Line and scatter plots}
+\declaremodule{extension}{line-plot}
+\index{scatter plot}
+
+\begin{classdesc*}{line_plot.T}
+  This class raws a line plot. By specifying None to its line style,
+  you can also draw a scatter plot.
+
+@samplechartandcode{linetest3, Sample line plot}
+@samplechartandcode{scattertest, Sample scatter plot}
+\index{scale!logarithmic (example)}
+\index{coordinate system!logarithmic (example)}
+
+\end{classdesc*}
+
+%%line_plot.T
+
+\subsection{Tick marks}
+\declaremodule{extension}{tick-mark}
+
+\begin{classdesc*}{tick_mark.T}
+Tick marks are used in conjunction with line plots (\pxref{module-line-plot})
+to show where sample points are.
+Class \code{tick_mark.T} is an abstract base class, from which
+several built-in tick mark classes are derived. They are described later.
+\end{classdesc*}
+
+Class \code{tick_mark.T} supports the following set of attributes.
+
+%%tick_mark.T
+
+Several types of tick marks are offered by \pychart{} as subclasses of
+\code{tick_mark.T}.  They include: tick_mark.Circle,
+tick_mark.Square, tick_mark.Triangle, tick_mark.DownTriangle,
+tick_mark.X, tick_mark.Plus, tick_mark.Diamond, tick_mark.Star,
+tick_mark.Null.  Specific instance of these classes are also defined for
+your convenience.  Below is the list of such standard tick marks.  They
+are referred to by as "\code{tick_mark.}\var{name}", where \var{name} is
+the labels below them.
+
+@samplechart{tickmarks}
+
+\subsection{Error bars}
+
+\declaremodule{extension}{error-bar}
+
+\begin{classdesc*}{error_bar.T}
+Error bars are used in conjunction with line, scatter, or bar plots to
+show the confidence interval of each sample value. \xref{module-bar-plot}.
+Class \code{error_bar.T} is an abstract base class. Actual drawing is
+done by its subclasses, described next.
+\end{classdesc*}
+
+@samplechart{errorbars}
+
+
+\begin{classdesc*}{error_bar.error_bar1}
+This class supports the following attributes:
+%%error_bar.error_bar1
+\end{classdesc*}
+
+\begin{classdesc*}{error_bar.error_bar2}
+This class supports the following attributes:
+%%error_bar.error_bar2
+\end{classdesc*}
+
+\begin{classdesc*}{error_bar.error_bar3}
+This class supports the following attributes:
+%%error_bar.error_bar3
+\end{classdesc*}
+
+\begin{classdesc*}{error_bar.error_bar4}
+This class supports the following attributes:
+%%error_bar.error_bar4
+\end{classdesc*}
+
+\begin{classdesc*}{error_bar.error_bar5}
+This class supports the following attributes:
+%%error_bar.error_bar5
+\end{classdesc*}
+
+\begin{classdesc*}{error_bar.error_bar6}
+This class supports the following attributes:
+%%error_bar.error_bar6
+\end{classdesc*}
+
+\section{Range plots}
+\declaremodule{extension}{range-plot}
+
+\begin{classdesc*}{range_plot.T}
+A range plot is similar to line plots (\pxref{module-line-plot}), but
+it fills regions, instead of drawing line.
+
+@samplechartandcode{rangetest,Sample range plot}
+\end{classdesc*}
+
+This class supports the following attributes:
+
+%%range_plot.T
+
+
+\section{Pie plots}
+\declaremodule{extension}{pie-plot}
+
+\begin{classdesc*}{pie_plot.T}
+Pie plots.
+@samplechartandcode{pietest, Sample pie chart}
+\end{classdesc*}
+
+This class supports the following attributes:
+
+%%pie_plot.T
+
+
+\section{Rose plots}
+\declaremodule{extension}{rose-plot}
+\index{wind rose plot}
+
+\begin{classdesc*}{rose_plot.T}
+Rose plot class is contributed by Kilian Hagemann. It's still experimental.
+@samplechartandcode{roseplottest, Sample rose plot}
+\end{classdesc*}
+
+This class supports the following attributes:
+
+%%rose_plot.T
+
+
+\section{PyChart options}\label{options}
+\index{command-line options}
+\index{redirecting output}
+
+The behavior of \pychart{} can be changed in three ways,
+by
+setting variables in module \code{theme}, via command-line options,
+and via environment variable \code{PYCHART_OPTIONS}.
+
+\subsection{\module{theme} -- Defining the default behaviour of PyChart}
+\declaremodule{extension}{theme}
+
+You can change \pychart{}'s behavior by setting variables in the module
+\code{theme}. After setting values, you \emph{must} call
+\code{theme.reinitialize()} to reflect the changes to other parts of
+\pychart{}.
+Notice that these variables are meaningful only before the first call to
+area.T.draw() (\pxref{module-area}).
+
+\begin{verbatim}
+theme.scale_factor = 3
+theme.reinitialize()
+\end{verbatim}
+
+The below are the list of variables in the \module{theme}
+module that you can
+modify.
+
+\index{magnifying charts}
+\begin{datadesc}{scale_factor}
+This variable defines the scaling factor.
+The default value is 1.0, meaning that
+one point in \pychart{} actually means one PostScript point.
+Setting this value to
+3.0, for example, makes \pychart{} draw everything three times larger.
+
+\begin{seealso}
+  \xref{unit} for how the length and the coordinate system
+  are defined in \pychart{}.
+\end{seealso}
+\end{datadesc}
+
+\begin{datadesc}{output_format}
+\indexii{write}{format}
+This variable sets the encoding of the data produced by \pychart{}.
+The value of this variable must be one of the following strings.
+
+\begin{description}
+\item[\code{ps}:]
+\item[\code{eps}:]
+\index{PostScript}
+\index{Encapsulated PostScript!see \textit{PostScript}}
+Encapsulated PostScript. This is the default.
+
+\item[\code{pdf}:]
+\index{PDF}
+Adobe Page Description Format, or PDF.
+
+\item[\code{pdf-uncompressed}:]
+PDF without compression.
+This option should be used for a debugging purpose only.
+
+\item[\code{png}:]
+\index{PNG}
+PNG graphics.  You need to have ghostscript (\code{gs}) installed to use
+this option, because \pychart{} internally calls ghostscript to convert
+PostScript to PNG.
+
+\begin{seealso}
+\seeurl{http://www.ghostscript.com/}{See this web page for more information about Ghostscript.}
+\end{seealso}
+
+\item[\code{svg}:]
+\index{SVG}
+Scalable vector graphics.
+
+\begin{seealso}
+\seeurl{http://www.w3.org/Graphics/SVG/}{See this web page for more information about SVG.}
+\end{seealso}
+
+\item[\code{x11}:]
+\index{X11}
+\index{ghostscript}
+Interactive display on in X window. This format works on UNIX-based
+systems, but not on Windows. You need to have ghostscript installed to
+use this option.
+
+\end{description}
+
+When this variable is not set (or is set to \code{None}),
+\pychart{} guesses the format from the file name
+(\code{theme.output_file}; see below).
+Failing that, \pychart{} will generate
+an encapsulated PostScript file.
+
+\end{datadesc}
+
+\begin{datadesc}{output_file}
+\indexii{write}{file}
+\index{file name}
+Sets the output file name. Without this option, \pychart{} sends code
+to the standard output.
+If you want to produce multiple charts from a single Python source file,
+use \code{canvas.init(\var{file})} (\pxref{module-canvas}).
+\end{datadesc}
+
+\begin{datadesc}{use_color}
+\index{gray scale}
+\index{color!-ing charts}
+The default value of this variable is \code{False}.
+If the value is \code{True},
+\pychart{} colorizes some of the default objects.
+If the value is \code{False}, \pychart{} uses gray scale for the color of
+these objects.
+In particular:
+
+\begin{itemize}
+\item
+The standard color list (\code{colors.standards}) will include all
+the colors listed in X's RGB file. So you can use something like
+"\code{color.slate_blue}"\footnote{In fact, you can use these color names
+in gray-scale mode as well. They will appear in some gray color though.}.
+\xref{module-color} for more about colors.
+\index{color!names}
+
+\item
+The standard fill style list (\code{fill_style.standards}) will
+be colorized.  Thus, if you create a bar plot without explicitly
+specifying its fill style, you will see colored bars on the canvas.
+\xref{module-fill-style} for more about fill styles.
+\index{fill_style}
+
+\item
+The standard line style list (\code{line_style.standards}) will be colorized.
+\xref{module-line-style} for more about line styles.
+\index{line_style}
+\end{itemize}
+
+\end{datadesc}
+
+
+\begin{datadesc}{default_font_family}
+This variable sets the default font family used when
+drawing texts.  The default is Helvetica.
+\xref{escape-sequence}.
+\index{font!family}
+\index{Helvetica (font)}
+\end{datadesc}
+
+\begin{datadesc}{default_font_size}
+This variable sets the font size used when
+drawing texts.  The default is 9 points.
+\xref{escape-sequence}.
+\indexii{font}{size}
+\end{datadesc}
+
+\begin{datadesc}{default_halign}
+Sets the default horizontal alignment of texts (Default value: \code{/h}).
+\xref{escape-sequence}.
+\end{datadesc}
+
+\begin{datadesc}{default_valign}
+Sets the default vertical alignment of texts (Default value: \code{/v}).
+\xref{escape-sequence}.
+\end{datadesc}
+
+\begin{datadesc}{default_angle}
+Default text-drawing angle (Default value: 0).
+\xref{escape-sequence}.
+\end{datadesc}
+
+\begin{datadesc}{default_line_height}
+Defines the separation between two text lines.
+\xref{escape-sequence}.
+\index{font!height}
+\end{datadesc}
+
+\begin{datadesc}{default_line_width}
+\indexii{line}{width}
+Set the default line width, in points (\pxref{unit}). (Default value: 0.4)
+\xref{module-line-style}.
+\end{datadesc}
+
+\begin{datadesc}{debug_level}
+This variable controls the verbosity of messages from \pychart{}. The
+default value is 1, meaning that \pychart{} only displays error
+messages. The larger the value, the more verbose \pychart{} becomes.
+\end{datadesc}
+
+\begin{datadesc}{bounding_box}
+This variable, if set, manually sets the bounding box of the
+chart(s) produced by \pychart{}. It is a four-tuple of numbers, i.e.,
+(\var{xmin, ymin, xmax, ymax}).
+\pychart{} usually calculates
+the bounding box of a chart
+automatically. Thus, you set this variable only
+when you want to override the
+calculation by \pychart{}, or \pychart{} screws the calculation.  The latter
+situation happens especially when you use really thick lines for
+drawing. See also \code{delta_bounding_box}, described next.
+\end{datadesc}
+
+\begin{datadesc}{delta_bounding_box}
+This variable, if set, adjusts the size of the bounding box of
+the chart(s).
+It is a four-tuple of numbers (\var{xmin}, \var{ymin}, \var{xmax}, \var{ymax}). Each of the number is added to the bounding box computed by
+\pychart{}.
+
+If both \code{bounding_box} and \code{delta_bounding_box} are
+set, then \code{delta_bounding_box} is ignored.
+\end{datadesc}
+
+After changing any of the variables described so far, you \emph{must}
+call the \code{reinitialize} function to reflect the change to
+the rest of \pychart{}:
+
+\begin{funcdesc}{reinitialize}{}
+@pydescribe{theme.reinitialize}
+\end{funcdesc}
+
+\subsection{Changing the default behavior via command-line options}\label{command-line-options}
+\index{command-line options}
+
+The variables in the \module{theme} module can
+also be set from the command line. To do this, the program
+that imports \pychart{} must call \code{theme.get_options} in the
+beginning, because \pychart{} itself is just a library. Below is an example.
+
+\begin{funcdesc}{get_options}{ARGV = sys.argv[1:]}
+@pydescribe{theme.get_options}
+\end{funcdesc}
+
+\subsection{Changing the default behavior via environment variable PYCHART_OPTIONS}\label{PYCHART-OPTIONS}
+\index{environment variable}
+\index{PYCHART_OPTIONS}
+
+The variables in the \module{theme} module can also be set
+via environment variable \code{PYCHART_OPTIONS}.
+The value of this variable, if set, should be a
+sequence of \code{var=val}, separated by space.  For instance, the below
+example tells \pychart{} to write to file \file{foo.pdf} and use
+Times-Roman as the default font.
+
+\begin{verbatim}
+% PYCHART_OPTIONS="output=foo.pdf font-family=Times"
+% export PYCHART_OPTIONS
+\end{verbatim}
+
+The summary of attributes that can be set via \code{PYCHART_OPTIONS}
+follows.
+
+\begin{description}
+\item[font-family=\var{name}:]
+\index{font}{family}
+ Same as setting \code{theme.default_font_family} variable.
+
+\item[font-size=\var{size}:]
+\index{font}{size}
+ Same as setting \code{theme.default_font_size} variable.
+
+\item[line-width=\var{points}:]
+  Same as setting \code{theme.default_line_width} variable.
+
+\item[scale=\var{n}:]
+\index{scale!scaling charts}
+\index{size!scaling charts (see \textit{scale})}
+\index{magnifying charts!see \textit{scale}}
+  Same as setting \code{theme.scale_factor} variable.
+
+\item[color=[yes|no]:]
+\index{color!-izing charts}
+  Same as setting \code{theme.use_color} variable.
+
+\item[debug-level=\var{N}:]
+Same as setting \code{theme.debug_level} variable.
+
+\item[bbox=\var{LEFT},\var{BOTTOM},\var{RIGHT},\var{TOP}:]
+\index{bounding box}
+This option sets \code{theme.bounding_box} and/or
+\code{theme.delta_bounding_box}.
+The value of this option is a sequence of four values, separated by
+commas. Each value is of the form, \code{+}\var{num}, \code{-}\var{num},
+or \var{num}. \code{+}\var{num} and \code{-}\var{num} adds to or subtracts
+from the bounding-box value computed by \pychart{} (the unit is PostScript
+points; \xref{unit}.) \var{num} sets the bounding box at that value. For
+example,
+
+\begin{verbatim}
+bbox=-10,0,+10,100
+\end{verbatim}
+
+Extends the bounding box 10 points to both left and right, and sets the
+vertical stretch from 0 to 100.
+\end{description}
+
+\section{Line styles}
+
+\declaremodule{extension}{line-style}
+
+\begin{classdesc*}{line_style.T}
+This class defines the looks of line segments.
+This class supports the following attributes:
+\end{classdesc*}
+
+%%line_style.T
+
+The below picture show standard line styles.
+These styles are referred to by names
+\code{line_style.}\var{name}, where \var{name} is the label below each item.
+
+@samplechart{linestyles}
+
+\section{Colors}
+\declaremodule{extension}{color}
+
+\begin{classdesc*}{color.T}
+This class determines the color.
+\end{classdesc*}
+
+This class supports the following attributes:
+
+%%color.T
+
+\index{rgb.txt}
+\index{color!names}
+
+For example, \code{color.T(r=1, g=1, b=1)} will produce white.
+The color of \code{color.T(r=1, g=0, b=1)} will produce purple.
+You can use all the colors defined in X rgb.txt (usually at
+\file{/usr/X11R6/lib/X11/rgb.txt}). The below shows some of the standard
+colors defined in the module.  They are refereed to by the names
+\code{color.}\var{name} (e.g., \code{color.gray1}).
+
+@samplechart{colors}
+
+\section{Fill styles}
+\declaremodule{extension}{fill-style}
+
+\begin{classdesc*}{fill_style.T}
+This class determines the color and the pattern of the
+background of a region. Class \code{fill_style.T} itself is an
+abstract base class; actual drawing functions are provided by
+its subclassess, which are described later.
+\end{classdesc*}
+
+This class supports the following attributes:
+
+%%fill_style.T
+
+
+\begin{classdesc*}{fill_style.Plain}
+@pydescribe{fill_style.Plain}
+\end{classdesc*}
+
+\begin{classdesc*}{fill_style.Diag}
+@pydescribe{fill_style.Diag}
+\end{classdesc*}
+
+\begin{classdesc*}{fill_style.Rdiag}
+Fills the region with diagonal lines, but tilted in the opposite
+direction from \code{fill_style.Diag}.
+\end{classdesc*}
+
+\begin{classdesc*}{fill_style.Vert}
+Fills the region with vertical lines.
+\end{classdesc*}
+
+\begin{classdesc*}{fill_style.Horiz}
+Fills the region with horizontal lines.
+\end{classdesc*}
+
+\begin{classdesc*}{fill_style.Stitch}
+Fills the region with horizontal and vertical lines.
+\end{classdesc*}
+
+\begin{classdesc*}{fill_style.Wave}
+Fills the region with horizontal wavy lines.
+\end{classdesc*}
+
+\begin{classdesc*}{fill_style.Vwave}
+Fills the region with vertical wavy lines.
+\end{classdesc*}
+
+\begin{classdesc*}{fill_style.Lines}
+Fills the region with a series of short line segments.
+\end{classdesc*}
+
+The below picture shows the standard set of fill styles. They are named
+like \code{fill_style.}\var{name}, where \var{name} are the labels shown
+in the picture.
+
+@samplechart{fillstyles}
+
+Just for your information, the "rdiag3" style shown in the picture can
+be created manually by the following code:
+
+\begin{verbatim}
+rdiag3 = fill_style.Rdiag(line_style=line_style.T(width=3, color=color.gray5),
+                          line_interval=6)
+\end{verbatim}
+
+You can create your own fill style by subtyping \code{fill_style.T}.
+It should provide the following public method:
+
+\begin{methoddesc}{draw}{self, can, x1, y1, x2, y2}
+  This method is called to fill a rectangular
+  region in a canvas. Parameter
+  \var{can} is a canvas (\pxref{module-canvas}), and
+  region (\var{x1,y1})-(\var{x2,y2}) specifies the region to be filled.
+\end{methoddesc}
+
+Just for your information, below is how the Rdiag class is implemented.
+
+\begin{verbatim}
+class Rdiag(fill_style.T):
+    """Fills the region with diagonal lines, but tilted in the opposite
+direction from fill_style.Diag."""
+    def draw(self, can, x1, y1, x2, y2):
+        line_width = self.line_style.width
+        interval = self.line_interval * 1.414
+        x1 -= line_width
+        y1 -= line_width
+        x2 += line_width
+        y2 += line_width
+        len = max(y2 - y1, x2 - x1)
+        while curx in range(x1, x2 + len, interval):
+            can.line(self.line_style, curx, y1, curx-len, y1+len)
+\end{verbatim}
+
+\section{Drawing texts}
+\index{drawing!texts}
+\index{text!see \textit{font}}
+\index{font}
+\index{show}
+
+\declaremodule{extension}{font}
+
+You can display text strings in chart as a part of axis labels, plot
+labels, legends, etc. You can also display an arbitrary text in an
+arbitrary location using annotations (\pxref{module-text-box}) or
+\code{canvas.show} function (\pxref{module-canvas}).
+
+\begin{seealso}
+  \secref{options} for a variety of ways to set default text attributes.
+\end{seealso}
+
+\subsection{Escape sequences}\label{escape-sequence}
+\index{escape character}
+
+A text string may contain escape characters that control its
+appearance.  The escape sequences all start with the letter
+``\code{/}''. Thus, to display ``\code{/}'' itself, you must write
+``\code{//}''.
+
+\begin{quote}
+\textbf{Restrictions}: \code{/h}, \code{/v}, and \code{/a} \emph{must}
+appear in the beginning of a string.
+\end{quote}
+
+\index{/}
+
+\index{alignment (font)}
+\index{justification (font)}
+
+\begin{description}
+
+\item[\code{/a\var{dd}}]
+Specifies the angle of the text.  Parameter \var{dd} is a number
+between -360 to 360.  Value 0 means left-to-right text, 90 means
+bottom-to-up, etc.
+If you want to print numbers right after an angle specification, put
+\code{\{} between the angle and the number. For example, the below
+code shows string "\code{"100"}" at a 60-degree angle.
+
+\begin{verbatim}
+"/a60{}100"
+\end{verbatim}
+\index{rotation (text)}
+
+\item[\code{/h}\var{A}:]
+Specifies horizontal alignment of the text.  \var{A} is one of
+"\code{L}" (left alignment), "\code{R}" (right alignment), or "\code{C}"
+(center alignment).
+
+\item[\code{/v}\var{A}:]
+Specifies vertical alignment of the text.  \var{A} is one of "\code{B}"
+(bottom), "\code{T}" (top), or "\code{M}" (middle).
+
+\item[\code{/T}]:
+Switch to Times font family.
+\index{Times-Roman (font)}
+
+\item[\code{/H}:] Switch to Helvetica font family.
+\index{Helvetica (font)}
+\item[\code{/C}:] Switch to Courier font family.
+\index{Courier (font)}
+\item[\code{/B}:] Switch to Bookman-Demi font family.
+\index{Bookman-Demi (font)}
+\item[\code{/A}:] Switch to AvantGarde-Book font family.
+\index{AvantGarde-Book (font)}
+\item[\code{/P}:] Switch to Palatino font family.
+\index{Palatino (font)}
+\item[\code{/S}:] Switch to Symbol font family.
+\index{Symbol (font)}
+\item[\code{/F\{\var{family}\}}:] Switch to \var{family} font family.
+The below example draws string "Funny" using ZapfDingbat font
+(which produces some meaningless output).
+\index{font!family}
+
+\begin{verbatim}
+canvas.show(100, 200, "/F{ZapfDingbat}Funny")
+\end{verbatim}
+
+The list of available fonts are the following:
+
+\begin{quote}
+Bookman-Demi Bookman-Light Courier AvantGarde-Book AvantGarde-Demi
+Helvetica Helvetica-Narrow Palatino NewCenturySchlbk Times
+Symbol ZapfChancery-MediumItalic ZapfChancery-Medium-Italic ZapfDingbats
+\end{quote}
+
+\item[\code{/b}:] Switch to bold typeface.
+\index{bold (typeface)}
+\item[\code{/i}:] Switch to italic typeface.
+\index{italic (typeface)}
+\item[\code{/o}:] Switch to oblique typeface.
+\index{oblique (typeface)}
+\item[\code{/}\var{dd}:] Set font size to \var{dd} points.
+\indexii{size}{font}
+\index{font!size}
+
+\begin{verbatim}
+"/20{}2001 space odyssey!"
+\end{verbatim}
+
+\item[\code{/c}\var{dd}:] Set gray-scale to 0.\var{dd}.
+Gray-scale of 0 means black, 1 means white.
+\indexii{gray scale}{font}
+
+\item[\code{//}, \code{/\{}, \code{/\}}:] Display `/', `\}', or `\{'.
+\item[\code{\{ ... \}}:] Limit the scope of escape sequences. For example,
+\code{"\{/10\{/20Big text\} and small text\}"}
+will display \code{"Big Text"} using
+a 20-point font, and \code{"and small text"} using a 10-point font.
+\index{\{}
+\index{\}}
+\index{/}
+
+
+\item[\code{$\backslash$n}:] Break the line.
+\index{line break}
+\end{description}
+
+@samplechartandcode{fonttest, Font usage example}
+
+\subsection{Procedures provided in the \module{font} module}
+\index{escape character}
+\index{font}
+The \module{font} module defines several procedures and variables for
+manipulating texts and fonts:
+
+\begin{funcdesc}{quotemeta}{text}
+\index{escape character}{quoting -}
+@pydescribe{font.quotemeta}
+\end{funcdesc}
+
+\begin{funcdesc}{text_height}{text}
+@pydescribe{font.text_height}
+\end{funcdesc}
+
+\begin{funcdesc}{text_width}{text}
+@pydescribe{font.text_width}
+\end{funcdesc}
+
+\begin{funcdesc}{get_dimension}{text}
+@pydescribe{font.get_dimension}
+\end{funcdesc}
+
+\section{Annotation}
+\index{arrow (extension module)}
+\index{annotation}
+\declaremodule{extension}{text-box}
+
+\begin{classdesc*}{text_box.T}
+A text box is an optional element that adds a text box and arrows to a
+chart.  This class supports the following attributes:
+\end{classdesc*}
+
+%%text_box.T
+
+In addition to the above attributes, this class
+provides the following methods.
+
+\begin{methoddesc}{add_arrow}{tip, tail=None, arrow=arrow.default}
+This method adds a straight arrow that points to \var{tip}, which is
+a tuple of integers. Parameter \var{tail}
+specifies the starting point of the
+arrow. It is either None or a string consisting of the following
+letters:
+\begin{quote}
+'l', 'c', 'r', 't', 'm,', 'b'
+\end{quote}
+
+Letters 'l', 'c', or 'r'
+means to start the arrow from the left, center, or right of the text
+box, respectively. Letters 't', 'm', or 'b' means to start the arrow
+from the top, middle or bottom of the text box.  For example, when
+\code{tail = 'tc'} then arrow is drawn from top-center point of the text
+box. Parameter \var{arrow} specifies the style of the arrow.
+
+\begin{seealso}
+Section~\ref{module-arrow} for arrows.
+\end{seealso}
+\end{methoddesc}
+
+@samplechartandcode{annotations, Annotations example}
+
+\section{Arrows}
+\declaremodule{extension}{arrow}
+
+\begin{classdesc*}{arrow.T}
+Arrow is an optional component of a chart that draws line segments with
+an arrowhead. To draw an arrow, one creates an arrow.T object, and calls
+its "draw" method usually after area.draw() is called (otherwise, area.draw()
+may overwrite the arrow). For example, the below code draws an arrow
+from (10,10) to (20,30).
+
+\begin{verbatim}
+ar = area.T(...)
+a = arrow.T(head_style = 1)
+ar.draw()
+a.draw([(10,10), (20,30)])
+\end{verbatim}
+\end{classdesc*}
+
+This class supports the following attributes:
+
+%%arrow.T
+
+An arrow object exports a single public method, \code{draw}.
+
+\begin{methoddesc}{draw}{points}
+@pydescribe{arrow.T.draw}
+\end{methoddesc}
+
+@samplechart{arrows}
+
+\section{Zap marks}
+\declaremodule{extension}{zap}
+
+A zapping symbol is a zig-zag symbol that indicates that a certain
+region of a plot is cut out due to space constraints. It's usually used
+in conjunction with non-linear/non-logarithmic coordinate system.
+\xref{module-coord}, for an sample of zap symbols.
+
+\begin{funcdesc}{zap.zap_horizontally}{canvas, style, fill_style, x1, y1, x2, y2, xsize, ysize}
+@pydescribe{zap.zap_horizontally}
+\end{funcdesc}
+
+\begin{funcdesc}{zap.zap_vertically}{canvas, style, fill_style, x1, y1, x2, y2, xsize, ysize}
+@pydescribe{zap.zap_vertically}
+\end{funcdesc}
+
+\section{\module{canvas} -- Controlling output and format}
+\declaremodule{extension}{canvas}
+\index{canvas (default -)}
+
+\begin{classdesc*}{canvas.T}
+Canvas is an object that corresponds to a single output file. It
+provides a set of methods for drawing lines, polygons, texts, and other
+things in a manner independent of the file's format.  Canvas is usually
+hidden from the user, as \pychart{} creates a \emph{default canvas} when it
+starts up and implicitly writes all charts on the default canvas (unless
+the user specifies otherwise; more on that later). There are some
+occasions, however, in which you might want to manipulate a canvas
+explicitly, e.g., when you want to create multiple plots from a single
+file, or you just want to add lines and texts directly.
+
+Class \code{canvas.T} is an abstract base class. \pychart{} provides several
+subclasses that correspond to specific file formats. For example,
+\code{pscanvas.T} implements methods for PostScript output. Class
+\code{pdfcanvas.T} implements methods for PDF output.
+\index{PostScript}
+\index{PDF}
+\index{file}{format}
+\end{classdesc*}
+
+\subsection{Creating a canvas}\label{creating-canvas}
+\index{canvas.T (class in canvas)}
+\index{redirecting output}
+\indexii{write}{file}
+\index{file name}
+
+A new canvas is created by calling the class static method
+\code{canvas.init}. It is closed by
+calling the \code{close()} method of the canvas object.
+
+\begin{funcdesc}{init}{fname=None format=None}
+@pydescribe{canvas.init}
+\end{funcdesc}
+
+\begin{methoddesc}{close}{}
+@pydescribe{basecanvas.T.close}
+\end{methoddesc}
+
+
+\subsection{Drawing plots on canvas}\label{drawing-graph-canvas}
+\index{drawing!plots on canvas}
+\pychart{} creates a new canvas object when "\code{area.T.draw()}"
+(\pxref{module-area}) is called for the first time, and no canvas is yet
+created at that moment.  You can thus use you own canvas by creating a
+canvas \emph{before} calling the first \code{area.T.draw()}, like below:
+
+\begin{verbatim}
+can = canvas.init("foo.pdf")
+...
+ar = area.T(...)
+ar.draw()
+\end{verbatim}
+
+You can also achieve the same effect by passing the canvas object to the
+\code{area.T.draw()} method explicitly:
+
+\begin{verbatim}
+can = canvas.init("foo.pdf")
+...
+ar = area.T(...)
+ar.draw(can)
+\end{verbatim}
+
+You can also pass a file object (or file-like object, such as
+\code{StringIO}) to canvas.init. In this case, you need
+to define the output format via the second argument.
+\index{file object}
+
+\index{StringIO}
+\indexii{string}{write}
+\begin{verbatim}
+fd = file("foo.pdf", "w")
+can = canvas.init(fd, "pdf")
+...
+ar.draw(can)
+\end{verbatim}
+
+\index{drawing!multiple graphs}
+\index{file!generating multiple files}
+
+Naturally, you can write to multiple files by passing multiple
+\code{canvas} objects to different \code{area.T.draw()}.  For example,
+the below example draws the first chart to \file{graph1.pdf} and the next
+chart to \file{graph2.pdf}.
+
+@samplecode{twographs}
+
+\subsection{Drawing other objects on canvas}\label{drawing-canvas}
+\index{drawing!arbitrary objects on canvas}
+
+The objects of \code{canvas.T} class and its subclasses provides
+several methods that can be invoked manually to draw variety of things
+if you desire so. These methods take Postscript points
+as the unit of X and Y
+coordinates, as described in \secref{unit}.
+(These methods obey the scaling-factor specifications).
+
+\begin{methoddesc}{line}{linestyle, x1, y1, x2, y2}
+
+\begin{verbatim}
+# draw a line segment from (10,20) to (100, 200)
+can.line(line_style.blackdash1, 10, 20, 100, 200)
+\end{verbatim}
+\index{line}
+\end{methoddesc}
+
+\begin{methoddesc}{polygon}{linestyle, fillstyle, [(x1,y1), ..., (xn, yn)], shadow = None}
+
+Draw a polygon \var{points}, with \var{linestyle}
+(\pxref{module-line-style}), and fill with
+\var{fillstyle}
+(\pxref{module-fill-style}). Parameter \var{points}
+is a list of
+coordinates, e.g., ((10,10), (15,5), (20,8)).
+Value of \var{linestyle} can be None, in which case
+no line is drawn on the perimeter.  Value of \var{fillstyle} can also be
+None, in which the internal of the polygon are left undrawn.
+@shadow
+
+\begin{verbatim}
+can.polygon(line_style.default, fill_style.default,
+               [(10, 20), (100, 200), (300,300)])
+\end{verbatim}
+\end{methoddesc}
+
+\begin{methoddesc}{rectangle}{linestyle, fillstyle, x1, y1, x2, y2, shadow=None}
+
+@shadow
+
+\begin{verbatim}
+can.rectangle(line_style.default, fill_style.default, 10, 20, 300, 300)
+\end{verbatim}
+\end{methoddesc}
+\begin{methoddesc}{ellipsis}{linestyle, fillstyle, x, y, radius, y_elongation=1, start=0, end=360, shadow=None}
+
+The start and end angles are specified in degrees; i.e., between 0 and
+360.
+@shadow
+
+\end{methoddesc}
+\begin{methoddesc}{round_rectangle}{linestyle, fillstyle, x1, y2, x2, y2, radius, shadow=None}
+\index{marquee}
+\index{round_rectangle}
+@pydescribe{basecanvas.T.round_rectangle}
+@shadow
+\end{methoddesc}
+
+\index{Bezier curve}
+\begin{methoddesc}{curve}{linestyle, [(x1,y2), ..., (xn, yn)]}
+Draw a Bezier curve.
+\end{methoddesc}
+\begin{methoddesc}{show}{x, y, text}
+Draw a \var{text} on the canvas at location (\var{x, y}).
+Parameter \var{text} supports font manipulation, as
+described in \xref{module-font}.
+\end{methoddesc}
+
+\begin{methoddesc}{verbatim}{string}
+This procedure outputs an arbitrary \var{string} to the output file.
+\index{PostScript}
+\index{verbatim}
+\end{methoddesc}
+
+\subsection{Clipping}\label{clipping-canvas}
+\index{clipping}
+
+A rectangle, polygon, or ellipsis can be used to define a clipping
+region.  Any drawing commands (\pxref{module-canvas}) issued afterward are
+confined in the region. You can even nest multiple clipping regions,
+in which case, drawings will be clipped to the intersection of the
+regions.  \code{canvas.endclip()} ends the clipping. Clipping commands
+and \code{endclip()} must nest properly.
+
+@samplechartandcode{cliptest, Clipping test}
+
+The following \code{canvas.T} methods are used to control clipping:
+
+\begin{methoddesc}{clip}{x1, y1, x2, y2}
+@pydescribe{basecanvas.T.clip}
+\end{methoddesc}
+
+\begin{methoddesc}{clip_ellipsis}{x, y, radius, y_elongation}
+@pydescribe{basecanvas.T.clip_ellipsis}
+\end{methoddesc}
+
+\begin{methoddesc}{clip_polygon}{[(x1,y2),(x2,y2), ..., (xn, yn)]}
+@pydescribe{basecanvas.T.clip_polygon}
+\end{methoddesc}
+
+\begin{methoddesc}{endclip}{}
+@pydescribe{basecanvas.T.endclip}
+\end{methoddesc}
+
+\subsection{Setting canvas properties}\label{property-canvas}
+
+A \code{canvas.T} object provides the following methods to define the
+information about the output file.
+
+\begin{verbatim}
+can = canvas.init("foo.pdf")
+ar = area.T(...)
+can.set_author("Charles Dickens")
+can.set_title("A tale of two cities")
+ar.draw(can)
+\end{verbatim}
+
+\begin{methoddesc}{set_title}{str}
+\index{title (setting - of chart)}
+@pydescribe{basecanvas.T.set_title}
+\end{methoddesc}
+
+\begin{methoddesc}{set_author}{str}
+\index{author (setting - of chart)}
+@pydescribe{basecanvas.T.set_author}
+\end{methoddesc}
+
+\begin{methoddesc}{set_creator}{str}
+\index{creator (setting - of chart)}
+\index{producer (setting - of chart)}
+@pydescribe{basecanvas.T.set_creator}
+\end{methoddesc}
+
+\begin{methoddesc}{set_creation_date}{str}
+\index{date!setting creation - of chart}
+@pydescribe{basecanvas.T.set_creation_date}
+\end{methoddesc}
+
+\subsection{Shortcut functions for the default canvas}\label{default-canvas}
+
+For the default canvas (\pxref{drawing-canvas}), you can call the
+following functions provided in the \code{canvas} module directly:
+
+\begin{funcdesc}{line}{linestyle, x1, y1, x2, y2}
+Calls the method with the same name on the default canvas object.
+\end{funcdesc}
+
+\begin{funcdesc}{polygon}{linestyle, fillstyle, [(x1,y1), ..., (xn, yn)]}
+Calls the method with the same name on the default canvas object.
+\end{funcdesc}
+
+\begin{funcdesc}{rectangle}{linestyle, fillstyle, x1, y1, x2, y2, shadow=None}
+Calls the method with the same name on the default canvas object.
+@shadow
+\end{funcdesc}
+
+\begin{funcdesc}{ellipsis}{linestyle, fillstyle, x, y, radius, y_elongation=1, start=0, end=360, shadow=None}
+Calls the method with the same name on the default canvas object.
+@shadow
+\end{funcdesc}
+
+\begin{funcdesc}{round_rectangle}{linestyle, fillstyle, x1, y2, x2, y2,radius, shadow=None}
+Calls the method with the same name on the default canvas object.
+@shadow
+\end{funcdesc}
+
+\begin{funcdesc}{curve}{linestyle, [(x1,y2), ..., (xn, yn)]}
+Calls the method with the same name on the default canvas object.
+\end{funcdesc}
+
+\index{font}
+\begin{funcdesc}{show}{x, y, text}
+Calls the method with the same name on the default canvas object.
+\end{funcdesc}
+
+\index{comments!- in PS or PDF}
+\begin{funcdesc}{verbatim}{str}
+Calls the method with the same name on the default canvas object.
+\end{funcdesc}
+
+\begin{funcdesc}{default_canvas}{}
+  Return the default canvas.
+\end{funcdesc}
+\index{canvas (default -)}
+
+\begin{funcdesc}{clip}{x1, y1, x2, y2}
+Calls the method with the same name on the default canvas object.
+\end{funcdesc}
+
+\begin{funcdesc}{clip_ellipsis}{x, y, radius, y_elongation}
+Calls the method with the same name on the default canvas object.
+\end{funcdesc}
+
+\begin{funcdesc}{clip_polygon}{[(x1,y2),(x2,y2), ..., (xn, yn)]}
+Calls the method with the same name on the default canvas object.
+\end{funcdesc}
+
+\begin{funcdesc}{endclip}{}
+Calls the method with the same name on the default canvas object.
+\end{funcdesc}
+
+\input{pychart.ind}
+
+
+\end{document}

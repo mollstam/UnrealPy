@@ -1,0 +1,9 @@
+Compiling python.tex requires following packages:
+
+- The Python source package. Download it from www.python.org and set
+  its Docs directory in PYTHON_DOC_DIR.
+
+- LaTeX (TeX). It's most likely to be knows as 'tetex' on Linux.
+
+- Linux2html.
+

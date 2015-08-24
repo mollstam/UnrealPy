@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{6514fb2a-fa4b-4ae1-a3e0-49396c684fcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bzip2 1.0.6 Header Files">
+      <UniqueIdentifier>{618c6142-6e0d-4d04-bf10-0412db9d8328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bzip2 1.0.6 Source Files">
+      <UniqueIdentifier>{d3b4897f-10cd-4006-9ca8-9bff3abcf2f6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Modules\bz2module.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(bz2Dir)\blocksort.c">
+      <Filter>bzip2 1.0.6 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(bz2Dir)\bzlib.c">
+      <Filter>bzip2 1.0.6 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(bz2Dir)\compress.c">
+      <Filter>bzip2 1.0.6 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(bz2Dir)\crctable.c">
+      <Filter>bzip2 1.0.6 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(bz2Dir)\decompress.c">
+      <Filter>bzip2 1.0.6 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(bz2Dir)\huffman.c">
+      <Filter>bzip2 1.0.6 Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(bz2Dir)\randtable.c">
+      <Filter>bzip2 1.0.6 Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(bz2Dir)\bzlib.h">
+      <Filter>bzip2 1.0.6 Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(bz2Dir)\bzlib_private.h">
+      <Filter>bzip2 1.0.6 Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
