@@ -1,3 +1,7 @@
 
-cdef extern from "Runtime/Core/Public/GenericPlatform/GenericPlatformMath.h":
-	int Max(const int, const int)
+cdef extern from "Core.h":
+	pass
+
+cdef extern from "GenericPlatform/GenericPlatformMath.h":
+	struct FGenericPlatformMath:
+		int Max(const int, const int)
