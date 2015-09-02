@@ -85,4 +85,5 @@ extensions = [
 setup(
 	name = 'GenericPlatformMath',
 	ext_modules = cythonize(extensions),
+	build_dir = "..\\Module\\",
 )
