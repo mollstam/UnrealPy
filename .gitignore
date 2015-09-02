@@ -1,4 +1,15 @@
 Binaries
 Intermediate
+amd64
+x64-temp-Release
+Win32-temp-Release
 
 .DS_Store
+
+*.pdb
+*.exe
+*.sdf
+*.suo
+*.o
+*.log
+*.obj
