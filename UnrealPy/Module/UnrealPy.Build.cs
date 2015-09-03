@@ -18,7 +18,7 @@ public class UnrealPy : ModuleRules
 			}
 		);
 
-		PrivateIncludePaths.Add(@"C:\Python27\include");
+        PrivateIncludePaths.Add(@"C:\Python27\include");
 
         PublicLibraryPaths.Add(@"C:\Python27\libs");
         PublicAdditionalLibraries.Add(@"C:\Python27\libs\python27.lib");
