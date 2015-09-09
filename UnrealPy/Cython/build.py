@@ -225,6 +225,8 @@ def clean_unreal_editor_target():
 					target_lines.extend([line])
 	with open(editor_target_path, 'w') as fwrite:
 		fwrite.write("".join(target_lines))
+	if not marker_found or not end_marker_found:
+		raise Exception("Unable to work with UE4Editor.Target.cs. You need to manually add the following lines somewhere among the OutExtraModuleNames.Add(...) calls:\n@UNREALPY@\n@/UNREALPY@")
 
 def build_unreal_old():
 	script_file = None
