@@ -85,7 +85,7 @@ namespace UnrealBuildTool.Rules
             else
             {
                 // todo: debug name of nix lib
-                return "libpython2.7m.a";
+                return "libpython2.7.a";
             }
         }
 

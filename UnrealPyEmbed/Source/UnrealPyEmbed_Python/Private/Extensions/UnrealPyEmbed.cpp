@@ -2,8 +2,8 @@
 #include "../UnrealPyEmbed_PythonPrivatePCH.h"
 #include "UnrealPyEmbed.h"
 #if WITH_PYTHON
-#include <Python.h>
-#include "structmember.h"
+#include <Python/Python.h>
+#include <Python/structmember.h>
 
 typedef struct {
 	PyObject_HEAD

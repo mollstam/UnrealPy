@@ -4,7 +4,7 @@
 #include "Extensions/UnrealPyEmbed.h"
 
 #if WITH_PYTHON
-	#include "Python.h"
+	#include "Python/Python.h"
 #endif // WITH_PYTHON
 
 DEFINE_LOG_CATEGORY(LogPython)
@@ -25,7 +25,7 @@ FPythonInterpreter* FPythonInterpreter::Get()
 FPythonInterpreter::FPythonInterpreter()
 {
 #if WITH_PYTHON
-	Py_Initialize();
+	Py_InitializeEx(0);
 	FUnrealPyEmbed::Init();
 #endif //WITH_PYTHON
 }
