@@ -76,6 +76,11 @@ WIN32 is still required for the locale module.
 #define HAVE_STRERROR
 #endif
 
+// UnrealPy fix, at least OSX doesnt have this
+#ifndef MS_WINDOWS
+#undef HAVE_IO_H
+#endif
+
 #ifdef HAVE_IO_H
 #include <io.h>
 #endif
