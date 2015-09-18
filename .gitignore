@@ -18,3 +18,5 @@ Win32-temp-Release
 # except for those files hand crafted and forcibly added, neato! >:D
 *.cpp
 *.h
+
+*.pyc
