@@ -20,3 +20,4 @@ Win32-temp-Release
 *.h
 
 *.pyc
+.cache
