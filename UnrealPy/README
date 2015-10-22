@@ -1,0 +1,3 @@
+unrealpy is a Python API for the Unreal Engine 4 Editor to manipulate UAssets, EdGraphs, and more in a scripted manner.
+
+Currently *very rough* developer version which isn't fit to clone for anyone. :)
