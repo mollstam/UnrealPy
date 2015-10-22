@@ -17,7 +17,15 @@ Win32-temp-Release
 # we actually ignore source files to ignore build artifacts from cython
 # except for those files hand crafted and forcibly added, neato! >:D
 *.cpp
+*.c
 *.h
 
 *.pyc
+*.so
 .cache
+.eggs
+.tox
+build
+dist
+*.egg-info
+*_temp
