@@ -149,10 +149,16 @@ class UnrealPyModule(object):
         self.create_unreal_module()
 
     def emit_cython(self):
-        pyx_path = os.path.join(self.path, self.name + '.pyx')
+        pyx_path = None
+        primary_pyx_path = pyx_path = os.path.join(self.path, self.name + '.pyx')
+        secondary_pyx_path = os.path.join(self.path, self.name, self.name + '.pyx')
+        if os.path.exists(primary_pyx_path):
+            pyx_path = primary_pyx_path
+        else:
+            pyx_path = secondary_pyx_path
         if not os.path.exists(pyx_path):
             raise Exception(
-                'Expected to find pyx file at {0}'.format(pyx_path))
+                'Expected to find pyx file at {0} or {1}'.format(primary_pyx_path, secondary_pyx_path))
         if not os.path.exists(self.unreal_module_dir_private):
             os.makedirs(self.unreal_module_dir_private)
         try:
