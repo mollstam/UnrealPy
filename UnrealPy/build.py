@@ -162,7 +162,7 @@ class UnrealPyModule(object):
         if not os.path.exists(self.unreal_module_dir_private):
             os.makedirs(self.unreal_module_dir_private)
         try:
-            if call(['cython', '--cplus', '-o', self.cython_output_file, pyx_path]) != 0:
+            if call(['cython', '--verbose', '--cplus', '-o', self.cython_output_file, pyx_path]) != 0:
                 raise Exception(
                     "cython command exited with non-zero status for {0}".format(self.name))
         except OSError, e:
