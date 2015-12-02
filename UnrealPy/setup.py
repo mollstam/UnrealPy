@@ -408,6 +408,9 @@ class BuildUnrealCommand(distutils.cmd.Command):
         checksums = self.load_checksums()
         for module in modules:
             checksums[module.name] = module.checksum()
+        checksum_dir = os.path.dirname(self.module_checksum_path)
+        if not os.path.exists(checksum_dir):
+        	os.makedirs(checksum_dir)
         pickle.dump(checksums, open(self.module_checksum_path, 'wb'))
 
     def generate_unreal_project(self):
