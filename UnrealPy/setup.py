@@ -616,7 +616,7 @@ setup(
     description=("A Python API for the Unreal Engine 4 Editor"),
     license="MIT",
     keywords="unreal ue4 gamedev",
-    long_description=read('README'),
+    long_description=read('README.md'),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
