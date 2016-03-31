@@ -203,7 +203,7 @@ public class {module_name} : ModuleRules
         hasher.update(file_hash(self.pyx))
         if self.pxd:
             hasher.update(file_hash(self.pxd))
-        return hasher.digest()
+        return hasher.hexdigest()
 
     def python_lib_path(self, in_source_dir=False):
         """Get path as a Python module."""
@@ -340,15 +340,15 @@ class BuildUnrealCommand(distutils.cmd.Command):
                 "No checksums found, everything is dirty",
                 distutils.log.INFO)
             return modules
-        self.announce(pprint.pformat(checksums), distutils.log.INFO)
+        self.announce("loaded checksums: {}".format(pprint.pformat(checksums)), distutils.log.INFO)
         for module in modules:
             self.announce(
-                '{} -> {}\n\t{}\n\t{}\n\t{}'.format(
+                'module: {}\n\tchecksum: {}\n\told checksum known: {}\n\tchecksum changed: {}\n\tbinary exists: {}'.format(
                     module.name,
                     module.checksum(),
-                    module.name not in checksums,
+                    module.name in checksums,
                     module.checksum() != checksums[module.name],
-                    not os.path.exists(module.unreal_lib_path(
+                    os.path.exists(module.unreal_lib_path(
                         self.unreal_config, self.unreal_path))),
                 distutils.log.INFO)
         return [module for module in modules
