@@ -385,9 +385,9 @@ class BuildUnrealCommand(distutils.cmd.Command):
             fwrite.write("".join(target_lines))
         if not marker_found or not end_marker_found:
             raise Exception(
-                "Unable to work with UE4Editor.Target.cs."
-                "You need to manually add the following lines somewhere"
-                "in SetupBinaries(...) among the OutExtraModuleNames.Add(...)"
+                "Unable to work with UE4Editor.Target.cs. "
+                "You need to manually add the following lines somewhere "
+                "in SetupBinaries(...) among the OutExtraModuleNames.Add(...) "
                 "calls:\n"
                 "// @UNREALPY@\n"
                 "// @/UNREALPY@")
