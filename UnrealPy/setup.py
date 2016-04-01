@@ -201,7 +201,7 @@ public class {module_name} : ModuleRules
         #        this is very temporary...
         hasher = hashlib.sha256()
         hasher.update(file_hash(self.pyx))
-        if self.pxd:
+        if hasattr(self, 'pxd'):
             hasher.update(file_hash(self.pxd))
         return hasher.hexdigest()
 
