@@ -578,7 +578,7 @@ def python_vars():
                         'to point to Python root directory.')
     lib_name = None
     if sys.platform == 'win32':
-        lib_name = 'python27.dll'
+        lib_name = 'python27.lib'
     elif sys.platform == 'darwin':
         lib_name = 'libpython2.7.dylib'
     if not lib_name:
