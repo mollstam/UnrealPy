@@ -504,8 +504,11 @@ class BuildUnrealCommand(distutils.cmd.Command):
             self.announce(
                 '{}\n\t-> {}'.format(
                     from_path.replace(self.unreal_path, ''),
-                    to_path.replace(base_dir, '')),
+                    to_path),
                 distutils.log.INFO)
+            to_dir = os.path.dirname(to_path)
+            if not os.path.exists(to_dir):
+                os.makedirs(to_dir)
             shutil.copyfile(from_path, to_path)
 
     def run(self):
