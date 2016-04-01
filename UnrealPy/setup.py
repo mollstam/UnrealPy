@@ -583,11 +583,12 @@ def python_vars():
         lib_name = 'libpython2.7.dylib'
     if not lib_name:
         raise Exception("Unsupported platform: {}".format(sys.platform))
-    if not os.path.exists(os.path.join(
-            python_base, 'include_unrealpy', 'Python', 'Python.h')):
+    header_to_find = os.path.join(python_base, 'include_unrealpy', 'Python', 'Python.h')
+    if not os.path.exists(header_to_find):
         raise Exception("""
 ----------------------------------------
-Python environment requires manual setup
+Python environment requires manual setup,
+Didn't find expected header {header}
 ----
 
 1. Inside PYTHON_BASE ({python_base})
@@ -607,7 +608,8 @@ I'm eager for a better solution...
 
 ----
 """.format(python_base=python_base,
-            desired_inc=os.path.join(python_base, 'include')))
+            desired_inc=os.path.join(python_base, 'include'),
+            header=header_to_find))
     inc_path = os.path.join(python_base, 'include_unrealpy')
     lib_path = os.path.join(python_base, 'lib')
     return inc_path, lib_path, lib_name
