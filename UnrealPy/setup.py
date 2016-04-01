@@ -275,6 +275,35 @@ public class {module_name} : ModuleRules
             self.unreal_name)
 
 
+class GenerateReadmeCommand(distutils.cmd.Command):
+
+    """
+    A custom command to generate README.txt in reStructuredTxt from README.md.
+    """
+
+    description = 'generate README.txt from README.md'
+    user_options = [
+        ('pandoc-path=', None, 'Path to Pandoc')
+    ]
+
+    def initialize_options(self):
+        """Set default values for options."""
+        self.pandoc_path = os.environ.get('PANDOC_PATH')
+
+    def finalize_options(self):
+        """Post-process options."""
+        assert self.pandoc_path and os.path.exists(self.pandoc_path), (
+            'pandoc-path not set or doesn\'t exist.')
+
+    def run(self):
+        import pandoc
+        doc = pandoc.Document()
+        doc.markdown = open('README.md').read()
+        f = open('README.txt', 'w+')
+        f.write(doc.rst)
+        f.close()
+
+
 class BuildUnrealCommand(distutils.cmd.Command):
 
     """
@@ -611,6 +640,10 @@ def distutils_dir_name(dname):
 # extensions = [make_extension(name) for name in ext_names]
 
 
+long_description = None
+if os.path.exists('README.txt'):
+    long_description = open('README.txt').read()
+
 setup(
     name="unrealpy",
     version="0.0.1",
@@ -619,7 +652,7 @@ setup(
     description=("A Python API for the Unreal Engine 4 Editor"),
     license="MIT",
     keywords="unreal ue4 gamedev",
-    long_description=read('README.md'),
+    long_description=long_description,
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Topic :: Utilities",
