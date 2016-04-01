@@ -150,9 +150,9 @@ public class {module_name} : ModuleRules
     }}
 }}
 """.format(module_name=self.unreal_name,
-            python_include_path=py_inc,
-            python_lib_path=py_lib,
-            python_lib=os.path.join(py_lib, py_lib_name))
+            python_include_path=py_inc.replace('\\', '\\\\'),
+            python_lib_path=py_lib.replace('\\', '\\\\'),
+            python_lib=os.path.join(py_lib, py_lib_name).replace('\\', '\\\\'))
         with open(build_file_path, 'w') as f:
             f.write(build_file_contents)
         self.add_to_ue_editor_target(unreal_path)
