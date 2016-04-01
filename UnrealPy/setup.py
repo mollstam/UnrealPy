@@ -525,11 +525,11 @@ class BuildUnrealCommand(distutils.cmd.Command):
                 distutils.log.INFO)
         if len(modules) > 0:
             self.generate_cython(modules)
-            self.save_checksums(modules)
             self.clean_unreal_editor_target()
             self.generate_unreal_module(modules)
             self.generate_unreal_project()
             self.invoke_unreal_build()
+            self.save_checksums(modules)
         self.extract_libraries()
 
 
@@ -551,6 +551,8 @@ def file_hash(fname, blocksize=65536):
 
 def run(exe, cwd):
     """Run provided exe and yield output."""
+    if type(exe) is str:
+        exe = [exe]
     p = subprocess.Popen(
         exe,
         cwd=cwd,
@@ -562,6 +564,7 @@ def run(exe, cwd):
         yield line
         if retcode is not None:
             if retcode != 0:
+                # todo: this is 0 even if UBT throws an error :(
                 raise Exception(
                     '{} failed with status {}'.format(' '.join(exe), retcode))
             break
