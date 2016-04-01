@@ -671,8 +671,9 @@ setup(
         'test': Tox,
         'build_ue': BuildUnrealCommand,
         'build_ext': BuildUnrealCommand,
+        'generate_readme': GenerateReadmeCommand,
     },
     packages=['unrealpy'],
-    package_data={'': ['*.so']},
+    package_data={'': ['*.so', '*.pyd']},
     # ext_modules=extensions,
 )
