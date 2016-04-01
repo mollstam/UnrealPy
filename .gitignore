@@ -30,3 +30,11 @@ dist
 *.egg-info
 *_temp
 __pycache__
+
+*.pyd
+
+# venv
+/unreal_py_env
+
+# this is generated from README.md
+README.txt
