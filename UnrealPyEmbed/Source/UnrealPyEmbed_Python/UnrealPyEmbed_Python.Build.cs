@@ -17,7 +17,6 @@ namespace UnrealBuildTool.Rules
                     "CoreUObject",
                     "EditorStyle",
                     "Engine",
-                    "Kismet",
                     "Slate",
                     "SlateCore",
                     "UnrealEd",
@@ -48,7 +47,7 @@ namespace UnrealBuildTool.Rules
             var PythonLibPath = Path.Combine(PythonLibDirectory, GetPythonLibName(Target.Platform, PythonDebug));
             var PythonIncludeSuffix ="Include";
 
-            Log.WriteLine(TraceEventType.Information, "Looking for Python lib at '{0}'", PythonLibPath);
+            Log.WriteLine(1, null, LogEventType.Console, "Looking for Python lib at '{0}'", PythonLibPath);
             if (File.Exists(PythonLibPath))
             {
                 // Path to Python include files
@@ -68,11 +67,11 @@ namespace UnrealBuildTool.Rules
                 PublicLibraryPaths.Add(PythonLibDirectory);
                 PublicAdditionalLibraries.Add(PythonLibPath);
 
-                Log.WriteLine(TraceEventType.Information, "Python Integration enabled: {0}", IncludePath);
+                Log.WriteLine(1, null, LogEventType.Console, "Python Integration enabled: {0}", IncludePath);
             }
             else
             {
-                Log.WriteLine(TraceEventType.Information, "Python Integration NOT enabled");
+                Log.WriteLine(1, null, LogEventType.Console, "Python Integration NOT enabled");
             }
         }
 
