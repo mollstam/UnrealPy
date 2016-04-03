@@ -3,6 +3,10 @@ Intermediate
 amd64
 x64-temp-Release
 Win32-temp-Release
+x64-temp-Debug
+Win32-temp-Debug
+
+*.opendb
 
 .DS_Store
 
