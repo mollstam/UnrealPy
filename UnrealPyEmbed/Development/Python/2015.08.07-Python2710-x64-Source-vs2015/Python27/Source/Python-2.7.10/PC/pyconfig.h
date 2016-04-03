@@ -30,7 +30,8 @@ WIN32 is still required for the locale module.
 
 */
 
-#define PYTHONPATH "..\\..\\Plugins\\Developer\\Arkitekt\\Source\\Python\\Lib\\python27"
+// UnrealPy: can't remember why I settled to have this here, very hacky... /tobias
+#define PYTHONPATH "..\\..\\Plugins\\Developer\\UnrealPyEmbed\\Source\\Python\\Lib\\python27"
 
 #ifndef Py_HUGE_VAL
 #define Py_HUGE_VAL ((double)INFINITY)
