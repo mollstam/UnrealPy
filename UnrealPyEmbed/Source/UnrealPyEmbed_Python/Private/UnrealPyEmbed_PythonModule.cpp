@@ -26,4 +26,6 @@ void FUnrealPyEmbed_PythonModule::ShutdownModule()
 	FPythonInterpreter::Get()->Destroy();
 }
 
+DEFINE_LOG_CATEGORY(LogPython)
+
 #undef LOCTEXT_NAMESPACE

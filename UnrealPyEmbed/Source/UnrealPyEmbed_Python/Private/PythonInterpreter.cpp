@@ -7,8 +7,6 @@
 	#include "Python/Python.h"
 #endif // WITH_PYTHON
 
-DEFINE_LOG_CATEGORY(LogPython)
-
 FPythonInterpreter* FPythonInterpreter::Instance = nullptr;
 
 FPythonInterpreter* FPythonInterpreter::Get()

@@ -1,8 +1,6 @@
 
 #pragma once
 
-DECLARE_LOG_CATEGORY_EXTERN(LogPython, Log, All);
-
 class FPythonInterpreter
 {
 
