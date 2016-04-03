@@ -632,12 +632,12 @@ _PyVerify_fd_dup2(int fd1, int fd2)
 ** man environ(7).
 */
 #include <crt_externs.h>
-static char **environ;
+static char **py_environ;
 #elif ( !defined(_MSC_VER) && !defined(__WATCOMC__) || defined(__QNX__) )
-extern char **environ;
+extern char **py_environ;
 #elif defined(_MSC_VER)
 static char *winenv;
-static char **environ;
+static char **py_environ;
 #endif
 
 static PyObject *
@@ -653,16 +653,16 @@ convertenviron(void)
     if (d == NULL)
         return NULL;
 #if defined(WITH_NEXT_FRAMEWORK) || (defined(__APPLE__) && defined(Py_ENABLE_SHARED))
-    if (environ == NULL)
-        environ = *_NSGetEnviron();
+    if (py_environ == NULL)
+        py_environ = *_NSGetEnviron();
 #elif defined(_MSC_VER)
 	winenv = GetEnvironmentStrings();
-	environ = &winenv;
+	py_environ = &winenv;
 #endif
-    if (environ == NULL)
+    if (py_environ == NULL)
         return d;
     /* This part ignores errors */
-    for (e = environ; *e != NULL; e++) {
+    for (e = py_environ; *e != NULL; e++) {
         PyObject *k;
         PyObject *v;
         char *p = strchr(*e, '=');
