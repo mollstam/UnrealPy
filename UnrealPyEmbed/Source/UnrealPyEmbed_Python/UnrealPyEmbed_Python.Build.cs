@@ -39,7 +39,7 @@ namespace UnrealBuildTool.Rules
                     "MainFrame",
                 });
 
-            // if true we will load Python debug build
+            // if true we will load Python debug libs
             bool PythonDebug = false;
 
             var PythonPath = Path.Combine("..", "Plugins", "Developer", "UnrealPyEmbed", "Source", "Python");
