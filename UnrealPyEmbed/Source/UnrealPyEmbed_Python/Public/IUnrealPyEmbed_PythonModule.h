@@ -3,6 +3,8 @@
 
 #include "ModuleManager.h"
 
+DECLARE_LOG_CATEGORY_EXTERN(LogPython, Log, All);
+
 class IUnrealPyEmbed_PythonModule : public IModuleInterface
 {
 
