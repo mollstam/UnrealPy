@@ -39,7 +39,10 @@ namespace UnrealBuildTool.Rules
                     "MainFrame",
                 });
 
-            // if true we will load Python debug libs
+            /** if true we will log some below during project generation */
+            bool VerboseProjectLogging = false;
+
+            /** if true we will load Python debug libs */
             bool PythonDebug = false;
 
             var PythonPath = Path.Combine("..", "Plugins", "Developer", "UnrealPyEmbed", "Source", "Python");
@@ -47,7 +50,10 @@ namespace UnrealBuildTool.Rules
             var PythonLibPath = Path.Combine(PythonLibDirectory, GetPythonLibName(Target.Platform, PythonDebug));
             var PythonIncludeSuffix ="Include";
 
-            Log.WriteLine(1, null, LogEventType.Console, "Looking for Python lib at '{0}'", PythonLibPath);
+            if (VerboseProjectLogging)
+            {
+                Log.WriteLine(1, null, LogEventType.Console, "\nLooking for Python lib at '{0}'", PythonLibPath);
+            }
             if (File.Exists(PythonLibPath))
             {
                 // Path to Python include files
@@ -67,11 +73,17 @@ namespace UnrealBuildTool.Rules
                 PublicLibraryPaths.Add(PythonLibDirectory);
                 PublicAdditionalLibraries.Add(PythonLibPath);
 
-                Log.WriteLine(1, null, LogEventType.Console, "Python Integration enabled: {0}", IncludePath);
+                if (VerboseProjectLogging)
+                {
+                    Log.WriteLine(1, null, LogEventType.Console, "Python Integration enabled: {0}", IncludePath);
+                }
             }
             else
             {
-                Log.WriteLine(1, null, LogEventType.Console, "Python Integration NOT enabled");
+                if (VerboseProjectLogging)
+                {
+                    Log.WriteLine(1, null, LogEventType.Console, "Python Integration NOT enabled");
+                }
             }
         }
 
