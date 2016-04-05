@@ -1,7 +1,7 @@
 
 #pragma once
 
-class FPythonInterpreter
+class UNREALPYEMBED_PYTHON_API FPythonInterpreter
 {
 
 public:
