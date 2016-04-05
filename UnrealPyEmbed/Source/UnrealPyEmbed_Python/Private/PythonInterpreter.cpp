@@ -39,6 +39,7 @@ void FPythonInterpreter::Destroy()
 
 void FPythonInterpreter::RunString(const FString& String)
 {
+	UE_LOG(LogPython, Log, TEXT(">>> %s"), *String);
 #if WITH_PYTHON
 	PyRun_SimpleString(TCHAR_TO_ANSI(*String));
 #endif // WITH_PYTHON
