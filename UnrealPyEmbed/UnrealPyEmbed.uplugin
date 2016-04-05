@@ -17,6 +17,10 @@
 			"Type" : "Editor"
 		},
 		{
+			"Name" : "UnrealPyEmbed_Console",
+			"Type" : "Editor"
+		},
+		{
 			"Name" : "UnrealPyEmbed",
 			"Type" : "Editor"
 		}
