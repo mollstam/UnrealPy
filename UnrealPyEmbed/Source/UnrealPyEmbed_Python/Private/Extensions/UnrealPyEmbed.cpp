@@ -125,7 +125,7 @@ static PyMethodDef UnrealPyEmbed_Methods[] = {
 void FUnrealPyEmbed::Init()
 {
 #if WITH_PYTHON
-	
+
 	PyObject* Module;
 
 	UnrealPyEmbedOutputWriter_Type.tp_new = PyType_GenericNew;
