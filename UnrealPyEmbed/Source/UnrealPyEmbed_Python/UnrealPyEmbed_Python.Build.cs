@@ -15,10 +15,7 @@ namespace UnrealBuildTool.Rules
                 {
                     "Core",
                     "CoreUObject",
-                    "EditorStyle",
                     "Engine",
-                    "Slate",
-                    "SlateCore",
                     "UnrealEd",
                 }
             );
@@ -29,14 +26,11 @@ namespace UnrealBuildTool.Rules
 
             DynamicallyLoadedModuleNames.AddRange(
                 new string[] {
-                    "Kismet",
-                    "MainFrame",
                 });
 
             PrivateIncludePathModuleNames.AddRange(
                 new string[]
                 {
-                    "MainFrame",
                 });
 
             /** if true we will log some below during project generation */
