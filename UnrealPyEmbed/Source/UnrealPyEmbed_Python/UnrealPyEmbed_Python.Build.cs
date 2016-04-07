@@ -46,7 +46,7 @@ namespace UnrealBuildTool.Rules
 
             if (VerboseProjectLogging)
             {
-                Log.WriteLine(1, null, LogEventType.Console, "\nLooking for Python lib at '{0}'", PythonLibPath);
+                Log.WriteLine(TraceEventType.Information, "\nLooking for Python lib at '{0}'", PythonLibPath);
             }
             if (File.Exists(PythonLibPath))
             {
@@ -69,14 +69,14 @@ namespace UnrealBuildTool.Rules
 
                 if (VerboseProjectLogging)
                 {
-                    Log.WriteLine(1, null, LogEventType.Console, "Python Integration enabled: {0}", IncludePath);
+                    Log.WriteLine(TraceEventType.Information, "Python Integration enabled: {0}", IncludePath);
                 }
             }
             else
             {
                 if (VerboseProjectLogging)
                 {
-                    Log.WriteLine(1, null, LogEventType.Console, "Python Integration NOT enabled");
+                    Log.WriteLine(TraceEventType.Information, "Python Integration NOT enabled");
                 }
             }
         }
