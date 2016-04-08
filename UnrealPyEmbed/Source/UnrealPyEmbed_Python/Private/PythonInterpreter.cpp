@@ -7,6 +7,40 @@
 	#include "Python/Python.h"
 #endif // WITH_PYTHON
 
+/** This is a small guard class to handle the case of Python calling exit() during init */
+namespace PythonExitGuard
+{
+	static bool InScope = false;
+}
+struct FPythonExitGuard
+{
+	FPythonExitGuard()
+	{
+		PythonExitGuard::InScope = true;
+		int i = atexit(&FPythonExitGuard::AtExit);
+		if (i != 0)
+		{
+			UE_LOG(LogPython, Fatal, TEXT("Unable to register atexit in FPythonExecContext"));
+		}
+	};
+
+	~FPythonExitGuard()
+	{
+		PythonExitGuard::InScope = false;
+	}
+
+	static void AtExit()
+	{
+		if (PythonExitGuard::InScope)
+		{
+			// Python encountered a fatal error, check stderr for more information e.g. by running 'UE4Editor-Cmd.exe -stdout'
+			// We cannot log here, probably since things are falling around us
+			FPlatformMisc::DebugBreak();
+		}
+	}
+
+};
+
 FPythonInterpreter* FPythonInterpreter::Instance = nullptr;
 
 FPythonInterpreter* FPythonInterpreter::Get()
@@ -23,8 +57,11 @@ FPythonInterpreter* FPythonInterpreter::Get()
 FPythonInterpreter::FPythonInterpreter()
 {
 #if WITH_PYTHON
-	Py_InitializeEx(0);
-	FUnrealPyEmbed::Init();
+	{
+		FPythonExitGuard ExecContext;
+		Py_InitializeEx(0);
+		FUnrealPyEmbed::Init();
+	}
 #endif //WITH_PYTHON
 }
 
