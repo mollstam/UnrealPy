@@ -57,6 +57,7 @@ FPythonInterpreter* FPythonInterpreter::Get()
 FPythonInterpreter::FPythonInterpreter()
 {
 #if WITH_PYTHON
+	Py_IgnoreEnvironmentFlag = 1;
 	{
 		FPythonExitGuard ExecContext;
 		Py_InitializeEx(0);
