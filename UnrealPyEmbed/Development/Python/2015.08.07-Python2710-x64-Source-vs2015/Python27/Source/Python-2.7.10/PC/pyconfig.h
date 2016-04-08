@@ -30,7 +30,7 @@ WIN32 is still required for the locale module.
 
 */
 
-// UnrealPy: can't remember why I settled to have this here, very hacky... /tobias
+// UnrealPy: statically compile path, user can append it after environment init from inside Python
 #define PYTHONPATH "..\\..\\Plugins\\Developer\\UnrealPyEmbed\\Source\\Python\\Lib\\python27"
 
 #ifndef Py_HUGE_VAL
