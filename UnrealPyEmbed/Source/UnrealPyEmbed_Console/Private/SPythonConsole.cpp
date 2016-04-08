@@ -237,7 +237,10 @@ FPythonConsoleTextLayoutMarshaller::~FPythonConsoleTextLayoutMarshaller()
 void FPythonConsoleTextLayoutMarshaller::SetText(const FString& SourceString, FTextLayout& TargetTextLayout)
 {
 	TextLayout = &TargetTextLayout;
-	AppendMessagesToTextLayout(Messages);
+	for (const auto& Message : Messages)
+	{
+		AppendMessageToTextLayout(Message);
+	}
 }
 
 void FPythonConsoleTextLayoutMarshaller::GetText(FString& TargetString, const FTextLayout& SourceTextLayout)
@@ -262,7 +265,10 @@ bool FPythonConsoleTextLayoutMarshaller::AppendMessage(const TCHAR* InText, cons
 				TextLayout->ClearLines();
 			}
 
-			AppendMessagesToTextLayout(NewMessages);
+			for (const auto& Message : NewMessages)
+			{
+				AppendMessageToTextLayout(Message);
+			}
 		}
 		else
 		{
@@ -301,25 +307,5 @@ void FPythonConsoleTextLayoutMarshaller::AppendMessageToTextLayout(const TShared
 	TArray<TSharedRef<IRun>> Runs;
 	Runs.Add(FSlateTextRun::Create(FRunInfo(), LineText, MessageTextStyle));
 
-	TextLayout->AddLine(FSlateTextLayout::FNewLineData(MoveTemp(LineText), MoveTemp(Runs)));
-}
-
-void FPythonConsoleTextLayoutMarshaller::AppendMessagesToTextLayout(const TArray<TSharedPtr<FLogMessage>>& InMessages)
-{
-	TArray<FTextLayout::FNewLineData> LinesToAdd;
-	LinesToAdd.Reserve(InMessages.Num());
-
-	for (const auto& CurrentMessage : InMessages)
-	{
-		const FTextBlockStyle& MessageTextStyle = FEditorStyle::Get().GetWidgetStyle<FTextBlockStyle>(CurrentMessage->Style);
-
-		TSharedRef<FString> LineText = CurrentMessage->Message;
-
-		TArray<TSharedRef<IRun>> Runs;
-		Runs.Add(FSlateTextRun::Create(FRunInfo(), LineText, MessageTextStyle));
-
-		LinesToAdd.Emplace(MoveTemp(LineText), MoveTemp(Runs));
-	}
-
-	TextLayout->AddLines(LinesToAdd);
+	TextLayout->AddLine(LineText, Runs);
 }
