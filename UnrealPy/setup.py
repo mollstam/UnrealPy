@@ -89,7 +89,7 @@ class CythonModule(object):
             pass
         else:
             raise Exception("cython command exited with non-zero status"
-                            "for {0}".format(self.name))
+                            " for {0}".format(self.name))
         # post-process the output
         # add PCH include to make UE happy
         lines = []
