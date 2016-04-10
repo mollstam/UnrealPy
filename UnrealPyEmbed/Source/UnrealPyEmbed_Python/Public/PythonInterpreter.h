@@ -12,6 +12,8 @@ public:
 
     void RunString(const FString& String);
 
+    void RunFile(const FString& Path);
+
 private:
 
     FPythonInterpreter();

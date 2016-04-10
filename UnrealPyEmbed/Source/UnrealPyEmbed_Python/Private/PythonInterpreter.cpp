@@ -83,3 +83,10 @@ void FPythonInterpreter::RunString(const FString& String)
 #endif // WITH_PYTHON
 }
 
+void FPythonInterpreter::RunFile(const FString& Path)
+{
+#if WITH_PYTHON
+	PyObject* PyFileObject = PyFile_FromString(TCHAR_TO_ANSI(*Path), "r");
+	PyRun_SimpleFileEx(PyFile_AsFile(PyFileObject), TCHAR_TO_ANSI(*Path), 1);
+#endif // WITH_PYTHON
+}
