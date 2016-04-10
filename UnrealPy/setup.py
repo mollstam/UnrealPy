@@ -377,7 +377,7 @@ class BuildUnrealCommand(distutils.cmd.Command):
                     module.name,
                     module.checksum(),
                     module.name in checksums,
-                    module.checksum() != checksums[module.name],
+                    (module.name not in checksums) or module.checksum() != checksums[module.name],
                     os.path.exists(module.unreal_lib_path(
                         self.unreal_config, self.unreal_path))),
                 distutils.log.INFO)
