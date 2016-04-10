@@ -3,6 +3,7 @@ import os
 import sys
 import sysconfig
 from setuptools import setup
+from setuptools import find_packages
 from setuptools.command.test import test as test
 from distutils.extension import Extension
 import distutils.cmd
@@ -673,7 +674,8 @@ setup(
         'build_ext': BuildUnrealCommand,
         'generate_readme': GenerateReadmeCommand,
     },
-    packages=['unrealpy'],
+    #packages=['unrealpy'],
+    packages=find_packages(),
     package_data={'': ['*.so', '*.pyd']},
     # ext_modules=extensions,
 )
