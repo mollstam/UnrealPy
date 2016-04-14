@@ -1,7 +1,7 @@
 
 #include "UnrealPyEmbed_PythonPrivatePCH.h"
 #include "PythonInterpreter.h"
-#include "Extensions/UnrealPyEmbed.h"
+#include "Extensions/UnrealPyEmbedExtOutputWriter.h"
 
 #if WITH_PYTHON
 	#include "Python/Python.h"
@@ -61,7 +61,9 @@ FPythonInterpreter::FPythonInterpreter()
 	{
 		FPythonExitGuard ExecContext;
 		Py_InitializeEx(0);
-		FUnrealPyEmbed::Init();
+
+		// Extensions
+		FUnrealPyEmbedExtOutputWriter::Init();
 	}
 #endif //WITH_PYTHON
 }
