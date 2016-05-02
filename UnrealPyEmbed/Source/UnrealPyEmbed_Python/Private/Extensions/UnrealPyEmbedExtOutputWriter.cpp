@@ -20,7 +20,7 @@ namespace UnrealPyEmbedExtOutputWriter
 	static PyTypeObject UnrealPyEmbedOutputWriter_Type = {
 		PyObject_HEAD_INIT(NULL)
 		0,                         													/*ob_size*/
-		"uepy_embed.OutputWriter",    												/*tp_name*/
+		"_upy_ext_output.OutputWriter",												/*tp_name*/
 		sizeof(UnrealPyEmbedOutputWriter), 											/*tp_basicsize*/
 		0,                         													/*tp_itemsize*/
 		0,                         													/*tp_dealloc*/
@@ -57,27 +57,14 @@ namespace UnrealPyEmbedExtOutputWriter
 		0,																			/* tp_dictoffset */
 		(initproc)FUnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter_Init,	/* tp_init */
 		0,																			/* tp_alloc */
-		FUnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter_New				/* tp_new */
+		PyType_GenericNew															/* tp_new */
 	};
 
-	static PyMethodDef UnrealPyEmbed_Methods[] = {
+	static PyMethodDef UnrealPyEmbedOutputWriterModule_Methods[] = {
 		{NULL}
 	};
 
 } // namespace UnrealPyEmbedExtOutputWriter
-
-PyObject* FUnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter_New(PyTypeObject* Type, PyObject* Args, PyObject *Kwds)
-{
-	UnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter* Self;
-
-	Self = (UnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter*)Type->tp_alloc(Type, 0);
-	if (Self != NULL)
-	{
-		Self->Severity = 0;
-	}
-
-	return (PyObject*)Self;
-}
 
 int FUnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter_Init(UnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter* Self, PyObject* Args, PyObject* Kwds)
 {
@@ -126,13 +113,12 @@ void FUnrealPyEmbedExtOutputWriter::Init()
 
 	PyObject* Module;
 
-	UnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter_Type.tp_new = PyType_GenericNew;
 	if (PyType_Ready(&UnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter_Type) < 0)
 	{
 		return;
 	}
 
-	Module = Py_InitModule3("_upy_ext_output", UnrealPyEmbedExtOutputWriter::UnrealPyEmbed_Methods, "Helper module for embedding Python in Unreal Editor");
+	Module = Py_InitModule3("_upy_ext_output", UnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriterModule_Methods, "Helper module for embedding Python in Unreal Editor");
 
 	/** redirecting stdout and stderr to UE logging */
 	Py_INCREF(&UnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter_Type);

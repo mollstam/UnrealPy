@@ -21,8 +21,6 @@ public:
 
 #if WITH_PYTHON
 
-	static PyObject* UnrealPyEmbedOutputWriter_New(PyTypeObject* Type, PyObject* Args, PyObject *Kwds);
-
 	static int UnrealPyEmbedOutputWriter_Init(UnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter* Self, PyObject* Args, PyObject* Kwds);
 
 	static PyObject* UnrealPyEmbedOutputWriter_Write(UnrealPyEmbedExtOutputWriter::UnrealPyEmbedOutputWriter* self, PyObject* args);
