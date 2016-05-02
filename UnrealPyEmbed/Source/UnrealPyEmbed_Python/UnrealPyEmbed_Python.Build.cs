@@ -8,7 +8,7 @@ namespace UnrealBuildTool.Rules
     {
         public UnrealPyEmbed_Python(TargetInfo Target)
         {
-            //BuildConfiguration.bPrintDebugInfo = true;
+            BuildConfiguration.bPrintDebugInfo = true;
 
             PrivateDependencyModuleNames.AddRange(
                 new string[]
@@ -33,66 +33,35 @@ namespace UnrealBuildTool.Rules
                 {
                 });
 
-            /** if true we will log some below during project generation */
-            bool VerboseProjectLogging = false;
-
             /** if true we will load Python debug libs */
-            bool PythonDebug = false;
+            const bool PythonDebug = true;
 
-            var PythonPath = Path.Combine("..", "Plugins", "Developer", "UnrealPyEmbed", "Source", "Python");
-            var PythonLibDirectory = Path.GetFullPath(Path.Combine(PythonPath, "Lib", Target.Platform.ToString()));
-            var PythonLibPath = Path.Combine(PythonLibDirectory, GetPythonLibName(Target.Platform, PythonDebug));
-            var PythonIncludeSuffix ="Include";
+            var PluginPath = Path.GetFullPath("../Plugins/Developer/UnrealPyEmbed");
+            var PythonPath = PluginPath + "/Source/Python";
+            var PythonLibDirectory = PythonPath + "/Lib";
+            var LibName = "python27" + (PythonDebug ? "_d" : "");
+            var PythonIncludeSuffix = "Include";
 
-            if (VerboseProjectLogging)
+            // Path to Python include files
+            var IncludePath = Path.GetFullPath(Path.Combine(PythonPath, PythonIncludeSuffix));
+            PrivateIncludePaths.Add(IncludePath);
+
+            Definitions.Add("WITH_PYTHON=1");
+            Definitions.Add("Py_ENABLE_SHARED=1");
+
+            if (PythonDebug)
             {
-                Log.WriteLine(1, null, LogEventType.Console, "\nLooking for Python lib at '{0}'", PythonLibPath);
+                // We have some C extensions in here, and they have to link properly
+                Definitions.Add("Py_DEBUG=1");
+                Definitions.Add("_DEBUG=1");
             }
-            if (File.Exists(PythonLibPath))
+
+            if (Target.Platform == UnrealTargetPlatform.Win64)
             {
-                // Path to Python include files
-                var IncludePath = Path.GetFullPath(Path.Combine(PythonPath, PythonIncludeSuffix));
-                PrivateIncludePaths.Add(IncludePath);
-
-                Definitions.Add("WITH_PYTHON=1");
-                Definitions.Add("Py_NO_ENABLE_SHARED=1");
-
-                if (PythonDebug)
-                {
-                    // We have some C extensions in here, and they have to link properly
-                    Definitions.Add("Py_DEBUG=1");
-                }
-
-                // Lib file
-                PublicLibraryPaths.Add(PythonLibDirectory);
-                PublicAdditionalLibraries.Add(PythonLibPath);
-
-                if (VerboseProjectLogging)
-                {
-                    Log.WriteLine(1, null, LogEventType.Console, "Python Integration enabled: {0}", IncludePath);
-                }
-            }
-            else
-            {
-                if (VerboseProjectLogging)
-                {
-                    Log.WriteLine(1, null, LogEventType.Console, "Python Integration NOT enabled");
-                }
+                PublicLibraryPaths.Add(PythonLibDirectory + "/Win64");
+                PublicAdditionalLibraries.Add(LibName + ".lib");
+                RuntimeDependencies.Add(new RuntimeDependency(LibName + ".dll"));
             }
         }
-
-        private System.String GetPythonLibName( UnrealTargetPlatform Platform, bool PythonDebug = false )
-        {
-            if (Platform == UnrealTargetPlatform.Win32 || Platform == UnrealTargetPlatform.Win64)
-            {
-                return System.String.Format("python27{0}.lib", PythonDebug ? "_d" : "");
-            }
-            else
-            {
-                // todo: debug name of nix lib
-                return "libpython2.7.a";
-            }
-        }
-
     }
 }
