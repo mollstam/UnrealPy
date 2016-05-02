@@ -181,7 +181,7 @@
     <ClCompile>
       <AdditionalIncludeDirectories>$(tcltk64Dir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WITH_APPINIT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <AdditionalDependencies>C:\Python27\Source\tcltk64\lib\tcl85g.lib;C:\Python27\Source\tcltk64\lib\tk85g.lib;%(AdditionalDependencies)</AdditionalDependencies>

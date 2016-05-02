@@ -944,9 +944,6 @@
     <ClCompile Include="..\Python\traceback.c">
       <Filter>Python</Filter>
     </ClCompile>
-    <ClCompile Include="..\Modules\getbuildinfo.c">
-      <Filter>Python</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\PC\python_nt.rc">

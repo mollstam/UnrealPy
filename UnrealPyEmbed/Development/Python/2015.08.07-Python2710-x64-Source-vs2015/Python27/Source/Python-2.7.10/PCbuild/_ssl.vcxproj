@@ -208,7 +208,7 @@
     </Midl>
     <ClCompile>
       <AdditionalIncludeDirectories>$(opensslDir)\inc64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <PreLinkEvent>
       <Command>
