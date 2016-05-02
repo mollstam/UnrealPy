@@ -512,13 +512,16 @@ calculate_path(void)
 
     skiphome = pythonhome==NULL ? 0 : 1;
 #ifdef Py_ENABLE_SHARED
-    machinepath = getpythonregpath(HKEY_LOCAL_MACHINE, skiphome);
-    userpath = getpythonregpath(HKEY_CURRENT_USER, skiphome);
+	// UnrealPy : we never want to use path from registry /tobias
+    //machinepath = getpythonregpath(HKEY_LOCAL_MACHINE, skiphome);
+    //userpath = getpythonregpath(HKEY_CURRENT_USER, skiphome);
 #endif
     /* We only use the default relative PYTHONPATH if we havent
        anything better to use! */
-    skipdefault = envpath!=NULL || pythonhome!=NULL || \
+    //skipdefault = envpath!=NULL || pythonhome!=NULL || \
                   machinepath!=NULL || userpath!=NULL;
+	// UnrealPy : we never want to skip default and never want to use the path from the registry :s / tobias
+	skipdefault = 0;
 #endif
 
     /* We need to construct a path from the following parts.
