@@ -2,6 +2,7 @@
 #include "UnrealPyEmbed_PythonPrivatePCH.h"
 #include "PythonInterpreter.h"
 #include "Extensions/UnrealPyEmbedExtOutputWriter.h"
+#include "Extensions/UnrealPyEmbedExtImporter.h"
 
 #if WITH_PYTHON
 	#include "Python/Python.h"
@@ -33,7 +34,8 @@ struct FPythonExitGuard
 	{
 		if (PythonExitGuard::InScope)
 		{
-			// Python encountered a fatal error, check stderr for more information e.g. by running 'UE4Editor-Cmd.exe -stdout'
+			// Python encountered a fatal error, check stderr for more information e.g. by running 'UE4Editor-[Win64-Debug-]Cmd.exe' from cmd.exe.
+			// This will cause log output to go to process as usual, but stderr being shown in cmd.exe. For log output in cmd.exe too, add -stdout.
 			// We cannot log here, probably since things are falling around us
 			FPlatformMisc::DebugBreak();
 		}
@@ -64,6 +66,7 @@ FPythonInterpreter::FPythonInterpreter()
 
 		// Extensions
 		FUnrealPyEmbedExtOutputWriter::Init();
+		FUnrealPyEmbedExtImporter::Init();
 	}
 #endif //WITH_PYTHON
 }
